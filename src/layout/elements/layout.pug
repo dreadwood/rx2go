@@ -1,0 +1,18 @@
+include ../elements/images
+include ../elements/head
+include ../templates/header
+
+- let title = "Layout"
+- let isLoggedIn = false
+
+block data
+
+doctype html
+html(lang="en")
+  +head(`Rx2go. ${title}`)
+  body
+    +header({isLoggedIn})
+  main
+    block content
+  include ../templates/footer
+  include ../elements/script

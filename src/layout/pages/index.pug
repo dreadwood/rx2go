@@ -1,0 +1,47 @@
+include ../elements/head
+include ../elements/console
+
+mixin page-list(data)
+  ul
+    each list in data
+      li
+        a(href=list.url) #{list.url} ---- #{list.name}
+
+-
+  const pages = [{
+    name: "Main",
+    url: "main-page.html",
+  },{
+    name: "About",
+    url: "about-page.html",
+  }]
+
+
+doctype html
+html(lang="en")
+  +head("Rx2go. Index.")
+
+  body
+    style.
+      body {
+        --color-main: #4AA3EF;
+        padding: 20px 40px;
+      }
+
+      h1 {
+        color: var(--color-main);
+      }
+
+      li {
+        margin-bottom: 10px;
+      }
+
+      a:hover,
+      a:focus {
+        color: var(--color-main);
+      }
+
+    h1 Rx2go
+
+    h2 Pages
+    +page-list(pages)

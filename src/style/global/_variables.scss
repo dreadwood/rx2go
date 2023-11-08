@@ -1,0 +1,38 @@
+// fonts
+$font-default: "Open Sans", arial, sans-serif;
+$font-title: "Open Sans", arial, sans-serif;
+
+// retina
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
+
+// container
+$container-width: 1250px;
+
+// viewport
+$desktop-width: 1024px;
+$tablet-width: 768px;
+$mobile-big-width: 375px;
+$mobile-small-width: 320px;
+
+// padding container
+$desktop-padding: 20px;
+$tablet-padding: 20px;
+$mobile-padding: 16px;
+
+// padding block
+$block-padding: 10px;
+$block-padding-mobile: 8px;
+$page-top-padding: 40px;
+$page-top-padding-mobile: 20px;
+$page-bottom-padding: 40px;
+$page-bottom-padding-mobile: 20px;
+
+// other
+$box-shadow: 0 4px 15px 4px transparentize($color-gray-827, 0.5);
+
+// character css code
+$character-nbsp: "\00A0";
+$character-bullet-code: "\2022";
+$character-four-em-space-code: "\2005";
+$character-next-line-code: "\000A";

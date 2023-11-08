@@ -1,0 +1,36 @@
+{
+  "name": "rx2go",
+  "description": "Layout scan page and get route name page",
+  "scripts": {
+    "dev": "gulp dev",
+    "build": "gulp build"
+  },
+  "author": "dreadwood",
+  "devDependencies": {
+    "autoprefixer": "10.4.16",
+    "browser-sync": "2.29.3",
+    "del": "5.1.0",
+    "eslint": "8.53.0",
+    "gulp": "4.0.2",
+    "gulp-concat": "2.6.1",
+    "gulp-csso": "4.0.1",
+    "gulp-imagemin": "7.1.0",
+    "gulp-order": "1.2.0",
+    "gulp-plumber": "1.2.1",
+    "gulp-postcss": "9.0.1",
+    "gulp-pug": "5.0.0",
+    "gulp-rename": "2.0.0",
+    "gulp-sass": "5.1.0",
+    "gulp-sourcemaps": "3.0.0",
+    "gulp-svgstore": "9.0.0",
+    "gulp-uglify-es": "3.0.0",
+    "gulp-webp": "4.0.1",
+    "postcss": "8.4.31",
+    "postcss-scss": "4.0.9",
+    "pug": "3.0.2",
+    "sass": "1.69.5",
+    "stylelint": "15.11.0",
+    "stylelint-config-standard-scss": "11.1.0",
+    "stylelint-order": "6.0.3"
+  }
+}

@@ -1,0 +1,28 @@
+//- simple raster image
+mixin picture(image, width, height, altText, className)
+  - const path = image.split("@")[0];
+  - const format = image.split(".")[1];
+  picture
+    source(type="image/webp"
+      srcset=`${path}@1x.webp 1x, ${path}@2x.webp 2x`)
+    img(class=className
+      src=image
+      srcset=`${path}@2x.${format} 2x`
+      width=width
+      height=height
+      alt=altText ? altText : "")
+
+//- simple vector image
+mixin svg(name, width, height, className)
+  if name.includes('/img')
+    img(class=(className || null) src=name width=width height=height alt="")
+  else
+    svg(class=(className || null) width=width height=height )
+      use(xlink:href=`img/sprite.svg#${name}`)
+
+//- portrait with default person
+mixin portrait(image, width, height, altText, className)
+  if image
+    +picture(image, width, height, altText, className)
+  else
+    +picture("img/userpic@1x.png", width, height, className)
