@@ -1,0 +1,50 @@
+//- extends ../elements/layout
+include ../elements/head
+include ../elements/images
+include ../templates/btn-1
+include ../templates/btn-2
+include ../templates/btn-3
+include ../templates/table-1
+include ../templates/table-2
+
+
+doctype html
+html(lang="en")
+  +head("Rx2go. UI-kit")
+  body
+    block content
+    include ../elements/script
+
+
+block content
+  .wrp.wrp--top-page.wrp--bottom-page
+    h1 UI-kit
+
+    h2.ui-second-title Buttons
+
+    p Button 1
+    .ui-btn-list
+      +btn-1({text: "Search Info"})
+      +btn-1({text: "Print Labels"})
+      +btn-1({text: "Get Hub Name", isDisabled: true})
+      +btn-1({text: "Get Route Name", isActive: true})
+
+    p Button 2
+    .ui-btn-list
+      +btn-2({text: "Ready for Delivery", icon: "icon-building", counter: 124})
+      +btn-2({text: "Driver Out", icon: "icon-auto", isActive: true})
+      +btn-2({text: "Returned", icon: "icon-building-arrows", isDisabled: true})
+      +btn-2({text: "..."})
+
+    p Button 3
+    .ui-btn-list
+      +btn-3({text: "Save"})
+      +btn-3({text: "Save", isDisabled: true})
+
+    h2.ui-second-title Tables
+
+    p Table 1
+    +table-1()
+
+    p Table 2
+    +table-2()

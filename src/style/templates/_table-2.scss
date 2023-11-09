@@ -1,0 +1,121 @@
+.table-2 {
+  $table-1-padding-outer: 12px;
+  $table-1-padding-inner: 20px;
+  font-size: 16px;
+  line-height: 19px;
+  color: $color-grayish-blue;
+  // word-spacing: 1.05px;
+  border: 1px solid $color-very-pale-blue;
+  border-collapse: collapse;
+  th {
+    padding: 15px $table-1-padding-inner 12px $table-1-padding-inner;
+    line-height: 21px;
+    font-weight: 700;
+    text-align: left;
+    white-space: nowrap;
+    background-color: $color-ghost-white;
+    &:first-child {
+      padding-left: $table-1-padding-outer;
+    }
+    &:last-child {
+      padding-right: $table-1-padding-outer;
+    }
+  }
+  tr {
+    border: 1px solid $color-very-pale-blue;
+    &:nth-child(2n+1) {
+      background-color: $color-gray-984;
+    }
+  }
+  td {
+    padding: 8px $table-1-padding-inner 7px $table-1-padding-inner;
+    white-space: nowrap;
+    &:first-child {
+      padding-left: $table-1-padding-outer;
+    }
+    &:last-child {
+      width: 100%;
+      padding-right: $table-1-padding-outer;
+    }
+  }
+}
+.table-2__numbers {
+  display: flex;
+  align-items: center;
+  column-gap: 6px;
+  & > * {
+    flex-shrink: 0;
+  }
+}
+
+// TODO: 2023-11-09 / move to separate file
+.number {
+  display: inline-grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  margin: 0;
+  padding: 0;
+  color: $color-grayish-blue;
+  background-color: $color-platinum;
+  border: none;
+  border-radius: 50%;
+  &.actv {
+    color: $color-white;
+    background-color: $color-lime-green;
+  }
+}
+.label {
+  min-width: 110px; // TODO: 2023-11-09 / needed?
+  padding: 2px 8px;
+  line-height: 20px;
+  text-align: center;
+  color: $color-white;
+  background-color: $color-umber-gray;
+  border-radius: 4px;
+  &--blue {
+    background-color: $color-crayola-blue;
+  }
+  &--light-green {
+    color: $color-black;
+    background-color: $color-light-green;
+  }
+  &--green {
+    background-color: $color-muslim-green;
+  }
+  &--yellow {
+    color: $color-black;
+    background-color: $color-yellow-school-bus;
+  }
+}
+.order-id {
+  display: flex;
+  align-items: flex-start;
+  column-gap: 8px;
+  width: max-content;
+}
+.order-id__number {
+  flex-shrink: 0;
+}
+.order-id__time {
+  width: max-content;
+  margin-top: 1.5px;
+  padding: 1px 5px;
+  font-size: 8px;
+  line-height: 10px;
+  color: $color-white;
+  background-color: $color-twitter-blue;
+  border-radius: 20px;
+}
+.order-id__icon {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+  &--color svg {
+    fill: $color-light-purple-blue;
+  }
+}

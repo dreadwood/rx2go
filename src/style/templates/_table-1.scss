@@ -1,0 +1,40 @@
+.table-1 {
+  $table-1-padding-outer: 12px;
+  $table-1-padding-inner: 20px;
+  font-size: 16px;
+  line-height: 21px;
+  color: $color-grayish-blue;
+  // word-spacing: 1.05px;
+  border: 1px solid $color-very-pale-blue;
+  border-collapse: collapse;
+  th {
+    padding: 15px $table-1-padding-inner 12px $table-1-padding-inner;
+    font-weight: 700;
+    text-align: left;
+    white-space: nowrap;
+    background-color: $color-ghost-white;
+    &:first-child {
+      padding-left: $table-1-padding-outer;
+    }
+    &:last-child {
+      padding-right: $table-1-padding-outer;
+    }
+  }
+  tr {
+    border: 1px solid $color-very-pale-blue;
+    &:nth-child(2n+1) {
+      background-color: $color-gray-984;
+    }
+  }
+  td {
+    padding: 8px $table-1-padding-inner 7px $table-1-padding-inner;
+    white-space: nowrap;
+    &:first-child {
+      padding-left: $table-1-padding-outer;
+    }
+    &:last-child {
+      width: 100%;
+      padding-right: $table-1-padding-outer;
+    }
+  }
+}

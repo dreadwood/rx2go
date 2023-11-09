@@ -1,0 +1,6 @@
+mixin btn-1({text, isActive, isDisabled})
+  button.btn-1(
+    class=(isActive ? 'actv' : null)
+    disabled=isDisabled
+    onclick="window.utils.toggleCssClass(this, 'actv')"
+  )=text

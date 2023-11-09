@@ -5,20 +5,20 @@ window.utils = {
   BREAKPOINT_TABLET: '(max-width: 1023px)',
 
   /**
-   * for show/hide a list when click button
+   * add/remove css class when click button
    * @param {HTMLButtonElement} btn
    * @param {String} className
    */
-  toggleParentCssClass(btn, className) {
+  toggleCssClass(btn, className) {
     if (!btn) {
-      throw new Error('toggleParentCssClass: Button not passed to parameters')
+      throw new Error('toggleCssClass: Button not passed to parameters')
     }
     if (typeof className !== 'string') {
       throw new Error(
-        'toggleParentCssClass: className is not passed or is not a string'
+        'toggleCssClass: className is not passed or is not a string'
       )
     }
-    btn.parentElement.classList.toggle(className)
+    btn.classList.toggle(className)
     btn.blur()
   }
 }
