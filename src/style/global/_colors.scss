@@ -21,15 +21,10 @@ $color-umber-gray:            #302F2E;
 $color-muslim-green:          #31B200;
 $color-yellow-school-bus:     #FFDD02;
 $color-twitter-blue:          #29B6FF;
+$color-mint:                  #46BE8A;
+$color-light-gray:            #D3D9DE;
 
 $tranparent:        rgba(255 255 255 / 0%); // hack for safari
 
-$color-text:        $color-gray-184;          // #2f2f2f
+$color-text:        $color-grayish-blue;      // #55595C
 $color-main:        $color-cornflower;        // #4AA3EF
-
-
-// scheme
-:root {
-  --common-background: #{$color-white};       // #ffffff
-  --common-text: #{$color-gray-184};          // #2f2f2f
-}

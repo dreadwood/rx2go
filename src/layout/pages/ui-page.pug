@@ -6,6 +6,7 @@ include ../templates/btn-2
 include ../templates/btn-3
 include ../templates/table-1
 include ../templates/table-2
+include ../templates/header
 
 
 doctype html
@@ -48,3 +49,9 @@ block content
 
     p Table 2
     +table-2()
+
+    h2.ui-second-title Header
+    .ui-header
+      +header()
+
+

@@ -1,6 +1,22 @@
 include ../elements/images
 
-mixin header({isLoggedIn = false})
+mixin header()
   header.header
-    .wrp
-      p This is a header
+    .header__title scan orders
+    .header__info
+      .header__time
+        +svg({name: "icon-play-indent-round", width: 20, height: 20})
+        | 09/21 12:00 AM
+      .header__time
+        +svg({name: "icon-done-indent-round", width: 20, height: 20})
+        | 5 HR 28 MIN 38 SEC
+      .header__time
+        +svg({name: "icon-cross-indent-round", width: 20, height: 20})
+        | 10 HR 18 MIN 40 SEC
+      .header__time
+        +svg({name: "icon-doc-indent-round", width: 20, height: 20})
+        | 1 MIN 40 SEC
+      .header__label in
+    .header__search
+      form(action="#" role="search")
+        input.form-field.form-search(type="search" placeholder="Search...")

@@ -16,12 +16,12 @@ body {
   padding: 0;
   font-family: $font-default;
   font-size: 16px;
-  line-height: 23px;
+  line-height: 21px;
   font-weight: 400;
   font-style: normal;
   text-align: left;
-  color: var(--common-text);
-  background-color: var(--common-background);
+  color: $color-text;
+  background-color: $color-white;
 }
 main {
   flex-grow: 1;
