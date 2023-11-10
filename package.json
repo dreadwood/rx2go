@@ -3,7 +3,8 @@
   "description": "Layout scan page and get route name page",
   "scripts": {
     "dev": "gulp dev",
-    "build": "gulp build"
+    "build": "gulp build",
+    "gh-pages": "push-dir --dir=build --branch=gh-pages"
   },
   "author": "dreadwood",
   "devDependencies": {
