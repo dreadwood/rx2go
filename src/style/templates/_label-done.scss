@@ -1,0 +1,18 @@
+.label-done {
+  display: flex;
+  align-items: center;
+  column-gap: 4px;
+  width: max-content;
+  padding: 4px 8px;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 700;
+  color: $color-white;
+  background-color: $color-lime-green;
+  border-radius: 4px;
+}
+.label-done__icon {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+}

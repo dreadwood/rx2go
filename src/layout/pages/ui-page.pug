@@ -7,6 +7,8 @@ include ../templates/btn-3
 include ../templates/table-1
 include ../templates/table-2
 include ../templates/header
+include ../templates/label-info
+include ../templates/label-done
 include ../templates/profile-card
 include ../templates/form/form-field-wrp-input
 include ../templates/form/form-field-wrp-select-input
@@ -67,9 +69,21 @@ block content
     +form-field-wrp-select-input({isOpen: true})
 
     p Input
-    +form-field-wrp-input({placeholder: "Enter Barcode Numbers, Vendor ID, Equipments"})
+    +form-field-wrp-input({
+      placeholder: "Enter Barcode Numbers, Vendor ID, Equipments",
+      error: "Error. Information not found in the system"
+    })
 
 
     h2.ui-second-title Profile card
 
     +profile-card({isEmpty: true})
+
+
+    h2.ui-second-title Labels
+
+    p Label info
+    +label-info()
+
+    p Label done
+    +label-done()
