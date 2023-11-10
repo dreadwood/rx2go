@@ -2,6 +2,7 @@ include ../elements/head
 include ../templates/header
 
 - let title = "Layout"
+- let table2Data = []
 
 block data
 
@@ -9,7 +10,7 @@ doctype html
 html(lang="en")
   +head(`Rx2go. ${title}`)
   body
-    +header()
     main.scan
+      +header()
       block content
     include ../elements/script

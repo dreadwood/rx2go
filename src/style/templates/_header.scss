@@ -1,7 +1,7 @@
 .header {
   display: flex;
   align-items: center;
-  max-width: $container-main-width; // TODO: 2023-11-10 / remove?
+  width: 100%;
   padding: 19px 16px;
 }
 .header__title {

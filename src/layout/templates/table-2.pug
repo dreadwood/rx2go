@@ -1,4 +1,4 @@
--
+//- -
   const table2Data = [
     {
       order: {
@@ -135,24 +135,25 @@ mixin odrer-id({isFirstIcon, secondIcon})
         +svg({name: secondIcon, width: 20, height: 20})
 
 
-mixin table-2()
+mixin table-2({table2Data})
   table.table-2
     tr
       th Order ID
       th Hubs
       th Items
-    each row, i in table2Data
-      tr
-        td
-          if row.order
-            +odrer-id({
-              isFirstIcon: row.order.isFirstIcon,
-              secondIcon: row.order.secondIcon
-            })
-        td
-          if row.hubs
-            +label({text: row.hubs.name, color: row.hubs.color})
-        td
-          .table-2__numbers
-            each item, j in row.items
-              +number({text: j+1, isActive: item})
+    if table2Data
+      each row, i in table2Data
+        tr
+          td
+            if row.order
+              +odrer-id({
+                isFirstIcon: row.order.isFirstIcon,
+                secondIcon: row.order.secondIcon
+              })
+          td
+            if row.hubs
+              +label({text: row.hubs.name, color: row.hubs.color})
+          td
+            .table-2__numbers
+              each item, j in row.items
+                +number({text: j+1, isActive: item})

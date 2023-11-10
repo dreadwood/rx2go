@@ -1,6 +1,21 @@
-mixin label-info()
-  .label-info
-    | Overall left to scan equipments
-    span.label-info__counter 5
-    | from
-    span.label-info__counter 12
+mixin label-info({version})
+  if version === 1
+    .label-info
+      | There are
+      span.label-info__counter 150
+      | of
+      span.label-info__counter 150
+      | left to scan
+  else if version === 1
+    .label-info
+      | Overall left to scan equipments
+      span.label-info__counter 12
+      | from
+      span.label-info__counter 12
+  else
+    .label-info
+      | There are
+      span.label-info__counter 0
+      | of
+      span.label-info__counter 0
+      | left to scan
