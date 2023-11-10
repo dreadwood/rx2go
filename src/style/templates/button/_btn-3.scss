@@ -1,5 +1,5 @@
 .btn-3 {
-  @include transition(color, background-color, border-color);
+  @include transition(background-color, border-color);
   display: block;
   min-height: 37px;
   margin: 0;

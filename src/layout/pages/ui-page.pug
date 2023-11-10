@@ -4,6 +4,7 @@ include ../elements/images
 include ../templates/btn-1
 include ../templates/btn-2
 include ../templates/btn-3
+include ../templates/btn-4
 include ../templates/table-1
 include ../templates/table-2
 include ../templates/header
@@ -47,6 +48,11 @@ block content
     .ui-btn-list
       +btn-3({text: "Save"})
       +btn-3({text: "Save", isDisabled: true})
+
+    p Button 4
+    .ui-btn-list
+      +btn-4({text: "Print the label", icon: "icon-print"})
+      +btn-4({text: "Print the label", icon: "icon-print", isDisabled: true})
 
 
     h2.ui-second-title Tables
