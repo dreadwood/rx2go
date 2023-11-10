@@ -1,7 +1,8 @@
 extends ../elements/layout
+include ../templates/btn-panel
 
 block data
-  - title = "About"
+  - title = "Scan: empty"
 
 block content
-  h1 This is Scan empty content
+  +btn-panel({})

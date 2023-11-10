@@ -1,0 +1,35 @@
+include ../templates/btn-1
+include ../templates/btn-2
+include ../templates/btn-3
+
+mixin btn-panel({isExtraVisible})
+  .btn-panel
+    .btn-panel__list
+      +btn-1({text: "Search Info"})
+      +btn-1({text: "Print Labels"})
+      +btn-1({text: "Get Hub Name"})
+      +btn-1({text: "Get Route Name"})
+      +btn-1({text: "See Activity"})
+      +btn-1({text: "Validate Queue"})
+      +btn-1({text: "Scan by Filter"})
+      +btn-1({text: "Return labels"})
+      +btn-1({text: "Print Stops"})
+      +btn-1({text: "Quick Create “Return to pharmacy”"})
+    .btn-panel__list
+      +btn-2({text: "Ready for Delivery", icon: "icon-building"})
+      +btn-2({text: "Driver Out", icon: "icon-auto"})
+      +btn-2({text: "Returned", icon: "icon-building-arrows"})
+      +btn-2({text: "...", onclick: "window.utils.toggleVisibleNodes(this, 'js-btn-panel-extra')"})
+    .btn-panel__list.js-btn-panel-extra(hidden=(isExtraVisible ? false : true))
+      +btn-2({text: "Ready to Print", icon: "icon-print", isExtra: true})
+      +btn-2({text: "Ready to Pickup", icon: "icon-package", isExtra: true})
+      +btn-2({text: "Pickup Occurred", icon: "icon-fast-truck", isExtra: true})
+      +btn-2({text: "Route Optimized", icon: "icon-dots", isExtra: true})
+      +btn-2({text: "Delivery Attempted", icon: "icon-floppy-prohibit", isExtra: true})
+      +btn-2({text: "Rejected", icon: "icon-bag-prohibit", isExtra: true})
+      +btn-2({text: "Investigation", icon: "icon-magnifier-question", isExtra: true})
+      +btn-2({text: "Back to Pharmacy", icon: "icon-briefcase-plus", isExtra: true})
+      +btn-2({text: "Other date delivery", icon: "icon-calendar", isExtra: true})
+      +btn-2({text: "Ready to optimize", icon: "icon-gear", isExtra: true})
+      +btn-2({text: "On its way to facility", icon: "icon-home-delivery", isExtra: true})
+      +btn-2({text: "Draft", icon: "icon-notebook", isExtra: true})

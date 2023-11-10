@@ -1,0 +1,79 @@
+.form-select-input {
+  &.open .form-select-input__input {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  &.open .form-select-input__toggle {
+    transform: rotate(180deg);
+  }
+  &.open .form-select-input__dropdown {
+    display: block
+  }
+}
+.form-select-input__field {
+  position: relative;
+}
+.form-select-input__input {
+  width: 100%;
+  padding: 10px 12px;
+  font-family: $font-default;
+  font-size: 14px;
+  line-height: 17px;
+  color: $color-text;
+  border: 1px solid $color-light-gray;
+  border-radius: 6px;
+  &::placeholder {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
+    color: $color-text;
+  }
+}
+.form-select-input__toggle {
+  @include transition(transform);
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  svg {
+    width: 20px;
+    height: 16px;
+    fill: $color-cadet-bluec-rayola
+  }
+}
+.form-select-input__dropdown {
+  display: none;
+  margin-top: -1px;
+  overflow: hidden;
+  background-color: $color-white;
+  border: 1px solid transparentize($color-black, 0.8);
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+  box-shadow: 0 1px 6px 0 transparentize($color-black, 0.92);
+  & > *:not(:last-child) {
+    border-bottom: 1px solid transparentize($color-black, 0.8);
+  }
+}
+.form-select-input__item {
+  @include transition(background-color);
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 12px 12px 11px 12px;
+  text-align: left;
+  background-color: transparent;
+  border: none;
+  &:hover,
+  &:focus {
+    background-color: $color-periwinkle-crayola;
+  }
+
+}

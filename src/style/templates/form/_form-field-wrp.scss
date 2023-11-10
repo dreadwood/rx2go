@@ -1,0 +1,14 @@
+.form-field-wrp {
+  padding: 12px;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 700;
+  color: $color-white;
+  background-color: $color-cornflower;
+  border-radius: 12px;
+}
+.form-field-wrp__label {
+  display: block;
+  width: max-content;
+  margin-bottom: 12px;
+}

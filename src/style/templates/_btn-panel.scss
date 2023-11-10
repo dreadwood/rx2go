@@ -1,0 +1,14 @@
+.btn-panel {
+  & > *:not(:first-child) {
+    margin-top: 16px;
+  }
+}
+.btn-panel__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  & > * {
+    flex-shrink: 0;
+  }
+}

@@ -1,11 +1,12 @@
-mixin btn-2({text, icon, counter, isActive, isDisabled})
+mixin btn-2({text, icon, counter, isActive, isDisabled, isExtra, onclick})
   button.btn-2(
     class=(isActive ? 'actv' : null)
+    class=(isExtra ? 'btn-2--extra' : null)
     disabled=isDisabled
-    onclick="window.utils.toggleCssClass(this, 'actv')"
+    onclick=(onclick || "window.utils.toggleCssClass(this, 'actv')")
   )
     if icon
       +svg({name: icon, width: 17, height: 17, className: "btn-2__icon"})
-    .btn-2__text=text
+    =text
     if counter
       .btn-2__counter=counter
