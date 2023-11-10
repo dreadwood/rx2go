@@ -13,7 +13,8 @@
 }
 .scan__form {
   display: grid;
-  grid-template-columns: 419px 342px;
+  // grid-template-columns: 419px 342px; // TODO: 2023-11-10 / check future
+  grid-template-columns: 419px 346px;
   gap: 16px;
   margin-top: 16px;
 }
