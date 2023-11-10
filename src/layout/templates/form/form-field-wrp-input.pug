@@ -1,0 +1,8 @@
+include ../../templates/form/form-input
+
+mixin form-field-wrp-input({placeholder, error})
+  .form-field-wrp
+    label.form-field-wrp__label Scan:
+    +form-input({placeholder})
+    if error
+      .form-field-wrp__msg=error

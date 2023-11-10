@@ -1,21 +1,18 @@
-.form-field {
+.form-input {
   width: 100%;
-  padding: 9px 12px;
+  padding: 10px 12px;
   font-family: $font-default;
   font-size: 14px;
-  line-height: 18px;
+  line-height: 17px;
   color: $color-text;
   border: 1px solid $color-light-gray;
-  border-radius: 20px;
+  border-radius: 6px;
   &::placeholder {
     font-family: inherit;
     font-size: inherit;
     line-height: inherit;
     font-weight: inherit;
-    color: $color-text;
-  }
-  &::-webkit-search-cancel-button {
-    display: none;
+    color: transparentize($color-text, 0.6);;
   }
   &[type="number"]::-webkit-outer-spin-button,
   &[type="number"]::-webkit-inner-spin-button {

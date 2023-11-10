@@ -1,0 +1,8 @@
+include ../../templates/form/form-select-input
+
+mixin form-field-wrp-select-input({isOpen, error})
+  .form-field-wrp
+    label.form-field-wrp__label Select a Route:
+    +form-select-input({isOpen})
+    if error
+      .form-field-wrp__msg=error

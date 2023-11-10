@@ -1,5 +1,6 @@
 .form-select-input {
-  &.open .form-select-input__input {
+  position: relative;
+  &.open .form-input {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
   }
@@ -50,7 +51,11 @@
   }
 }
 .form-select-input__dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
   display: none;
+  width: 100%;
   margin-top: -1px;
   overflow: hidden;
   background-color: $color-white;

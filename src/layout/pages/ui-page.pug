@@ -7,6 +7,9 @@ include ../templates/btn-3
 include ../templates/table-1
 include ../templates/table-2
 include ../templates/header
+include ../templates/profile-card
+include ../templates/form/form-field-wrp-input
+include ../templates/form/form-field-wrp-select-input
 
 
 doctype html
@@ -20,6 +23,7 @@ html(lang="en")
 block content
   .wrp.wrp--top-page.wrp--bottom-page
     h1 UI-kit
+
 
     h2.ui-second-title Buttons
 
@@ -42,6 +46,7 @@ block content
       +btn-3({text: "Save"})
       +btn-3({text: "Save", isDisabled: true})
 
+
     h2.ui-second-title Tables
 
     p Table 1
@@ -50,8 +55,21 @@ block content
     p Table 2
     +table-2()
 
+
     h2.ui-second-title Header
     .ui-header
       +header()
 
 
+    h2.ui-second-title Form elements
+
+    p Select input
+    +form-field-wrp-select-input({isOpen: true})
+
+    p Input
+    +form-field-wrp-input({placeholder: "Enter Barcode Numbers, Vendor ID, Equipments"})
+
+
+    h2.ui-second-title Profile card
+
+    +profile-card({isEmpty: true})

@@ -1,0 +1,23 @@
+.profile-card {
+  display: grid;
+  place-items: center;
+  width: 407px;
+  min-height: 676px;
+  padding: 20px 20px 16px 20px;
+  background-color: $color-ghost-white;
+  border: 1px solid $color-light-gray;
+  border-radius: 20px;
+}
+.profile-card__btn {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 700;
+  color: $color-maple-blue;
+  background-color: transparent;
+  border: none;
+  &:hover {
+    color: color.adjust($color-maple-blue, $blackness: 25%)
+  }
+}
