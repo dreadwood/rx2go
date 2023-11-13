@@ -2,23 +2,33 @@ include ../templates/button/btn-1
 include ../templates/button/btn-2
 include ../templates/button/btn-3
 
-mixin btn-panel({isExtraVisible})
+mixin btn-panel({isExtraVisible, activeSection})
   .btn-panel
     .btn-panel__list
-      +btn-1({text: "Search Info"})
-      +btn-1({text: "Print Labels"})
-      +btn-1({text: "Get Hub Name"})
-      +btn-1({text: "Get Route Name"})
-      +btn-1({text: "See Activity"})
-      +btn-1({text: "Validate Queue"})
-      +btn-1({text: "Scan by Filter"})
-      +btn-1({text: "Return labels"})
-      +btn-1({text: "Print Stops"})
-      +btn-1({text: "Quick Create “Return to pharmacy”"})
+      -
+        const btns1 = [
+          "Search Info",
+          "Print Labels",
+          "Get Hub Name",
+          "Get Route Name",
+          "See Activity",
+          "Validate Queue",
+          "Scan by Filter",
+          "Return labels",
+          "Print Stops",
+          "Quick Create “Return to pharmacy”"
+        ]
+      each it in btns1
+        +btn-1({text: it, isActive: it === activeSection})
     .btn-panel__list
-      +btn-2({text: "Ready for Delivery", icon: "icon-building"})
-      +btn-2({text: "Driver Out", icon: "icon-auto"})
-      +btn-2({text: "Returned", icon: "icon-building-arrows"})
+      -
+        const btns2 = [
+          { text: "Ready for Delivery", icon: "icon-building" },
+          { text: "Driver Out", icon: "icon-auto" },
+          { text: "Returned", icon: "icon-building-arrows" }
+        ]
+      each it in btns2
+        +btn-2({text: it.text, icon: it.icon, isActive: it.text === activeSection})
       +btn-2({text: "...", onclick: "window.utils.toggleVisibleNodes(this, 'js-btn-panel-extra')"})
     .btn-panel__list.js-btn-panel-extra(hidden=(isExtraVisible ? false : true))
       +btn-2({text: "Ready to Print", icon: "icon-print", isExtra: true})

@@ -5,14 +5,15 @@ include ../templates/table-1
 include ../templates/table-2
 include ../templates/table-3
 include ../templates/label-info
+include ../templates/label-fridge
 include ../templates/profile-card
 include ../templates/form/form-field-wrp-input
 include ../templates/form/form-field-wrp-select-input
 
 block data
   -
-    title = "Scan: driver out, route select, without vendor"
-    table2Data = [
+    title = "Scan: driver out, route select, with vendor"
+    let table2Data = [
       {
         order: {
           id: "#16247419",
@@ -110,16 +111,116 @@ block data
         ]
       },
     ]
+    let table2Data2 = [
+      {
+        order: {
+          id: "#16247419",
+          time: "11:45 - 15:45",
+          isFirstIcon: true,
+          secondIcon: "icon-watch-round",
+        },
+        hubs: {
+          name: "Brooklyn",
+          color: "blue",
+        },
+        items: [
+          true,
+          true,
+          true,
+          true,
+        ]
+      },
+      {
+        order: {
+          id: "#16247419",
+          time: "11:45 - 15:45",
+          isFirstIcon: true,
+          secondIcon: "icon-stopwatch-round",
+        },
+        hubs: {
+          name: "New Jersey",
+          color: "light-green",
+        },
+        items: [
+          true,
+        ]
+      },
+      {
+        order: {
+          id: "#16247419",
+          time: "11:45 - 15:45",
+          isFirstIcon: false,
+          secondIcon: "icon-lightning-round",
+        },
+        hubs: {
+          name: "Connecticut"
+        },
+        items: [
+          true,
+        ]
+      },
+      {
+        order: {
+          id: "#16247419",
+          time: "11:45 - 15:45",
+          isFirstIcon: true,
+          secondIcon: "icon-bag-round",
+        },
+        hubs: {
+          name: "Pennsylvania",
+          color: "green",
+        },
+        items: [
+          true,
+        ]
+      },
+      {
+        order: {
+          id: "#16247419",
+          time: "11:45 - 15:45",
+          isFirstIcon: true,
+          secondIcon: "icon-truck-round",
+        },
+        hubs: {
+          name: "Connecticut"
+        },
+        items: [
+          true,
+          true,
+        ]
+      },
+      {
+        order: {
+          id: "#16247419",
+          time: "11:45 - 15:45",
+          isFirstIcon: true,
+          secondIcon: "icon-truck-round",
+        },
+        hubs: {
+          name: "Long Island",
+          color: "yellow",
+        },
+        items: [
+          true,
+          true,
+          true,
+          true,
+        ]
+      },
+    ]
 
 block content
   .scan__main
     .scan__content
       +btn-panel({activeSection: "Driver Out"})
 
-      .scan__form
-        +form-field-wrp-select-input({})
-        +form-field-wrp-input({placeholder: "Enter Barcode Numbers, Vendor ID, Equipments"})
-        +btn-4({text: "Print the label", icon: "icon-print"})
+      .scan__form-wrp
+        .scan__form
+          +form-field-wrp-select-input({})
+          +form-field-wrp-input({placeholder: "Enter Barcode Numbers, Vendor ID, Equipments"})
+          +btn-4({text: "Print the label", icon: "icon-print"})
+        .scan__info
+          +label-fridge({})
 
       .scan__grid
         .scan__grid-item
@@ -127,13 +228,13 @@ block content
           .scan__grid-label
             +label-info({version: 1})
           .scan__grid-table
-            +table-2({table2Data})
+            +table-2({table2Data: table2Data})
         .scan__grid-item
           h3.scan__grid-title Driver Out
           .scan__grid-label
-            +label-info({})
+            +label-info({version: 2})
           .scan__grid-table
-            +table-3()
+            +table-2({table2Data: table2Data2})
         .scan__grid-item
           h3.scan__grid-title Assigned equipments
           .scan__grid-label
@@ -142,4 +243,4 @@ block content
             +table-1()
 
     .scan__profile
-      +profile-card({isEmpty: true})
+      +profile-card({})

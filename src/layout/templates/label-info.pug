@@ -12,6 +12,13 @@ mixin label-info({version})
       span.label-info__counter 12
       | from
       span.label-info__counter 12
+  else if version === 2
+    .label-info
+      | There are
+      span.label-info__counter 7
+      | of
+      span.label-info__counter 13
+      | left to scan
   else
     .label-info
       | There are

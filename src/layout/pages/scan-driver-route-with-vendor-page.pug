@@ -11,7 +11,7 @@ include ../templates/form/form-field-wrp-select-input
 
 block data
   -
-    title = "Scan: driver out, route select, without vendor"
+    title = "Scan: driver out, route select, with vendor"
     table2Data = [
       {
         order: {
@@ -142,4 +142,4 @@ block content
             +table-1()
 
     .scan__profile
-      +profile-card({isEmpty: true})
+      +profile-card({})
