@@ -4,8 +4,16 @@
   }
 }
 
+// TODO: 2023-11-13 / remove?
+// @mixin desktop {
+//   @media (max-width: $container-width - 1px) {
+//     @content;
+//   }
+// }
+
+// TODO: 2023-11-13 / change name
 @mixin desktop {
-  @media (max-width: $container-width - 1px) {
+  @media (max-width: $desktop-large-width - 1px) {
     @content;
   }
 }
@@ -18,12 +26,6 @@
 
 @mixin mobile {
   @media (max-width: $tablet-width - 1px) {
-    @content;
-  }
-}
-
-@mixin mobile-small {
-  @media (max-width: $mobile-big-width - 1px) {
     @content;
   }
 }

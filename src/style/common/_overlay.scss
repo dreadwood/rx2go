@@ -1,0 +1,10 @@
+// TODO: 2023-11-13 /
+.overlay {
+  display: grid;
+  place-items: center;
+  padding: $desktop-padding;
+  background-color: transparentize($color-black, 0.8);
+  @include mobile {
+    padding: $mobile-padding;
+  }
+}

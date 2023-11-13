@@ -1,0 +1,20 @@
+.form-textarea {
+  display: block;
+  width: 100%;
+  min-height: 103px;
+  padding: 12px;
+  font-family: $font-default;
+  font-size: 14px;
+  line-height: 18px;
+  border: 1px solid transparentize($color-black, 0.9);
+  border-radius: 8px;
+  appearance: none;
+  resize: none;
+  &::placeholder {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
+    color: transparentize($color-text, 0.6);;
+  }
+}

@@ -1,10 +1,13 @@
 include ../../templates/form/form-input
 
-mixin form-select-input({isOpen})
-  .form-select-input(class=(isOpen ? "js-form-select-input" : null))
+mixin form-select-input({isOpen, scriptId})
+  .form-select-input(
+    class=(isOpen && "open")
+    class=`js-form-select-input${scriptId || ''}`
+  )
     .form-select-input__field
       +form-input({placeholder: "Select a Route..."})
-      button.form-select-input__toggle(onclick="window.utils.toggleCssClassNodes(this, 'js-form-select-input', 'open')")
+      button.form-select-input__toggle(onclick=`window.utils.toggleCssClassNodes(this, 'js-form-select-input${scriptId || ''}', 'open')`)
         +svg({name: "icon-arrow-dropdown", width: 20, height: 16})
     .form-select-input__dropdown
       each it in (new Array(7).fill(''))

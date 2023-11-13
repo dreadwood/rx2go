@@ -1,4 +1,96 @@
-mixin profile-card({isEmpty})
-  .profile-card
+include ../elements/images
+
+mixin profile-card-label({icon, text, counter, color})
+  .profile-card__label(class=(
+    color ? `profile-card__label--${color}` : null
+  ))
+    +svg({name: icon, width: 17, height: 17})
+    | !{text}
+    if counter
+      span.counter=counter
+
+mixin profile-card-stars({raiting})
+  .profile-card__stars
+    each it, i in (new Array(5).fill(''))
+      - actvClass = raiting && raiting > i ? 'actv' : ''
+      +svg({
+        name: "icon-star",
+        width: 22,
+        height: 22,
+        className: `profile-card__star ${actvClass}`
+      })
+
+
+mixin profile-card({isEmpty, scriptId})
+  .profile-card.hide(
+    class=(isEmpty && "profile-card--empty")
+    class=`js-profile-card${scriptId || ''}`
+  )
     if isEmpty
-      button.profile-card__btn Choose a Vendor
+      button.profile-card__btn-link Choose a Vendor
+    else
+      .profile-card__header
+        | Vendor information
+        button.profile-card__btn-hide(onclick=`window.utils.toggleCssClassNodes(this, 'js-profile-card${scriptId || ''}', 'hide')`)
+          +svg({name: "icon-arrow-profile-card", width: 20, height: 20})
+      .profile-card__content
+        .profile-card__person
+          .profile-card__photo-wrp
+            .profile-card__photo.img.img--circle
+              +picture({image: "/img/person-02@1x.jpg", width: 112, height: 112})
+            .profile-card__rating
+              +svg({name: "icon-star-spiky", width: 10, height: 10})
+              | 5.0
+          .profile-card__person-info
+            .profile-card__name Aslambek Farkhodov
+            .profile-card__info ID: 219222040
+            .profile-card__info Experience: 900 days
+
+        .profile-card__group.profile-card__group--col
+          div
+            .profile-card__title Orders
+            .profile-card__col
+              +profile-card-label({
+                icon: "icon-fast-truck",
+                text: "Pickup Occurred",
+                counter: 100,
+                color: "orange"
+              })
+              +profile-card-label({
+                icon: "icon-building-arrows",
+                text: "Driver Out &amp; DA",
+                counter: 100,
+                color: "green"
+              })
+          div
+            .profile-card__title Copay
+            .profile-card__col
+              +profile-card-label({
+                icon: "icon-wallet",
+                text: "1460$",
+                color: "purple"
+              })
+        .profile-card__group
+          .profile-card__title Overall left to scan items:
+          .profile-card__list
+            +profile-card-label({
+              icon: "icon-snowflake",
+              text: "Amazon fridge bags",
+              counter: 2,
+            })
+            +profile-card-label({
+              icon: "icon-boxes",
+              text: "Ice packs",
+              counter: 10,
+            })
+        .profile-card__group
+          .profile-card__title Recent feedback:
+          .profile-card__col
+            .profile-card__feedback
+              +profile-card-stars({raiting: 1})
+              | Did Not Follow Instructions and Late Delivery
+            .profile-card__feedback
+              +profile-card-stars({raiting: 5})
+              | Went Above and Beyond
+        .profile-card__footer
+          button.profile-card__btn-link Choose a different driver

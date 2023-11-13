@@ -1,0 +1,24 @@
+include ../elements/images
+include ../templates/form/form-textarea
+include ../templates/button/btn-3
+
+mixin modal({isErrorHeader, isSubmitDisabled, submitText, textareaPlaceholder, textareaValue, textareaError})
+  .overlay
+    .modal(class=(isErrorHeader && 'error'))
+      .modal__header
+        if isErrorHeader
+          +svg({name: "icon-cross-round", width: 52, height: 52, className: "modal__title-icon"})
+          .modal__title Order #16854456 does not apply to this route. Move the order to route 09/21/2023 01:42 am (CONNECTICUT - 2)
+          .modal__stopwatch 10 SEC
+        else
+          .modal__title Why does copay is unpaid
+      form.modal__form
+        .modal__form-field
+          +form-textarea({
+            placeholder: textareaPlaceholder,
+            value: textareaValue
+          })
+          if textareaError
+            .modal__form-error=textareaError
+        .modal__form-submit
+          +btn-3({text: submitText, isDisabled: isSubmitDisabled})

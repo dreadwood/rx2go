@@ -1,5 +1,5 @@
 //- simple raster image
-mixin picture(image, width, height, altText, className)
+mixin picture({image, width, height, altText, className})
   - const path = image.split("@")[0];
   - const format = image.split(".")[1];
   picture
@@ -10,7 +10,8 @@ mixin picture(image, width, height, altText, className)
       srcset=`${path}@2x.${format} 2x`
       width=width
       height=height
-      alt=altText ? altText : "")
+      alt=altText
+    )
 
 //- simple vector image
 mixin svg({name, width, height, className})
@@ -19,10 +20,3 @@ mixin svg({name, width, height, className})
   else
     svg(class=(className || null) width=width height=height )
       use(xlink:href=`img/sprite.svg#${name}`)
-
-//- portrait with default person
-mixin portrait(image, width, height, altText, className)
-  if image
-    +picture(image, width, height, altText, className)
-  else
-    +picture("img/userpic@1x.png", width, height, className)

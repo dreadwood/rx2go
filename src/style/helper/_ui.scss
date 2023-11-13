@@ -1,14 +1,36 @@
 // .ui {}
+.ui-second-title {
+  margin-top: 40px;
+}
 .ui-btn-list {
   display: flex;
-  column-gap: 8px;
+  flex-wrap: wrap;
+  gap: 8px;
   & > * {
     flex-shrink: 0;
   }
 }
-.ui-second-title {
-  margin-top: 40px;
+.ui-filter-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+.ui-table {
+  @include hide-scroll;
+  overflow-x: scroll;
+
 }
 .ui-header {
   border: 1px solid $color-light-gray;
+}
+.ui-profile-card-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 10px;
+}
+.ui-modal {
+  overflow: hidden;
+  border-radius: 12px;
 }

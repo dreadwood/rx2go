@@ -13,23 +13,23 @@ $container-main-width: 2320px; // TODO: 2023-11-10 / rename
 
 
 // viewport
+$desktop-large-width: 1200px;
 $desktop-width: 1024px;
 $tablet-width: 768px;
-$mobile-big-width: 375px;
-$mobile-small-width: 320px;
+$mobile-width: 375px;
 
 // padding container
-$desktop-padding: 20px;
-$tablet-padding: 20px;
-$mobile-padding: 16px;
+$desktop-padding: 16px;
+$tablet-padding: 16px;
+$mobile-padding: 8px;
 
 // padding block
 $block-padding: 10px;
 $block-padding-mobile: 8px;
-$page-top-padding: 40px;
-$page-top-padding-mobile: 20px;
-$page-bottom-padding: 40px;
-$page-bottom-padding-mobile: 20px;
+$page-top-padding: 20px;
+$page-top-padding-mobile: 16px;
+$page-bottom-padding: 20px;
+$page-bottom-padding-mobile: 16px;
 
 // other
 $box-shadow: 0 4px 15px 4px transparentize($color-gray-827, 0.5);

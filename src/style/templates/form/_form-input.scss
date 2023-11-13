@@ -1,4 +1,5 @@
 .form-input {
+  display: block;
   width: 100%;
   padding: 10px 12px;
   font-family: $font-default;
@@ -7,6 +8,7 @@
   color: $color-text;
   border: 1px solid $color-light-gray;
   border-radius: 6px;
+  appearance: none;
   &::placeholder {
     font-family: inherit;
     font-size: inherit;

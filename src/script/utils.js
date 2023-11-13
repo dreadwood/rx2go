@@ -16,7 +16,7 @@ window.utils = {
 
     if (typeof toggleClassName !== 'string') {
       throw new Error(
-        'toggleCssClass: className is not passed or is not a string'
+        'toggleCssClass: toggleClassName is not passed or is not a string'
       )
     }
 
@@ -40,17 +40,15 @@ window.utils = {
       typeof toggleClassName !== 'string'
     ) {
       throw new Error(
-        'toggleCssClassNodes: nodeClassName or toggleClassName are not passed or is not a string'
+        `toggleCssClassNodes: nodeClassName or toggleClassName are not passed or is not a string`
       )
     }
-    console.log('test')
 
     const nodes = document.querySelectorAll(`.${nodeClassName}`)
-    console.log(nodes)
 
     if (nodes.length === 0) {
       throw new Error(
-        'toggleCssClassNodes: nodes with class classNameNode do not exist'
+        `toggleCssClassNodes: nodes with class ${nodeClassName} do not exist`
       )
     }
 
@@ -70,7 +68,7 @@ window.utils = {
 
     if (typeof nodeClassName !== 'string') {
       throw new Error(
-        'toggleVisibleNodes: classNameNode is not passed or is not a string'
+        'toggleVisibleNodes: nodeClassName is not passed or is not a string'
       )
     }
 
@@ -78,7 +76,7 @@ window.utils = {
 
     if (nodes.length === 0) {
       throw new Error(
-        'toggleVisibleNodes: nodes with class classNameNode do not exist'
+        `toggleVisibleNodes: nodes with class ${nodeClassName} do not exist`
       )
     }
 

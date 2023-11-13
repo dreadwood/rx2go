@@ -5,14 +5,20 @@ include ../templates/button/btn-1
 include ../templates/button/btn-2
 include ../templates/button/btn-3
 include ../templates/button/btn-4
+include ../templates/button/btn-5
+include ../templates/button/btn-filter
+include ../templates/form/form-field-wrp-input
+include ../templates/form/form-field-wrp-select-input
+include ../templates/form/form-input
+include ../templates/form/form-select-input
+include ../templates/form/form-textarea
 include ../templates/table-1
 include ../templates/table-2
 include ../templates/header
 include ../templates/label-info
+include ../templates/modal
 include ../templates/label-done
 include ../templates/profile-card
-include ../templates/form/form-field-wrp-input
-include ../templates/form/form-field-wrp-select-input
 
 
 doctype html
@@ -54,14 +60,43 @@ block content
       +btn-4({text: "Print the label", icon: "icon-print"})
       +btn-4({text: "Print the label", icon: "icon-print", isDisabled: true})
 
+    p Button 5
+    .ui-btn-list
+      +btn-5({text: "Print all"})
+      +btn-5({text: "Print all", isDisabled: true})
+      +btn-5({text: "Print", icon: "icon-print"})
+      +btn-5({text: "Unpaid", isError: true})
+      +btn-5({text: "Unpaid", isError: true, isDisabled: true})
+
+
+    h2.ui-second-title Filter
+
+    .ui-filter-list
+      +btn-filter({text: "All", counter: 120, color: "light-blue"})
+      +btn-filter({text: "BK", counter: 12, color: "blue"})
+      +btn-filter({text: "LI", counter: 10, color: "yellow"})
+      +btn-filter({text: "NJ", counter: 40, color: "light-green"})
+      +btn-filter({text: "CT", counter: 50, color: "black"})
+      +btn-filter({text: "PA", counter: 30, color: "green"})
+    .ui-filter-list
+      +btn-filter({text: "All", counter: 120})
+      +btn-filter({text: "BK", counter: 12})
+      +btn-filter({text: "LI", counter: 10})
+      +btn-filter({text: "NJ", counter: 40})
+      +btn-filter({text: "CT", counter: 50})
+      +btn-filter({text: "PA", counter: 30})
+
+
 
     h2.ui-second-title Tables
 
     p Table 1
-    +table-1()
+    .ui-table
+      +table-1()
 
     p Table 2
-    +table-2({})
+    .ui-table
+      +table-2({})
 
 
     h2.ui-second-title Header
@@ -71,10 +106,21 @@ block content
 
     h2.ui-second-title Form elements
 
-    p Select input
-    +form-field-wrp-select-input({isOpen: true})
+    p Field wrapper select input
+    +form-input({placeholder: "Enter Barcode Numbers"})
 
-    p Input
+    p Field wrapper select input
+    +form-select-input({scriptId: 1})
+
+    p Textarea
+    +form-textarea({
+      placeholder: "Write why does copay is unpaid"
+    })
+
+    p Field wrapper select input
+    +form-field-wrp-select-input({scriptId: 2})
+
+    p Field wrapper input
     +form-field-wrp-input({
       placeholder: "Enter Barcode Numbers, Vendor ID, Equipments",
       error: "Error. Information not found in the system"
@@ -83,7 +129,9 @@ block content
 
     h2.ui-second-title Profile card
 
-    +profile-card({isEmpty: true})
+    .ui-profile-card-list
+      +profile-card({isEmpty: true, scriptId: 1})
+      +profile-card({scriptId: 2})
 
 
     h2.ui-second-title Labels
@@ -93,3 +141,32 @@ block content
 
     p Label done
     +label-done()
+
+
+    h2.ui-second-title Modal
+
+    p Simple modal
+    .ui-modal
+      +modal({
+        submitText: "Submit",
+        textareaPlaceholder: "Write why does copay is unpaid",
+      })
+
+    p Error modal
+    .ui-modal
+      +modal({
+        isErrorHeader: true,
+        submitText: "Save",
+        textareaPlaceholder: "Write how you corrected the error",
+        textareaValue: "Sorry I accidentally scanned the wrong package, all corrected.",
+      })
+
+    p Error modal, submit disabled
+    .ui-modal
+      +modal({
+        isErrorHeader: true,
+        isSubmitDisabled: true,
+        submitText: "Save",
+        textareaPlaceholder: "Write how you corrected the error",
+        textareaError: "Too short a comment"
+      })

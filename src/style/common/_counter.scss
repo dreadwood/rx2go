@@ -1,0 +1,9 @@
+.counter {
+  flex-shrink: 0;
+  padding: 2px 4px;
+  font-size: 16px; // TODO: 2023-11-12 / check
+  line-height: 21px; // TODO: 2023-11-12 / check
+  color: $color-text;
+  background-color: $color-white;
+  border-radius: 12px;
+}

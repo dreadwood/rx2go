@@ -1,14 +1,202 @@
+$profile-card-raiting-margin: 10px;
+$profile-card-group-gap: 16px;
 .profile-card {
-  display: grid;
-  place-items: center;
   width: 407px;
   min-height: 676px;
-  padding: 20px 20px 16px 20px;
+  padding: 19px 19px 15px 19px;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
   background-color: $color-ghost-white;
   border: 1px solid $color-light-gray;
   border-radius: 20px;
+  @include mobile {
+    padding: 11px 11px 14px 11px;
+    &.hide {
+      min-height: auto;
+      padding: 9px 11px;
+    }
+    &.hide .profile-card__btn-hide {
+      transform: rotate(0deg);
+    }
+    &.hide .profile-card__content {
+      height: 0;
+      overflow: hidden;
+    }
+  }
+  &--empty {
+    display: grid;
+    place-items: center;
+  }
 }
-.profile-card__btn {
+.profile-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 22px;
+  line-height: 29px;
+  font-weight: 700;
+  @include mobile {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+.profile-card__btn-hide {
+  display: none;
+  margin: 0;
+  padding: 0;
+  color: $color-twitter-blue;
+  background-color: transparent;
+  border: none;
+  transform: rotate(180deg);
+  svg{
+    width: 20px;
+    height: 20px;
+    stroke: currentColor;
+  }
+  @include mobile {
+    display: block;
+  }
+}
+.profile-card__person {
+  display: flex;
+  align-items: flex-start;
+  column-gap: 12px;
+  margin-top: 16px;
+}
+.profile-card__photo-wrp {
+  flex-shrink: 0;
+}
+.profile-card__photo {
+  width: 112px;
+  height: 112px;
+}
+.profile-card__rating {
+  position: relative;
+  display: flex;
+  align-items: center;
+  column-gap: 3px;
+  width: max-content;
+  margin: -$profile-card-raiting-margin auto 0 auto;
+  padding: 3px 6px;
+  font-size: 12px;
+  line-height: 14px;
+  color: $color-white;
+  background-color: $color-light-denim;
+  border-radius: 12px;
+  svg {
+    flex-shrink: 0;
+    width: 10px;
+    height: 10px;
+  }
+}
+.profile-card__person-info {
+  align-self: center;
+  margin-bottom: $profile-card-raiting-margin;
+  & > *:not(:last-child) {
+    margin-bottom: 4px;
+  }
+}
+.profile-card__name {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 22px;
+  line-height: 29px;
+  font-weight: 700;
+  @include mobile {
+    font-size: 18px;
+    line-height: 23px;
+  }
+}
+.profile-card__info {
+  opacity: 0.7;
+}
+.profile-card__label {
+  display: flex;
+  align-items: center;
+  column-gap: 6px;
+  padding: 10px;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 700;
+  color: $color-sky-blue;
+  background-color: transparentize($color-cornflower, 0.8);
+  border-radius: 8px;
+  svg {
+    fill: currentColor;
+  }
+  &--orange {
+    color: $color-bright-orange-yellow;
+    background-color: transparentize($color-amber, 0.8);
+  }
+  &--purple {
+    color: $color-moderate-slate-blue;
+    background-color: transparentize($color-moderate-slate-blue, 0.8);
+  }
+  &--green {
+    color: $color-brilliant-greenish-blue;
+    background-color: transparentize($color-aquamarine-crayola, 0.8);
+  }
+}
+.profile-card__feedback {
+  width: 100%;
+  padding: 12px;
+  color: $color-text;
+  background-color: $color-white;
+  border: 1px solid $color-light-gray;
+  border-radius: 8px;
+  @include mobile {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+.profile-card__stars {
+  display: flex;
+  align-items: center;
+  column-gap: 2px;
+  margin-bottom: 6px;
+}
+.profile-card__star {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  fill: $color-periwinkle-criola;
+  &.actv {
+    fill: $color-brilliant-greenish-yellow;
+  }
+}
+.profile-card__group {
+  margin-top: $profile-card-group-gap;
+  &--col {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    column-gap: 12px;
+  }
+}
+.profile-card__title {
+  margin-bottom: 8px;
+  font-size: 14px;
+  line-height: 18px;
+  opacity: 0.6;
+}
+.profile-card__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 8px;
+}
+.profile-card__col {
+  & > *:not(:last-child) {
+    margin-bottom: 8px;
+  }
+}
+.profile-card__footer {
+  display: grid;
+  justify-content: center;
+  margin-top: $profile-card-group-gap;
+}
+.profile-card__btn-link {
   margin: 0;
   padding: 0;
   font-size: 14px;

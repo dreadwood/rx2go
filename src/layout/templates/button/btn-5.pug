@@ -1,0 +1,5 @@
+mixin btn-5({text, icon, isError, isDisabled})
+  button.btn-5(class=(isError && "btn-5--error") disabled=isDisabled)
+    if icon
+      +svg({name: icon, width: 17, height: 17, className: "btn-5__icon"})
+    =text

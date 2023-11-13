@@ -1,0 +1,38 @@
+.btn-filter {
+  @include transition(background-color, color);
+  display: flex;
+  align-items: center;
+  column-gap: 4px;
+  margin: 0;
+  padding: 4px 8px;
+  font-family: $font-default;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 700;
+  color: $color-black;
+  background-color: $color-platinum;
+  border: none;
+  border-radius: 8px;
+  &--light-blue {
+    color: $color-green-pine-criola;
+    background-color: $color-aquamarine-crayola;
+  }
+  &--blue {
+    color: $color-white;
+    background-color: $color-crayola-blue;
+  }
+  &--yellow {
+    background-color: $color-yellow-school-bus;
+  }
+  &--light-green {
+    background-color: $color-light-green;
+  }
+  &--black {
+    color: $color-white;
+    background-color: $color-umber-gray;
+  }
+  &--green {
+    color: $color-white;
+    background-color: $color-muslim-green;
+  }
+}

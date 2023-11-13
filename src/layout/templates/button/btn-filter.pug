@@ -1,0 +1,8 @@
+mixin btn-filter({text, counter, color})
+  - const colorClass = color ? `btn-filter--${color}` : 'btn-filter--black'
+  button.btn-filter(
+    class=(color && colorClass)
+    onclick=`window.utils.toggleCssClass(this, '${colorClass}')`
+  )
+    =text
+    .counter=counter
