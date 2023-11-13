@@ -1,0 +1,10 @@
+include ../templates/button/btn-filter
+
+mixin filter-panel({})
+  .filter-panel
+    +btn-filter({text: "All", counter: 120, color: "light-blue"})
+    +btn-filter({text: "BK", counter: 12})
+    +btn-filter({text: "LI", counter: 10})
+    +btn-filter({text: "NJ", counter: 40})
+    +btn-filter({text: "CT", counter: 50})
+    +btn-filter({text: "PA", counter: 30})
