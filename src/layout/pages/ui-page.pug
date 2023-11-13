@@ -15,9 +15,10 @@ include ../templates/form/form-textarea
 include ../templates/table-1
 include ../templates/table-2
 include ../templates/header
-include ../templates/label-info
 include ../templates/modal
+include ../templates/label-info
 include ../templates/label-done
+include ../templates/label-city
 include ../templates/profile-card
 
 
@@ -141,6 +142,15 @@ block content
 
     p Label done
     +label-done()
+
+    p Label city
+    .ui-label-city
+      +label-city({text: "Gotham"})
+      +label-city({text: "Brooklyn", color: "blue"})
+      +label-city({text: "Connecticut", color: "black"})
+      +label-city({text: "New Jersey", color: "light-green"})
+      +label-city({text: "Pennsylvania", color: "green"})
+      +label-city({text: "Long Island", color: "yellow"})
 
 
     h2.ui-second-title Modal

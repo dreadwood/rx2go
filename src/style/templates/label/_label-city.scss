@@ -1,0 +1,36 @@
+.label-city {
+  width: max-content;
+  min-width: 400px;
+  padding: 26px 20px 25px 20px;
+  font-size: 30px;
+  line-height: 39px;
+  font-weight: 700;
+  text-align: center;
+  color: $color-black;
+  text-transform: uppercase;
+  background-color: $color-platinum;
+  border-radius: 12px;
+  &--blue {
+    color: $color-white;
+    background-color: $color-crayola-blue;
+  }
+  &--yellow {
+    background-color: $color-yellow-school-bus;
+  }
+  &--light-green {
+    background-color: $color-light-green;
+  }
+  &--black {
+    color: $color-white;
+    background-color: $color-umber-gray;
+  }
+  &--green {
+    color: $color-white;
+    background-color: $color-muslim-green;
+  }
+  @include mobile {
+    padding: 28px 20px;
+    font-size: 26px;
+    line-height: 34px;
+  }
+}

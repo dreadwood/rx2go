@@ -21,6 +21,11 @@
   overflow-x: scroll;
 
 }
+.ui-label-city {
+  & > *:not(:last-child) {
+    margin-bottom: 8px;
+  }
+}
 .ui-header {
   border: 1px solid $color-light-gray;
 }

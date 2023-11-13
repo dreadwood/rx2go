@@ -1,0 +1,24 @@
+extends ../elements/layout
+include ../templates/btn-panel
+include ../templates/button/btn-4
+include ../templates/table-1
+include ../templates/table-2
+include ../templates/table-3
+include ../templates/label-info
+include ../templates/profile-card
+include ../templates/form/form-field-wrp-input
+include ../templates/form/form-field-wrp-select-input
+
+block data
+  -
+    title = "Scan: driver out"
+
+block content
+  .scan__main
+    .scan__content
+      +btn-panel({activeSection: "Ready for Delivery"})
+
+      .scan__form
+        +form-field-wrp-input({placeholder: "Enter Barcode Numbers, Vendor ID, Equipments"})
+
+    .scan__profile
