@@ -152,7 +152,7 @@ block data
 block content
   .scan__main
     .scan__content
-      +btn-panel({activeSection: "Driver Out"})
+      +btn-panel({activeSection: "Returned", counter: 13})
 
       .scan__form-wrp
         .scan__form
@@ -163,13 +163,13 @@ block content
 
       .scan__grid
         .scan__grid-item
-          h3.scan__grid-title Route Optimized
+          h3.scan__grid-title Orders for Driver Not Yet Returned
           .scan__grid-label
             +filter-panel({})
           .scan__grid-table
             +table-2({table2Data: table2Data})
         .scan__grid-item
-          h3.scan__grid-title Driver Out
+          h3.scan__grid-title Orders for Driver already Returned
           .scan__grid-label
             +filter-panel({})
           .scan__grid-table
