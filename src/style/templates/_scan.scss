@@ -64,3 +64,8 @@
     width: 100%;
   }
 }
+.scan__info {
+  &--returned > * {
+    width: 100%;
+  }
+}

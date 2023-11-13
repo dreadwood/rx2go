@@ -19,6 +19,10 @@ mixin label-info({version})
       | of
       span.label-info__counter 13
       | left to scan
+  else if version === 3
+    .label-info.label-info--purple
+      | Vendor Owes:
+      span.label-info__counter 1460$
   else
     .label-info
       | There are

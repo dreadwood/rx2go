@@ -10,6 +10,10 @@
   color: $color-sky-blue;
   background-color: transparentize($color-cornflower, 0.8);
   border-radius: 8px;
+  &--purple {
+    color: $color-moderate-slate-blue;
+    background-color: transparentize($color-moderate-slate-blue, 0.8);
+  }
 }
 .label-info__counter {
   display: inline-block;

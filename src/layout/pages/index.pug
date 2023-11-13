@@ -46,6 +46,18 @@ mixin page-list(data)
     url: "ui-page.html",
   }]
 
+  const pagesReturned = [{
+    name: "Scan: returned",
+    url: "scan-returned-page.html",
+  },{
+    name: "Scan: returned, modal",
+    //- url: "scan-returned-modal-page.html",
+    url: "#",
+  },{
+    name: "Scan: returned, done",
+    //- url: "scan-returned-done-page.html",
+    url: "#",
+  }]
 
 doctype html
 html(lang="en")
@@ -75,3 +87,5 @@ html(lang="en")
 
     h2 Pages
     +page-list(pages)
+    hr
+    +page-list(pagesReturned)

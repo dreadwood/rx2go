@@ -1,0 +1,191 @@
+extends ../elements/layout
+include ../templates/btn-panel
+include ../templates/button/btn-4
+include ../templates/filter-panel
+include ../templates/table-1
+include ../templates/table-2
+include ../templates/table-3
+include ../templates/table-4
+include ../templates/label-info
+include ../templates/label-city
+include ../templates/profile-card
+include ../templates/form/form-field-wrp-input
+include ../templates/form/form-field-wrp-select-input
+
+block data
+  -
+    title = "Scan: driver out, route select, with vendor"
+    let table2Data = [
+      {
+        order: {
+          id: "#16247419",
+          time: "11:45 - 15:45",
+          isFirstIcon: true,
+          secondIcon: "icon-watch-round",
+        },
+        hubs: {
+          name: "Brooklyn",
+          color: "blue",
+        },
+        items: [
+          false,
+        ]
+      },
+      {
+        order: {
+          id: "#16247419",
+          time: "11:45 - 15:45",
+          isFirstIcon: true,
+          secondIcon: "icon-stopwatch-round",
+        },
+        hubs: {
+          name: "New Jersey",
+          color: "light-green",
+        },
+        items: [
+          false,
+          true,
+        ]
+      },
+      {
+        order: {
+          id: "#16247419",
+          time: "11:45 - 15:45",
+          isFirstIcon: false,
+          secondIcon: "icon-lightning-round",
+        },
+        hubs: {
+          name: "Connecticut"
+        },
+        items: [
+          false,
+        ]
+      },
+      {
+        order: {
+          id: "#16247419",
+          time: "11:45 - 15:45",
+          isFirstIcon: true,
+          secondIcon: "icon-bag-round",
+        },
+        hubs: {
+          name: "Pennsylvania",
+          color: "green",
+        },
+        items: [
+          false,
+        ]
+      },
+      {
+        order: {
+          id: "#16247419",
+          time: "11:45 - 15:45",
+          isFirstIcon: true,
+          secondIcon: "icon-truck-round",
+        },
+        hubs: {
+          name: "Connecticut"
+        },
+        items: [
+          false,
+          false,
+        ]
+      },
+      {
+        order: {
+          id: "#16247419",
+          time: "11:45 - 15:45",
+          isFirstIcon: true,
+          secondIcon: "icon-truck-round",
+        },
+        hubs: {
+          name: "Long Island",
+          color: "yellow",
+        },
+        items: [
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+        ]
+      },
+    ]
+    let table2Data2 = [
+      {
+        order: {
+          id: "#16247419",
+          time: "11:45 - 15:45",
+          isFirstIcon: true,
+          secondIcon: "icon-watch-round",
+        },
+        hubs: {
+          name: "Brooklyn",
+          color: "blue",
+        },
+        items: [
+          true,
+          true,
+          true,
+          true,
+        ]
+      },
+      {
+        order: {
+          id: "#16247419",
+          time: "11:45 - 15:45",
+          isFirstIcon: true,
+          secondIcon: "icon-stopwatch-round",
+        },
+        hubs: {
+          name: "New Jersey",
+          color: "light-green",
+        },
+        items: [
+          true,
+        ]
+      },
+    ]
+
+block content
+  .scan__main
+    .scan__content
+      +btn-panel({activeSection: "Driver Out"})
+
+      .scan__form-wrp
+        .scan__form
+          +form-field-wrp-select-input({})
+          +form-field-wrp-input({placeholder: "Enter Barcode Numbers, Vendor ID, Equipments"})
+        .scan__info.scan__info--returned
+          +label-city({text: "Confirmed back to pharmacy. Brooklyn Hub", color: "blue"})
+
+      .scan__grid
+        .scan__grid-item
+          h3.scan__grid-title Route Optimized
+          .scan__grid-label
+            +filter-panel({})
+          .scan__grid-table
+            +table-2({table2Data: table2Data})
+        .scan__grid-item
+          h3.scan__grid-title Driver Out
+          .scan__grid-label
+            +filter-panel({})
+          .scan__grid-table
+            +table-2({table2Data: table2Data2})
+        .scan__grid-item
+          h3.scan__grid-title Assigned equipments
+          .scan__grid-label
+            +label-info({version: 2})
+          .scan__grid-table
+            +table-1()
+        .scan__grid-item
+          h3.scan__grid-title Copay Returns
+          .scan__grid-label
+            +label-info({version: 3})
+          .scan__grid-table
+            +table-4({})
+
+    .scan__profile
+      +profile-card({})
