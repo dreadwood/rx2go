@@ -1,6 +1,6 @@
 include ../elements/images
 
-mixin label-done()
+mixin label-done({text})
   .label-done
-    | All packages are scanned
+    =text
     +svg({name: "icon-check", width: 18, height: 18, className: "label-done__icon"})

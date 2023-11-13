@@ -2,7 +2,6 @@ $profile-card-raiting-margin: 10px;
 $profile-card-group-gap: 16px;
 .profile-card {
   width: 407px;
-  min-height: 676px;
   padding: 19px 19px 15px 19px;
   font-size: 16px;
   line-height: 21px;
@@ -27,6 +26,7 @@ $profile-card-group-gap: 16px;
   &--empty {
     display: grid;
     place-items: center;
+    min-height: 664px;
   }
 }
 .profile-card__header {
