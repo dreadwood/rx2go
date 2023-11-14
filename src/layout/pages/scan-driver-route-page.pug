@@ -12,104 +12,7 @@ include ../templates/form/form-field-wrp-select-input
 block data
   -
     title = "Scan: driver out, route select, without vendor"
-    table2Data = [
-      {
-        order: {
-          id: "#16247419",
-          time: "11:45 - 15:45",
-          isFirstIcon: true,
-          secondIcon: "icon-watch-round",
-        },
-        hubs: {
-          name: "Brooklyn",
-          color: "blue",
-        },
-        items: [
-          false,
-        ]
-      },
-      {
-        order: {
-          id: "#16247419",
-          time: "11:45 - 15:45",
-          isFirstIcon: true,
-          secondIcon: "icon-stopwatch-round",
-        },
-        hubs: {
-          name: "New Jersey",
-          color: "light-green",
-        },
-        items: [
-          false,
-          true,
-        ]
-      },
-      {
-        order: {
-          id: "#16247419",
-          time: "11:45 - 15:45",
-          isFirstIcon: false,
-          secondIcon: "icon-lightning-round",
-        },
-        hubs: {
-          name: "Connecticut"
-        },
-        items: [
-          false,
-        ]
-      },
-      {
-        order: {
-          id: "#16247419",
-          time: "11:45 - 15:45",
-          isFirstIcon: true,
-          secondIcon: "icon-bag-round",
-        },
-        hubs: {
-          name: "Pennsylvania",
-          color: "green",
-        },
-        items: [
-          false,
-        ]
-      },
-      {
-        order: {
-          id: "#16247419",
-          time: "11:45 - 15:45",
-          isFirstIcon: true,
-          secondIcon: "icon-truck-round",
-        },
-        hubs: {
-          name: "Connecticut"
-        },
-        items: [
-          false,
-          false,
-        ]
-      },
-      {
-        order: {
-          id: "#16247419",
-          time: "11:45 - 15:45",
-          isFirstIcon: true,
-          secondIcon: "icon-truck-round",
-        },
-        hubs: {
-          name: "Long Island",
-          color: "yellow",
-        },
-        items: [
-          false,
-          false,
-          false,
-          true,
-          false,
-          false,
-          false,
-        ]
-      },
-    ]
+
 
 block content
   .scan__main
@@ -127,19 +30,20 @@ block content
           .scan__grid-label
             +label-info({version: 1})
           .scan__grid-table
-            +table-2({table2Data})
+            include ../mocks/table-data-1
+            +table-2({data: tableData1})
         .scan__grid-item
           h3.scan__grid-title Driver Out
           .scan__grid-label
             +label-info({})
           .scan__grid-table
-            +table-3()
+            +table-3({})
         .scan__grid-item
           h3.scan__grid-title Assigned equipments
           .scan__grid-label
             +label-info({version: 2})
           .scan__grid-table
-            +table-1()
+            +table-1({})
 
     .scan__profile
       +profile-card({isEmpty: true})

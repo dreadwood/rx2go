@@ -38,4 +38,7 @@
 .ui-modal {
   overflow: hidden;
   border-radius: 12px;
+  .overlay {
+    position: static;
+  }
 }

@@ -88,19 +88,20 @@ block content
       +btn-filter({text: "PA", counter: 30})
 
 
-
     h2.ui-second-title Tables
 
     p Table 1
     .ui-table
-      +table-1()
+      +table-1({})
 
     p Table 2
     .ui-table
-      +table-2({})
+      include ../mocks/table-data-1
+      +table-2({data: tableData1})
 
 
     h2.ui-second-title Header
+
     .ui-header
       +header()
 

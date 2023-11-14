@@ -15,104 +15,8 @@ include ../templates/form/form-field-wrp-select-input
 
 block data
   -
-    title = "Scan: driver out, route select, with vendor"
-    let table2Data2 = [
-      {
-        order: {
-          id: "#16247419",
-          time: "11:45 - 15:45",
-          isFirstIcon: true,
-          secondIcon: "icon-watch-round",
-        },
-        hubs: {
-          name: "Brooklyn",
-          color: "blue",
-        },
-        items: [
-          true,
-          true,
-          true,
-          true,
-        ]
-      },
-      {
-        order: {
-          id: "#16247419",
-          time: "11:45 - 15:45",
-          isFirstIcon: true,
-          secondIcon: "icon-stopwatch-round",
-        },
-        hubs: {
-          name: "New Jersey",
-          color: "light-green",
-        },
-        items: [
-          true,
-        ]
-      },
-      {
-        order: {
-          id: "#16247419",
-          time: "11:45 - 15:45",
-          isFirstIcon: false,
-          secondIcon: "icon-lightning-round",
-        },
-        hubs: {
-          name: "Connecticut"
-        },
-        items: [
-          true,
-        ]
-      },
-      {
-        order: {
-          id: "#16247419",
-          time: "11:45 - 15:45",
-          isFirstIcon: true,
-          secondIcon: "icon-bag-round",
-        },
-        hubs: {
-          name: "Pennsylvania",
-          color: "green",
-        },
-        items: [
-          true,
-        ]
-      },
-      {
-        order: {
-          id: "#16247419",
-          time: "11:45 - 15:45",
-          isFirstIcon: true,
-          secondIcon: "icon-truck-round",
-        },
-        hubs: {
-          name: "Connecticut"
-        },
-        items: [
-          true,
-          true,
-        ]
-      },
-      {
-        order: {
-          id: "#16247419",
-          time: "11:45 - 15:45",
-          isFirstIcon: true,
-          secondIcon: "icon-truck-round",
-        },
-        hubs: {
-          name: "Long Island",
-          color: "yellow",
-        },
-        items: [
-          true,
-          true,
-          true,
-          true,
-        ]
-      },
-    ]
+    title = "Scan: returned, done"
+
 
 block content
   .scan__main
@@ -134,7 +38,8 @@ block content
           .scan__grid-label
             +filter-panel({})
           .scan__grid-table
-            +table-2({table2Data: table2Data2})
+            include ../mocks/table-data-1
+            +table-2({data: tableData1})
         .scan__grid-item
           h3.scan__grid-title Assigned equipments
           .scan__grid-label
