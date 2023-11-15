@@ -16,6 +16,7 @@ include ../templates/table/table-text
 include ../templates/table/table-orders
 include ../templates/table/table-returns
 include ../templates/table/table-pharmacy
+include ../templates/table/table-route
 include ../templates/header
 include ../templates/modal
 include ../templates/label-info
@@ -109,6 +110,13 @@ block content
     .ui-table
       include ../mocks/table-data-3
       +table-pharmacy({data: tableData3})
+
+    p Route
+    .ui-table
+      include ../mocks/table-data-4
+      +table-route({data: tableData4})
+
+
 
 
     h2.ui-second-title Header

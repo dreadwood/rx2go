@@ -1,0 +1,31 @@
+.table-route {
+  $table-padding-outer: 12px;
+  position: relative;
+  width: 100%;
+  font-size: 16px;
+  line-height: 21px;
+  text-align: left;
+  color: $color-grayish-blue;
+  border: 1px solid $color-very-pale-blue;
+  border-collapse: collapse;
+  tr {
+    border: 1px solid $color-very-pale-blue;
+  }
+  tr:hover {
+    background-color: $color-honey-dew;
+  }
+  td {
+    padding: 8px 8px;
+  }
+  td:first-child {
+    padding-left: $table-padding-outer;
+  }
+  td:last-child {
+    padding-right: $table-padding-outer;
+  }
+}
+.table-route__list {
+  display: flex;
+  align-items: center;
+  column-gap: 2px;
+}

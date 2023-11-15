@@ -1,7 +1,5 @@
 include ../../elements/images
-
-mixin table-number({text, isActive, })
-  .table__number(class=(isActive && 'actv'))=text
+include ../../templates/number-circle
 
 mixin table-icon({isFridge})
   .table__icon.table__icon--color
@@ -32,4 +30,4 @@ mixin table-pharmacy({data})
             td
               .table__number-list
                 each item, j in row.items
-                  +table-number({text: j+1, isActive: item})
+                  +number-circle({text: j+1, isActive: item})

@@ -1,0 +1,14 @@
+.number-circle {
+  display: grid;
+  flex-shrink: 0;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  color: $color-grayish-blue;
+  background-color: $color-platinum;
+  border-radius: 50%;
+  &.actv {
+    color: $color-white;
+    background-color: $color-lime-green;
+  }
+}

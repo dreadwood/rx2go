@@ -1,8 +1,6 @@
 include ../../elements/images
 include ../../templates/label-city
-
-mixin table-number({text, isActive, })
-  .table__number(class=(isActive && 'actv'))=text
+include ../../templates/number-circle
 
 mixin table-order({order})
   .table__order
@@ -45,4 +43,4 @@ mixin table-orders({data})
             td
               .table__number-list
                 each item, j in row.items
-                  +table-number({text: j+1, isActive: item})
+                  +number-circle({text: j+1, isActive: item})

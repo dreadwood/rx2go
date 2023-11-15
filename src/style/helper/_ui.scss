@@ -17,9 +17,9 @@
   margin-bottom: 20px;
 }
 .ui-table {
-  // @include hide-scroll;
+  @include hide-scroll;
   // height: 200px;
-  // overflow: hidden;
+  overflow-x: scroll;
 
 }
 .ui-label-city {

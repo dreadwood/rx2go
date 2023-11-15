@@ -1,0 +1,18 @@
+include ../../elements/images
+include ../../templates/label-city
+include ../../templates/number-circle
+include ../../templates/route
+
+
+mixin table-route({data})
+  table.table-route
+    if data
+      tbody
+        each item in data
+          tr
+            td
+              +label-city({text: item.hub.name, color: item.hub.color})
+            td
+              .table-route__list
+                each _, i in (new Array(item.routes).fill(''))
+                  +route({number: i + 1, hub: item.hub.name, isActive: Math.random() > 0.5})

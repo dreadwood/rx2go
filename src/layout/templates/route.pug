@@ -1,0 +1,11 @@
+mixin route({number, hub, isActive, })
+  .route
+    .route__item(class=(isActive && 'actv'))=number
+    .route__tooltip
+      .route__title
+        .route__title-item.blue=number
+        =hub || "Brooklyn 6"
+      | Iterms
+      .route__number-list
+        each _, i in (new Array(7).fill(''))
+          +number-circle({text: i + 1, isActive: i + 1 === 4})
