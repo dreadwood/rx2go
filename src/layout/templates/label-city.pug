@@ -1,2 +1,5 @@
-mixin label-city({text, color})
-    .label-city(class=(color && `label-city--${color}`))=text
+mixin label-city({text, color, size})
+    .label-city(
+      class=color
+      class=(size && `label-city--${size}`)
+    )=text

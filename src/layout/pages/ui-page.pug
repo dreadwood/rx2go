@@ -12,8 +12,10 @@ include ../templates/form/form-field-wrp-select-input
 include ../templates/form/form-input
 include ../templates/form/form-select-input
 include ../templates/form/form-textarea
-include ../templates/table-1
-include ../templates/table-2
+include ../templates/table/table-text
+include ../templates/table/table-orders
+include ../templates/table/table-returns
+include ../templates/table/table-pharmacy
 include ../templates/header
 include ../templates/modal
 include ../templates/label-info
@@ -90,14 +92,23 @@ block content
 
     h2.ui-second-title Tables
 
-    p Table 1
+    p Text
     .ui-table
-      +table-1({})
+      +table-text({})
 
-    p Table 2
+    p Orders
     .ui-table
       include ../mocks/table-data-1
-      +table-2({data: tableData1})
+      +table-orders({data: tableData1})
+
+    p Returns
+    .ui-table
+      +table-returns({})
+
+    p Pharmacy
+    .ui-table
+      include ../mocks/table-data-3
+      +table-pharmacy({data: tableData3})
 
 
     h2.ui-second-title Header
@@ -146,12 +157,29 @@ block content
 
     p Label city
     .ui-label-city
-      +label-city({text: "Gotham"})
-      +label-city({text: "Brooklyn", color: "blue"})
-      +label-city({text: "Connecticut", color: "black"})
-      +label-city({text: "New Jersey", color: "light-green"})
-      +label-city({text: "Pennsylvania", color: "green"})
-      +label-city({text: "Long Island", color: "yellow"})
+      div
+        +label-city({text: "Gotham"})
+        +label-city({text: "Brooklyn", color: "blue"})
+        +label-city({text: "Connecticut", color: "black"})
+        +label-city({text: "New Jersey", color: "light-green"})
+        +label-city({text: "Pennsylvania", color: "green"})
+        +label-city({text: "Long Island", color: "yellow"})
+      div
+        +label-city({text: "Gotham hub", size: "medium"})
+        +label-city({text: "Brooklyn hub", color: "blue", size: "medium"})
+        +label-city({text: "Connecticut hub", color: "black", size: "medium"})
+        +label-city({text: "New Jersey hub", color: "light-green", size: "medium"})
+        +label-city({text: "Pennsylvania hub", color: "green", size: "medium"})
+        +label-city({text: "Long Island hub", color: "yellow", size: "medium"})
+      div
+        //- +label-city({text: "Gotham", size: "big"})
+        +label-city({text: "Brooklyn", color: "blue", size: "big"})
+        +label-city({text: "Connecticut", color: "black", size: "big"})
+        //- +label-city({text: "New Jersey", color: "light-green", size: "big"})
+        //- +label-city({text: "Pennsylvania", color: "green", size: "big"})
+        //- +label-city({text: "Long Island", color: "yellow", size: "big"})
+
+
 
 
     h2.ui-second-title Modal

@@ -17,12 +17,20 @@
   margin-bottom: 20px;
 }
 .ui-table {
-  @include hide-scroll;
-  overflow-x: scroll;
+  // @include hide-scroll;
+  // height: 200px;
+  // overflow: hidden;
 
 }
 .ui-label-city {
-  & > *:not(:last-child) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  & > * {
+    width: 100%;
+    overflow: hidden;
+  }
+  div > *:not(:last-child) {
     margin-bottom: 8px;
   }
 }

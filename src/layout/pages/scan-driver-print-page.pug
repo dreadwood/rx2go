@@ -1,9 +1,7 @@
 extends ../elements/layout
 include ../templates/btn-panel
 include ../templates/button/btn-4
-include ../templates/table-1
-include ../templates/table-2
-include ../templates/table-3
+include ../templates/table/table-orders
 include ../templates/label-info
 include ../templates/label-done
 include ../templates/profile-card
@@ -35,7 +33,7 @@ block content
             +label-info({version: 2})
           .scan__grid-table
             include ../mocks/table-data-2
-            +table-2({data: tableData2})
+            +table-orders({data: tableData2})
           .scan__grid-btn
             +btn-4({text: "Print the label", icon: "icon-print"})
         .scan__grid-item

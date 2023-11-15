@@ -1,0 +1,156 @@
+.table {
+  $table-padding-outer: 12px;
+  position: relative;
+  height: 100%;
+  font-size: 16px;
+  line-height: 21px;
+  text-align: left;
+  color: $color-grayish-blue;
+  border: 1px solid $color-very-pale-blue;
+  border-collapse: collapse;
+  tr {
+    border: 1px solid $color-very-pale-blue;
+  }
+  th,
+  td {
+    padding-right: 20px;
+    padding-left: 20px;
+    white-space: nowrap;
+  }
+  th {
+    padding-top: 14px;
+    padding-bottom: 12px;
+    font-weight: 700;
+    background-color: $color-ghost-white;
+  }
+  td {
+    padding-top: 8px;
+    padding-bottom: 7px;
+  }
+  th:first-child,
+  td:first-child {
+    padding-left: $table-padding-outer;
+  }
+  th:last-child,
+  td:last-child {
+    width: 100%;
+    padding-right: $table-padding-outer;
+  }
+  tbody tr:nth-child(odd) {
+    background-color: $color-gray-984;
+  }
+}
+.table.table--orders {
+  .table__td-order {
+    padding-right: 4px;
+  }
+  .table__td-icons {
+    padding-left: 4px;
+    vertical-align: text-top;
+  }
+}
+.table.table--pharmacy {
+  line-height: 19px;
+  tbody tr {
+    height: 46px;
+  }
+  .table__td-order {
+    padding-right: 4px;
+  }
+  .table__td-icons {
+    padding-left: 4px;
+  }
+}
+.table.table--returns {
+  $table-padding-outer: 12px;
+  th,
+  td {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+  th:first-child,
+  td:first-child {
+    padding-left: $table-padding-outer;
+  }
+  th:last-child,
+  td:last-child {
+    padding-right: $table-padding-outer;
+  }
+  .table__th-price,
+  .table__td-price {
+    text-align: center;
+  }
+  .table__th-btn {
+    padding-top: 9px;
+    padding-bottom: 9px;
+  }
+  .table__th-label {
+    padding-right: 4px;
+  }
+  .table__th-order {
+    padding-left: 4px;
+  }
+}
+.table__order {
+  line-height: 19px;
+}
+.table__order-time {
+  width: max-content;
+  margin-top: 2px;
+  padding: 0 5px;
+  font-size: 10px;
+  line-height: 12px;
+  color: $color-white;
+  background-color: $color-twitter-blue;
+  border-radius: 20px;
+}
+.table__icon-list {
+  display: flex;
+  align-items: flex-start;
+  column-gap: 8px;
+  width: max-content;
+}
+.table__icon {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  &--color {
+    color: $color-light-purple-blue;
+  }
+  svg {
+    width: 100%;
+    height: 100%;
+    fill: currentColor;
+  }
+}
+.table__number-list {
+  display: flex;
+  align-items: center;
+  column-gap: 6px;
+}
+.table__number {
+  display: grid;
+  flex-shrink: 0;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  color: $color-grayish-blue;
+  background-color: $color-platinum;
+  border-radius: 50%;
+  &.actv {
+    color: $color-white;
+    background-color: $color-lime-green;
+  }
+}
+.table__label { // TODO: 2023-11-15 / rename?
+  width: max-content;
+  padding: 0 4px;
+  color: $color-moderate-slate-blue;
+  background-color: transparentize($color-moderate-slate-blue, 0.8);
+  border-radius: 4px;
+}
+.table__btns {
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
+}

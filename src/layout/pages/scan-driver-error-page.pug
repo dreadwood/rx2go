@@ -3,9 +3,8 @@ include ../templates/btn-panel
 include ../templates/button/btn-4
 include ../templates/form/form-field-wrp-input
 include ../templates/form/form-field-wrp-select-input
-include ../templates/table-1
-include ../templates/table-2
-include ../templates/table-3
+include ../templates/table/table-text
+include ../templates/table/table-orders
 include ../templates/label-info
 include ../templates/profile-card
 include ../templates/modal
@@ -32,20 +31,20 @@ block content
             +label-info({version: 1})
           .scan__grid-table
             include ../mocks/table-data-1
-            +table-2({data: tableData1})
+            +table-orders({data: tableData1})
         .scan__grid-item
           h3.scan__grid-title Driver Out
           .scan__grid-label
             +label-info({version: 2})
           .scan__grid-table
             include ../mocks/table-data-2
-            +table-2({data: tableData2})
+            +table-orders({data: tableData2})
         .scan__grid-item
           h3.scan__grid-title Assigned equipments
           .scan__grid-label
             +label-info({version: 2})
           .scan__grid-table
-            +table-1({})
+            +table-text({})
 
     .scan__profile
       +profile-card({})

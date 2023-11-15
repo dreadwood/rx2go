@@ -2,10 +2,9 @@ extends ../elements/layout
 include ../templates/btn-panel
 include ../templates/button/btn-4
 include ../templates/filter-panel
-include ../templates/table-1
-include ../templates/table-2
-include ../templates/table-3
-include ../templates/table-4
+include ../templates/table/table-text
+include ../templates/table/table-orders
+include ../templates/table/table-returns
 include ../templates/label-info
 include ../templates/label-city
 include ../templates/profile-card
@@ -36,26 +35,26 @@ block content
             +filter-panel({})
           .scan__grid-table
             include ../mocks/table-data-1
-            +table-2({data: tableData1})
+            +table-orders({data: tableData1})
         .scan__grid-item
           h3.scan__grid-title Orders for Driver already Returned
           .scan__grid-label
             +filter-panel({})
           .scan__grid-table
             include ../mocks/table-data-2
-            +table-2({data: tableData2})
+            +table-orders({data: tableData2})
         .scan__grid-item
           h3.scan__grid-title Assigned equipments
           .scan__grid-label
             +label-info({version: 2})
           .scan__grid-table
-            +table-1({})
+            +table-text({})
         .scan__grid-item
           h3.scan__grid-title Copay Returns
           .scan__grid-label
             +label-info({version: 3})
           .scan__grid-table
-            +table-4({})
+            +table-returns({})
 
     .scan__profile
       +profile-card({})

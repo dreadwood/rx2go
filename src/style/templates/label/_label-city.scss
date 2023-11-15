@@ -1,36 +1,62 @@
 .label-city {
   width: max-content;
-  min-width: 400px;
-  padding: 26px 20px 25px 20px;
-  font-size: 30px;
-  line-height: 39px;
-  font-weight: 700;
+  min-width: 110px;
+  padding: 2px 8px;
+  overflow: hidden;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
   text-align: center;
   color: $color-black;
-  text-transform: uppercase;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   background-color: $color-platinum;
-  border-radius: 12px;
-  &--blue {
-    color: $color-white;
-    background-color: $color-crayola-blue;
+  border-radius: 4px;
+  &--medium {
+    min-width: 400px;
+    padding: 26px 20px 25px 20px;
+    font-size: 30px;
+    line-height: 39px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 12px;
   }
-  &--yellow {
-    background-color: $color-yellow-school-bus;
-  }
-  &--light-green {
-    background-color: $color-light-green;
-  }
-  &--black {
-    color: $color-white;
-    background-color: $color-umber-gray;
-  }
-  &--green {
-    color: $color-white;
-    background-color: $color-muslim-green;
+  &--big {
+    width: 100%;
+    max-width: 1984px;
+    min-width: auto;
+    padding: 115px 90px 114px 90px;
+    font-size: 120px;
+    line-height: 156px;
+    text-transform: uppercase;
+    border-radius: 30px;
   }
   @include mobile {
-    padding: 28px 20px;
-    font-size: 26px;
-    line-height: 34px;
+    &--medium {
+      min-width: 360px;
+      padding: 28px 20px;
+      font-size: 26px;
+      line-height: 34px;
+    }
   }
+}
+
+// TODO: 2023-11-15 / move
+.blue {
+  color: $color-white;
+  background-color: $color-crayola-blue;
+}
+.yellow {
+  background-color: $color-yellow-school-bus;
+}
+.light-green {
+  background-color: $color-light-green;
+}
+.black {
+  color: $color-white;
+  background-color: $color-umber-gray;
+}
+.green {
+  color: $color-white;
+  background-color: $color-muslim-green;
 }

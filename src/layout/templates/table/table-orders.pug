@@ -1,0 +1,48 @@
+include ../../elements/images
+include ../../templates/label-city
+
+mixin table-number({text, isActive, })
+  .table__number(class=(isActive && 'actv'))=text
+
+mixin table-order({order})
+  .table__order
+    =order.id
+    .table__order-time=order.time
+
+mixin table-icon-list({isFridge, secondIcon})
+  .table__icon-list
+    .table__icon.table__icon--color
+      if isFridge
+        +svg({name: "icon-snowflake", width: 20, height: 20})
+    .table__icon
+      if secondIcon
+        +svg({name: secondIcon, width: 20, height: 20})
+
+
+mixin table-orders({data})
+  table.table.table--orders
+    thead
+      tr
+        th(colspan="2") Order ID
+        th Hubs
+        th Items
+    if data
+      tbody
+        each row, i in data
+          tr
+            td.table__td-order
+              if row.order
+                +table-order({order: row.order})
+            td.table__td-icons
+              if row.order
+                +table-icon-list({
+                  isFridge: row.order.isFridge,
+                  secondIcon: row.order.secondIcon
+                })
+            td
+              if row.hubs
+                +label-city({text: row.hubs.name, color: row.hubs.color})
+            td
+              .table__number-list
+                each item, j in row.items
+                  +table-number({text: j+1, isActive: item})

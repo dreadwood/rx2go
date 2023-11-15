@@ -1,0 +1,35 @@
+include ../../elements/images
+
+mixin table-number({text, isActive, })
+  .table__number(class=(isActive && 'actv'))=text
+
+mixin table-icon({isFridge})
+  .table__icon.table__icon--color
+    if isFridge
+      +svg({name: "icon-snowflake", width: 20, height: 20})
+
+
+mixin table-pharmacy({data})
+  table.table.table--pharmacy
+    thead
+      tr
+        th(colspan="2") Order ID
+        th Hubs
+        th Items
+    if data
+      tbody
+        each row, i in data
+          tr
+            if row.order.isFridge
+              td.table__td-order=row.order.id
+              td.table__td-icons
+                +table-icon({
+                  isFridge: row.order.isFridge
+                })
+            else
+              td(colspan="2")=row.order.id
+            td=row.pharmacy
+            td
+              .table__number-list
+                each item, j in row.items
+                  +table-number({text: j+1, isActive: item})
