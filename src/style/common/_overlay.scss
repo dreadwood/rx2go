@@ -2,6 +2,7 @@
 .overlay {
   @include hide-scroll;
   position: fixed;
+  z-index: 100;
   display: grid;
   place-items: center;
   width: 100%;
