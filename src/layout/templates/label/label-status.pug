@@ -1,0 +1,32 @@
+mixin label-status({version})
+  if version === 1
+    .label-status
+      | There are
+      span.label-status__counter 150
+      | of
+      span.label-status__counter 150
+      | left to scan
+  else if version === 1
+    .label-status
+      | Overall left to scan equipments
+      span.label-status__counter 12
+      | from
+      span.label-status__counter 12
+  else if version === 2
+    .label-status
+      | There are
+      span.label-status__counter 7
+      | of
+      span.label-status__counter 13
+      | left to scan
+  else if version === 3
+    .label-status.label-status--purple
+      | Vendor Owes:
+      span.label-status__counter 1460$
+  else
+    .label-status
+      | There are
+      span.label-status__counter 0
+      | of
+      span.label-status__counter 0
+      | left to scan

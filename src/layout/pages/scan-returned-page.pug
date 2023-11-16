@@ -5,8 +5,8 @@ include ../templates/filter-panel
 include ../templates/table/table-text
 include ../templates/table/table-orders
 include ../templates/table/table-returns
-include ../templates/label-info
-include ../templates/label-city
+include ../templates/label/label-status
+include ../templates/label/label-city
 include ../templates/profile-card
 include ../templates/form/form-field-wrp-input
 include ../templates/form/form-field-wrp-select-input
@@ -62,7 +62,7 @@ block content
         .scan-page__item
           .scan-page__title Assigned equipments
           .scan-page__label
-            +label-info({version: 2})
+            +label-status({version: 2})
           .scan-page__table
             +table-text({})
 
@@ -70,6 +70,6 @@ block content
         .scan-page__item
           .scan-page__title Copay Returns
           .scan-page__label
-            +label-info({version: 3})
+            +label-status({version: 3})
           .scan-page__table
             +table-returns({})

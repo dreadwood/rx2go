@@ -1,0 +1,25 @@
+.label-status {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  width: max-content;
+  padding: 4px 8px 4px 8px;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 700;
+  color: $color-sky-blue;
+  background-color: transparentize($color-cornflower, 0.8);
+  border-radius: 8px;
+  &--purple {
+    color: $color-moderate-slate-blue;
+    background-color: transparentize($color-moderate-slate-blue, 0.8);
+  }
+}
+.label-status__counter {
+  display: inline-block;
+  flex-shrink: 0;
+  padding: 2px 4px;
+  color: $color-text;
+  background-color: $color-white;
+  border-radius: 12px;
+}

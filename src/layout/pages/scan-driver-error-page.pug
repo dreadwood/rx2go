@@ -5,7 +5,7 @@ include ../templates/form/form-field-wrp-input
 include ../templates/form/form-field-wrp-select-input
 include ../templates/table/table-text
 include ../templates/table/table-orders
-include ../templates/label-info
+include ../templates/label/label-status
 include ../templates/profile-card
 include ../templates/modal
 
@@ -37,7 +37,7 @@ block content
               +profile-card({})
           .scan-page__title Route Optimized
           .scan-page__label
-            +label-info({version: 1})
+            +label-status({version: 1})
           .scan-page__table
             include ../mocks/table-data-1
             +table-orders({data: tableData1})
@@ -47,7 +47,7 @@ block content
           .scan-page__top.scan-page__top--btn
           .scan-page__title Driver Out
           .scan-page__label
-            +label-info({version: 2})
+            +label-status({version: 2})
           .scan-page__table
             include ../mocks/table-data-2
             +table-orders({data: tableData2})
@@ -56,7 +56,7 @@ block content
         .scan-page__item
           .scan-page__title Assigned equipments
           .scan-page__label
-            +label-info({version: 2})
+            +label-status({version: 2})
           .scan-page__table
             +table-text({})
 

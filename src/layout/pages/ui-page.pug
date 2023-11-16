@@ -19,9 +19,9 @@ include ../templates/table/table-pharmacy
 include ../templates/table/table-route
 include ../templates/header
 include ../templates/modal
-include ../templates/label-info
-include ../templates/label-done
-include ../templates/label-city
+include ../templates/label/label-status
+include ../templates/label/label-done
+include ../templates/label/label-city
 include ../templates/profile-card
 
 
@@ -159,7 +159,7 @@ block content
     h2.ui-second-title Labels
 
     p Label info
-    +label-info({})
+    +label-status({})
 
     p Label done
     +label-done({text: "All packages are scanned"})

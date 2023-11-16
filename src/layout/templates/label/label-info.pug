@@ -1,0 +1,5 @@
+mixin label-info({text, color, isUppercase})
+    .label-info(
+      class=color
+      class=(isUppercase && "label-info--uppercase")
+    )=text
