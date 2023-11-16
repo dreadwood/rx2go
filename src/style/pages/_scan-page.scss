@@ -15,28 +15,11 @@
 }
 .scan-page__content {
   // 1860px
-  // max-width: 1860px;
   margin-right: $container-main-width - $desktop-padding * 2 - 1860px;
   @include tablet {
     margin-right: 0;
   }
 }
-
-// .scan-page__form-scan {
-//   & > * {
-//     width: 350px;
-//   }
-// }
-// .scan-page__form-wrp {
-//   display: grid;
-//   grid-template-columns: 1fr 1fr;
-//   align-items: start;
-//   gap: 24px;
-//   margin-top: 16px;
-//   .scan-page__form {
-//     margin-top: 0;
-//   }
-// }
 .scan-page__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;

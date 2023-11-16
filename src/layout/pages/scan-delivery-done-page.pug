@@ -2,7 +2,6 @@ extends ../elements/layout-page
 include ../templates/btn-panel
 include ../templates/filter-panel
 include ../templates/profile-card
-include ../templates/button/btn-4
 include ../templates/table/table-orders
 include ../templates/label-info
 include ../templates/label-done
@@ -11,8 +10,7 @@ include ../templates/form/form-field-wrp-input
 include ../templates/form/form-field-wrp-select-input
 
 block data
-  -
-    title = "Scan: ready for delivery, done"
+  - title = "Scan: ready for delivery, done"
 
 
 block content
@@ -20,32 +18,37 @@ block content
     .scan-page__content
       +btn-panel({activeSection: "Ready for Delivery", counter: 124})
 
-      .scan-page__form-wrp
-        .scan-page__form-scan
-          +form-field-wrp-input({
-            placeholder: "Enter Barcode Numbers, Vendor ID, Equipments",
-            color: "blue"
-          })
-        .scan-page__info
-
       .scan-page__grid
-        .scan-page__grid-item
-          h3.scan-page__grid-title Route Optimized
-          .scan-page__grid-label
+        //- COL 1
+        .scan-page__item
+          .scan-page__top
+            .scan-page__form
+              .scan-page__scan
+                +form-field-wrp-input({
+                  placeholder: "Enter Barcode Numbers, Vendor ID, Equipments",
+                  color: "blue"
+                })
+            //- PROFILE
+            .scan-page__profile
+              +profile-card({})
+          .scan-page__title Route Optimized
+          .scan-page__label
             +label-done({text: "All packages are scanned"})
-          .scan-page__grid-table
-        .scan-page__grid-item
-          h3.scan-page__grid-title Driver Out
-          .scan-page__grid-label
+          .scan-page__table
+
+        //- COL 2
+        .scan-page__item
+          .scan-page__top
+          .scan-page__title Driver Out
+          .scan-page__label
             +filter-panel({})
-          .scan-page__grid-table
+          .scan-page__table
             include ../mocks/table-data-2
             +table-orders({data: tableData2})
-        .scan-page__grid-item
-          h3.scan-page__grid-title Assigned equipments
-          .scan-page__grid-label
-            +label-done({text: "All packages are scanned"})
-          .scan-page__grid-table
 
-    .scan-page__profile
-      +profile-card({})
+        //- COL 3
+        .scan-page__item
+          .scan-page__title Assigned equipments
+          .scan-page__label
+            +label-done({text: "All packages are scanned"})
+          .scan-page__table

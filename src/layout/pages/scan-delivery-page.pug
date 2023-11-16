@@ -3,19 +3,20 @@ include ../templates/btn-panel
 include ../templates/form/form-field-wrp-input
 
 block data
-  -
-    title = "Scan: ready for delivery"
+  - title = "Scan: ready for delivery"
 
 block content
   .scan-page__main
     .scan-page__content
       +btn-panel({activeSection: "Ready for Delivery"})
 
-      .scan-page__form-wrp
-        .scan-page__form-scan
-          +form-field-wrp-input({
-            placeholder: "Enter Barcode Numbers, Vendor ID, Equipments",
-            color: "blue"
-          })
-
-    .scan-page__profile
+      .scan-page__grid
+        //- COL 1
+        .scan-page__item
+          .scan-page__top
+            .scan-page__form
+              .scan-page__scan
+                +form-field-wrp-input({
+                  placeholder: "Enter Barcode Numbers, Vendor ID, Equipments",
+                  color: "blue"
+                })
