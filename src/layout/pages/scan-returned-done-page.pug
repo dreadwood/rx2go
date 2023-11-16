@@ -11,8 +11,7 @@ include ../templates/form/form-field-wrp-input
 include ../templates/form/form-field-wrp-select-input
 
 block data
-  -
-    title = "Scan: returned, done"
+  - title = "Scan: returned, done"
 
 
 block content
@@ -20,34 +19,43 @@ block content
     .scan-page__content
       +btn-panel({activeSection: "Returned", counter: 124})
 
-      .scan-page__form-wrp
-        .scan-page__form
-          +form-field-wrp-select-input({color: "blue"})
-          +form-field-wrp-input({
-            placeholder: "Enter Barcode Numbers, Vendor ID, Equipments",
-            color: "blue"
-          })
-
       .scan-page__grid
-        .scan-page__grid-item
-          h3.scan-page__grid-title Orders for Driver Not Yet Returned
-          .scan-page__grid-label
+        //- COL 1
+        .scan-page__item
+          .scan-page__top
+            .scan-page__form
+              .scan-page__select-route
+                +form-field-wrp-select-input({color: "blue"})
+              .scan-page__scan
+                +form-field-wrp-input({
+                  placeholder: "Enter Barcode Numbers, Vendor ID, Equipments",
+                  color: "blue"
+                })
+            //- PROFILE
+            .scan-page__profile
+              +profile-card({})
+          .scan-page__title Orders for Driver Not Yet Returned
+          .scan-page__label
             +label-done({text: "All packages are scanned"})
-        .scan-page__grid-item
-          h3.scan-page__grid-title Orders for Driver already Returned
-          .scan-page__grid-label
+
+        //- COL 2
+        .scan-page__item
+          .scan-page__top
+          .scan-page__title Orders for Driver already Returned
+          .scan-page__label
             +filter-panel({})
-          .scan-page__grid-table
+          .scan-page__table
             include ../mocks/table-data-1
             +table-orders({data: tableData1})
-        .scan-page__grid-item
-          h3.scan-page__grid-title Assigned equipments
-          .scan-page__grid-label
-            +label-done({text: "All equipments are scanned"})
-        .scan-page__grid-item
-          h3.scan-page__grid-title Copay Returns
-          .scan-page__grid-label
-            +label-done({text: "All Copay scanned"})
 
-    .scan-page__profile
-      +profile-card({})
+        //- COL 3
+        .scan-page__item
+          .scan-page__title Assigned equipments
+          .scan-page__label
+            +label-done({text: "All equipments are scanned"})
+
+        //- COL 4
+        .scan-page__item
+          .scan-page__title Copay Returns
+          .scan-page__label
+            +label-done({text: "All Copay scanned"})

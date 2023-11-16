@@ -9,7 +9,9 @@ $profile-card-group-gap: 16px;
   background-color: $color-ghost-white;
   border: 1px solid $color-light-gray;
   border-radius: 20px;
-  @include mobile {
+  @include tablet {
+    width: 100%;
+    max-width: 407px;
     padding: 11px 11px 14px 11px;
     &.hide {
       min-height: auto;
@@ -36,7 +38,7 @@ $profile-card-group-gap: 16px;
   font-size: 22px;
   line-height: 29px;
   font-weight: 700;
-  @include mobile {
+  @include tablet {
     font-size: 20px;
     line-height: 26px;
   }
@@ -54,7 +56,7 @@ $profile-card-group-gap: 16px;
     height: 20px;
     stroke: currentColor;
   }
-  @include mobile {
+  @include tablet {
     display: block;
   }
 }
@@ -103,7 +105,7 @@ $profile-card-group-gap: 16px;
   font-size: 22px;
   line-height: 29px;
   font-weight: 700;
-  @include mobile {
+  @include tablet {
     font-size: 18px;
     line-height: 23px;
   }
@@ -145,7 +147,7 @@ $profile-card-group-gap: 16px;
   background-color: $color-white;
   border: 1px solid $color-light-gray;
   border-radius: 8px;
-  @include mobile {
+  @include tablet {
     font-size: 14px;
     line-height: 18px;
   }
