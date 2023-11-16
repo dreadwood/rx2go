@@ -1,4 +1,4 @@
-extends ../elements/layout
+extends ../elements/layout-page
 include ../templates/btn-panel
 include ../templates/label-info
 include ../templates/form/form-field-wrp-select-input
@@ -9,11 +9,11 @@ block data
 
 
 block content
-  .scan__main
-    .scan__content
+  .scan-page__main
+    .scan-page__content
       +btn-panel({activeSection: "Driver Out"})
 
-      .scan__form
+      .scan-page__form
         +form-field-wrp-select-input({color: "blue"})
 
-    .scan__profile
+    .scan-page__profile

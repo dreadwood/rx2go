@@ -1,4 +1,4 @@
-extends ../elements/layout
+extends ../elements/layout-page
 include ../templates/btn-panel
 include ../templates/filter-panel
 include ../templates/profile-card
@@ -16,36 +16,36 @@ block data
 
 
 block content
-  .scan__main
-    .scan__content
+  .scan-page__main
+    .scan-page__content
       +btn-panel({activeSection: "Ready for Delivery", counter: 124})
 
-      .scan__form-wrp
-        .scan__form-scan
+      .scan-page__form-wrp
+        .scan-page__form-scan
           +form-field-wrp-input({
             placeholder: "Enter Barcode Numbers, Vendor ID, Equipments",
             color: "blue"
           })
-        .scan__info
+        .scan-page__info
 
-      .scan__grid
-        .scan__grid-item
-          h3.scan__grid-title Route Optimized
-          .scan__grid-label
+      .scan-page__grid
+        .scan-page__grid-item
+          h3.scan-page__grid-title Route Optimized
+          .scan-page__grid-label
             +label-done({text: "All packages are scanned"})
-          .scan__grid-table
-        .scan__grid-item
-          h3.scan__grid-title Driver Out
-          .scan__grid-label
+          .scan-page__grid-table
+        .scan-page__grid-item
+          h3.scan-page__grid-title Driver Out
+          .scan-page__grid-label
             +filter-panel({})
-          .scan__grid-table
+          .scan-page__grid-table
             include ../mocks/table-data-2
             +table-orders({data: tableData2})
-        .scan__grid-item
-          h3.scan__grid-title Assigned equipments
-          .scan__grid-label
+        .scan-page__grid-item
+          h3.scan-page__grid-title Assigned equipments
+          .scan-page__grid-label
             +label-done({text: "All packages are scanned"})
-          .scan__grid-table
+          .scan-page__grid-table
 
-    .scan__profile
+    .scan-page__profile
       +profile-card({})

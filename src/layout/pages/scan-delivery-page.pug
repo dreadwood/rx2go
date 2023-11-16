@@ -1,4 +1,4 @@
-extends ../elements/layout
+extends ../elements/layout-page
 include ../templates/btn-panel
 include ../templates/form/form-field-wrp-input
 
@@ -7,15 +7,15 @@ block data
     title = "Scan: ready for delivery"
 
 block content
-  .scan__main
-    .scan__content
+  .scan-page__main
+    .scan-page__content
       +btn-panel({activeSection: "Ready for Delivery"})
 
-      .scan__form-wrp
-        .scan__form-scan
+      .scan-page__form-wrp
+        .scan-page__form-scan
           +form-field-wrp-input({
             placeholder: "Enter Barcode Numbers, Vendor ID, Equipments",
             color: "blue"
           })
 
-    .scan__profile
+    .scan-page__profile

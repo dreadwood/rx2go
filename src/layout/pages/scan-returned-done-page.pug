@@ -1,4 +1,4 @@
-extends ../elements/layout
+extends ../elements/layout-page
 include ../templates/btn-panel
 include ../templates/button/btn-4
 include ../templates/filter-panel
@@ -16,38 +16,38 @@ block data
 
 
 block content
-  .scan__main
-    .scan__content
+  .scan-page__main
+    .scan-page__content
       +btn-panel({activeSection: "Returned", counter: 124})
 
-      .scan__form-wrp
-        .scan__form
+      .scan-page__form-wrp
+        .scan-page__form
           +form-field-wrp-select-input({color: "blue"})
           +form-field-wrp-input({
             placeholder: "Enter Barcode Numbers, Vendor ID, Equipments",
             color: "blue"
           })
 
-      .scan__grid
-        .scan__grid-item
-          h3.scan__grid-title Orders for Driver Not Yet Returned
-          .scan__grid-label
+      .scan-page__grid
+        .scan-page__grid-item
+          h3.scan-page__grid-title Orders for Driver Not Yet Returned
+          .scan-page__grid-label
             +label-done({text: "All packages are scanned"})
-        .scan__grid-item
-          h3.scan__grid-title Orders for Driver already Returned
-          .scan__grid-label
+        .scan-page__grid-item
+          h3.scan-page__grid-title Orders for Driver already Returned
+          .scan-page__grid-label
             +filter-panel({})
-          .scan__grid-table
+          .scan-page__grid-table
             include ../mocks/table-data-1
             +table-orders({data: tableData1})
-        .scan__grid-item
-          h3.scan__grid-title Assigned equipments
-          .scan__grid-label
+        .scan-page__grid-item
+          h3.scan-page__grid-title Assigned equipments
+          .scan-page__grid-label
             +label-done({text: "All equipments are scanned"})
-        .scan__grid-item
-          h3.scan__grid-title Copay Returns
-          .scan__grid-label
+        .scan-page__grid-item
+          h3.scan-page__grid-title Copay Returns
+          .scan-page__grid-label
             +label-done({text: "All Copay scanned"})
 
-    .scan__profile
+    .scan-page__profile
       +profile-card({})

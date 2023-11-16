@@ -1,4 +1,4 @@
-extends ../elements/layout
+extends ../elements/layout-page
 include ../templates/btn-panel
 include ../templates/button/btn-4
 include ../templates/form/form-field-wrp-input
@@ -15,11 +15,11 @@ block data
 
 
 block content
-  .scan__main
-    .scan__content
+  .scan-page__main
+    .scan-page__content
       +btn-panel({activeSection: "Driver Out", counter: 13})
 
-      .scan__form
+      .scan-page__form
         +form-field-wrp-select-input({color: "blue"})
         +form-field-wrp-input({
           placeholder: "Enter Barcode Numbers, Vendor ID, Equipments",
@@ -27,29 +27,29 @@ block content
         })
         +btn-4({text: "Print the label", icon: "icon-print"})
 
-      .scan__grid
-        .scan__grid-item
-          h3.scan__grid-title Route Optimized
-          .scan__grid-label
+      .scan-page__grid
+        .scan-page__grid-item
+          h3.scan-page__grid-title Route Optimized
+          .scan-page__grid-label
             +label-info({version: 1})
-          .scan__grid-table
+          .scan-page__grid-table
             include ../mocks/table-data-1
             +table-orders({data: tableData1})
-        .scan__grid-item
-          h3.scan__grid-title Driver Out
-          .scan__grid-label
+        .scan-page__grid-item
+          h3.scan-page__grid-title Driver Out
+          .scan-page__grid-label
             +label-info({version: 2})
-          .scan__grid-table
+          .scan-page__grid-table
             include ../mocks/table-data-2
             +table-orders({data: tableData2})
-        .scan__grid-item
-          h3.scan__grid-title Assigned equipments
-          .scan__grid-label
+        .scan-page__grid-item
+          h3.scan-page__grid-title Assigned equipments
+          .scan-page__grid-label
             +label-info({version: 2})
-          .scan__grid-table
+          .scan-page__grid-table
             +table-text({})
 
-    .scan__profile
+    .scan-page__profile
       +profile-card({})
 
 block modal
