@@ -1,5 +1,7 @@
 .route-page {
   position: relative;
+  display: flex;
+  flex-direction: column;
   width: 100%;
   max-width: $container-main-width;
   margin: 0 auto;
@@ -47,5 +49,19 @@
 }
 .route-page__content {
   @include hide-scroll;
+  // hack to display menu on hover
+  // problem due to overflow-y
+  margin-top: -132px;
+  padding-top: 132px;
   overflow-x: scroll;
+}
+.route-page__city {
+  display: grid;
+  place-items: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  @include desktop {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }

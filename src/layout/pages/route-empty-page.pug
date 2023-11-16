@@ -1,0 +1,19 @@
+extends ../elements/layout-route
+include ../templates/btn-panel-2
+include ../templates/filter-panel
+include ../templates/table/table-route
+include ../templates/label-city
+include ../templates/form/form-field-wrp-input
+
+block data
+  - title = "Get Route Name: empty"
+
+
+block content
+  main.route-page
+    .route-page__info
+      +form-field-wrp-input({text: "#16247419"})
+      .wrp-center
+    .route-page__city
+      +label-city({text: "Pennsylvania", color: "green", size: "big"})
+

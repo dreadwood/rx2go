@@ -40,12 +40,31 @@
     text-transform: uppercase;
     border-radius: 30px;
   }
+  @include desktop {
+    &--big {
+      padding: 23px 20px 22px 20px;
+      font-size: 35px;
+      line-height: 46px;
+      border-radius: 12px;
+    }
+  }
   @include mobile {
     &--medium {
       min-width: 360px;
       padding: 28px 20px;
       font-size: 26px;
       line-height: 34px;
+    }
+    &--wide {
+      padding: 28px 20px 28px 20px;
+      font-size: 26px;
+      line-height: 34px;
+    }
+    &--big {
+      padding: 28px 20px 28px 20px;
+      font-size: 26px;
+      line-height: 34px;
+      border-radius: 12px;
     }
   }
 }
