@@ -76,19 +76,19 @@ block content
     h2.ui-second-title Filter
 
     .ui-filter-list
+      +btn-filter({text: "All", counter: 120, color: "light-blue", isActive: true})
+      +btn-filter({text: "BK", counter: 12, color: "blue", isActive: true})
+      +btn-filter({text: "LI", counter: 10, color: "yellow", isActive: true})
+      +btn-filter({text: "NJ", counter: 40, color: "light-green", isActive: true})
+      +btn-filter({text: "CT", counter: 50, color: "black", isActive: true})
+      +btn-filter({text: "PA", counter: 30, color: "green", isActive: true})
+    .ui-filter-list
       +btn-filter({text: "All", counter: 120, color: "light-blue"})
       +btn-filter({text: "BK", counter: 12, color: "blue"})
       +btn-filter({text: "LI", counter: 10, color: "yellow"})
       +btn-filter({text: "NJ", counter: 40, color: "light-green"})
       +btn-filter({text: "CT", counter: 50, color: "black"})
       +btn-filter({text: "PA", counter: 30, color: "green"})
-    .ui-filter-list
-      +btn-filter({text: "All", counter: 120})
-      +btn-filter({text: "BK", counter: 12})
-      +btn-filter({text: "LI", counter: 10})
-      +btn-filter({text: "NJ", counter: 40})
-      +btn-filter({text: "CT", counter: 50})
-      +btn-filter({text: "PA", counter: 30})
 
 
     h2.ui-second-title Tables
@@ -139,12 +139,13 @@ block content
     })
 
     p Field wrapper select input
-    +form-field-wrp-select-input({scriptId: 2})
+    +form-field-wrp-select-input({scriptId: 2, color: "blue"})
 
     p Field wrapper input
     +form-field-wrp-input({
       placeholder: "Enter Barcode Numbers, Vendor ID, Equipments",
-      error: "Error. Information not found in the system"
+      error: "Error. Information not found in the system",
+      color: "blue"
     })
 
 

@@ -1,0 +1,23 @@
+.wrp-field {
+  padding: 11px;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 700;
+  background-color: $color-ghost-white;
+  border: 1px solid $color-light-gray;
+  border-radius: 12px;
+  &--blue {
+    color: $color-white;
+    background-color: $color-cornflower;
+    border-color: $color-cornflower;
+  }
+}
+.wrp-field__label {
+  display: block;
+  width: max-content;
+  margin-bottom: 8px;
+}
+.wrp-field__msg {
+  margin-top: 8px;
+  color: $color-red-burgundy;
+}

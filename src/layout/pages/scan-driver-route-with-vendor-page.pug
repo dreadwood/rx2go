@@ -20,8 +20,11 @@ block content
       +btn-panel({activeSection: "Driver Out", counter: 13})
 
       .scan__form
-        +form-field-wrp-select-input({})
-        +form-field-wrp-input({placeholder: "Enter Barcode Numbers, Vendor ID, Equipments"})
+        +form-field-wrp-select-input({color: "blue"})
+        +form-field-wrp-input({
+          placeholder: "Enter Barcode Numbers, Vendor ID, Equipments",
+          color: "blue"
+        })
         +btn-4({text: "Print the label", icon: "icon-print"})
 
       .scan__grid

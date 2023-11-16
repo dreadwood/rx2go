@@ -1,0 +1,16 @@
+include ../templates/button/btn-1
+
+mixin btn-panel-2({activeSection})
+  .panel.panel--wrap
+    -
+      const data = [
+        "Accounting calculation",
+        "Route ready to start",
+        "Driver assigner",
+        "Route started",
+        "Driver finished",
+        "QAQC checked",
+        "Accounting checked",
+      ]
+    each it in data
+      +btn-1({text: it, isActive: it === activeSection})

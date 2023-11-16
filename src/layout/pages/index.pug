@@ -63,6 +63,14 @@ mixin page-list(data)
     url: "scan-returned-done-page.html",
   }]
 
+  const routePages = [{
+    name: "Get Route Name: empty",
+    url: "route-empty-page.html",
+  },{
+    name: "Get Route Name: content",
+    url: "route-content-page.html",
+  }]
+
 doctype html
 html(lang="en")
   +head("Rx2go. Index.")
@@ -100,3 +108,4 @@ html(lang="en")
     +page-list(scanDeliveryPages)
     +page-list(scanDriverPages)
     +page-list(scanReturnedPages)
+    +page-list(routePages)

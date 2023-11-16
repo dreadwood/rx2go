@@ -21,6 +21,15 @@
     text-transform: uppercase;
     border-radius: 12px;
   }
+  &--wide {
+    width: 100%;
+    padding: 23px 20px 22px 20px;
+    font-size: 35px;
+    line-height: 46px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 12px;
+  }
   &--big {
     width: 100%;
     max-width: 1984px;

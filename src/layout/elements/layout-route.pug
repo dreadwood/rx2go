@@ -1,5 +1,4 @@
 include ../elements/head
-include ../templates/header
 
 - let title = ""
 
@@ -9,8 +8,5 @@ doctype html
 html(lang="en")
   +head(`Rx2go. ${title}`)
   body
-    main.scan
-      +header()
-      block content
-    block modal
+    block content
     include ../elements/script

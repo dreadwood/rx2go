@@ -1,8 +1,8 @@
 include ../../templates/form/form-select-input
 
-mixin form-field-wrp-select-input({isOpen, scriptId, error})
-  .form-field-wrp
-    label.form-field-wrp__label Select a Route:
+mixin form-field-wrp-select-input({isOpen, scriptId, error, color})
+  .wrp-field(class=(color && `wrp-field--${color}`))
+    label.wrp-field__label Select a Route:
     +form-select-input({isOpen, scriptId})
     if error
-      .form-field-wrp__msg=error
+      .wrp-field__msg=error

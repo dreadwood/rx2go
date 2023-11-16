@@ -23,8 +23,11 @@ block content
 
       .scan__form-wrp
         .scan__form
-          +form-field-wrp-select-input({})
-          +form-field-wrp-input({placeholder: "Enter Barcode Numbers, Vendor ID, Equipments"})
+          +form-field-wrp-select-input({color: "blue"})
+          +form-field-wrp-input({
+            placeholder: "Enter Barcode Numbers, Vendor ID, Equipments",
+            color: "blue"
+          })
         .scan__info.scan__info--returned
           +label-city({text: "Confirmed back to pharmacy. Brooklyn Hub", color: "blue"})
 

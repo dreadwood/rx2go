@@ -4,15 +4,16 @@ include ../../templates/number-circle
 include ../../templates/route
 
 
-mixin table-route({data})
+mixin table-route({data, repeat})
   table.table-route
     if data
       tbody
-        each item in data
-          tr
-            td
-              +label-city({text: item.hub.name, color: item.hub.color})
-            td
-              .table-route__list
-                each _, i in (new Array(item.routes).fill(''))
-                  +route({number: i + 1, hub: item.hub.name, isActive: Math.random() > 0.5})
+        each _ in (new Array(repeat ? repeat : 1).fill(''))
+          each item in data
+            tr
+              td
+                +label-city({text: item.hub.name, color: item.hub.color})
+              td
+                .table-route__list
+                  each __, i in (new Array(item.routes).fill(''))
+                    +route({number: i + 1, hub: item.hub.name, isActive: Math.random() > 0.5})

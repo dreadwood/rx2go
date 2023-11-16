@@ -4,7 +4,7 @@ include ../templates/button/btn-3
 
 mixin btn-panel({isExtraVisible, activeSection, counter})
   .btn-panel
-    .btn-panel__list
+    .panel.panel--wrap
       -
         const btns1 = [
           "Search Info",
@@ -20,7 +20,7 @@ mixin btn-panel({isExtraVisible, activeSection, counter})
         ]
       each it in btns1
         +btn-1({text: it, isActive: it === activeSection})
-    .btn-panel__list
+    .panel.panel--wrap
       -
         const btns2 = [
           { text: "Ready for Delivery", icon: "icon-building" },
@@ -36,7 +36,7 @@ mixin btn-panel({isExtraVisible, activeSection, counter})
           counter: isActive && counter ? counter : null
         })
       +btn-2({text: "...", onclick: "window.utils.toggleVisibleNodes(this, 'js-btn-panel-extra')"})
-    .btn-panel__list.js-btn-panel-extra(hidden=(isExtraVisible ? false : true))
+    .panel.panel--wrap.js-btn-panel-extra(hidden=(isExtraVisible ? false : true))
       +btn-2({text: "Ready to Print", icon: "icon-print", isExtra: true})
       +btn-2({text: "Ready to Pickup", icon: "icon-package", isExtra: true})
       +btn-2({text: "Pickup Occurred", icon: "icon-fast-truck", isExtra: true})

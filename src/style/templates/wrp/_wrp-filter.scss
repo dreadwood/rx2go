@@ -1,0 +1,18 @@
+.wrp-filter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+  max-width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 700;
+  background-color: $color-ghost-white;
+  border: 1px solid $color-light-gray;
+  border-radius: 12px;
+}
+.wrp-filter__scroll {
+  @include hide-scroll;
+  overflow-x: scroll;
+}

@@ -1,8 +1,8 @@
 include ../../templates/form/form-input
 
-mixin form-field-wrp-input({placeholder, error})
-  .form-field-wrp
-    label.form-field-wrp__label Scan:
-    +form-input({placeholder})
+mixin form-field-wrp-input({text, placeholder, error, color})
+  .wrp-field(class=(color && `wrp-field--${color}`))
+    label.wrp-field__label Scan:
+    +form-input({placeholder, value: text})
     if error
-      .form-field-wrp__msg=error
+      .wrp-field__msg=error
