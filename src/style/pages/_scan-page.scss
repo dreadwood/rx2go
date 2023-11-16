@@ -56,14 +56,18 @@
 .scan-page__top {
   min-height: 90px;
   margin-bottom: 16px;
+  &--btn {
+    min-height: 151px;
+  }
   @include container {
     min-height: auto;
   }
 }
 .scan-page__form {
   display: flex;
+  flex-wrap: wrap;
   gap: 16px;
-  @include mobile {
+  @include desktop-lg {
     flex-direction: column;
   }
 }
@@ -74,6 +78,16 @@
 .scan-page__scan {
   width: 100%;
   max-width: 346px;
+  @include desktop-lg {
+    max-width: 420px;
+  }
+}
+.scan-page__print {
+  width: 100%;
+  max-width: 420px;
+  & > * {
+    width: 100%;
+  }
 }
 .scan-page__label-info {
   width: 100%;
@@ -113,7 +127,7 @@
   margin-top: 12px;
   overflow-y: scroll;
 }
-.scan-page__grid-btn {
+.scan-page__table-btn {
   margin-top: 12px;
   & > * {
     width: 100%;

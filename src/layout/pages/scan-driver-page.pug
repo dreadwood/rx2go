@@ -4,8 +4,7 @@ include ../templates/label-info
 include ../templates/form/form-field-wrp-select-input
 
 block data
-  -
-    title = "Scan: driver out"
+  - title = "Scan: driver out"
 
 
 block content
@@ -13,7 +12,9 @@ block content
     .scan-page__content
       +btn-panel({activeSection: "Driver Out"})
 
-      .scan-page__form
-        +form-field-wrp-select-input({color: "blue"})
-
-    .scan-page__profile
+      .scan-page__grid
+        //- COL 1
+        .scan-page__item
+          .scan-page__top
+            .scan-page__select-route
+                +form-field-wrp-select-input({color: "blue"})

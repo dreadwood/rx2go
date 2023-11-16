@@ -10,8 +10,7 @@ include ../templates/form/form-field-wrp-input
 include ../templates/form/form-field-wrp-select-input
 
 block data
-  -
-    title = "Scan: driver out, fridge"
+  - title = "Scan: driver out, fridge"
 
 
 block content
@@ -19,37 +18,47 @@ block content
     .scan-page__content
       +btn-panel({activeSection: "Driver Out", counter: 13})
 
-      .scan-page__form-wrp
-        .scan-page__form
-          +form-field-wrp-select-input({color: "blue"})
-          +form-field-wrp-input({
-            placeholder: "Enter Barcode Numbers, Vendor ID, Equipments",
-            color: "blue"
-          })
-          +btn-4({text: "Print the label", icon: "icon-print"})
-        .scan-page__info
-          +label-fridge({})
-
       .scan-page__grid
-        .scan-page__grid-item
-          h3.scan-page__grid-title Route Optimized
-          .scan-page__grid-label
+        //- COL 1
+        .scan-page__item
+          .scan-page__top
+            .scan-page__form
+              .scan-page__select-route
+                +form-field-wrp-select-input({color: "blue"})
+              .scan-page__scan
+                +form-field-wrp-input({
+                  placeholder: "Enter Barcode Numbers, Vendor ID, Equipments",
+                  color: "blue"
+                })
+              .scan-page__print
+                +btn-4({text: "Print the label", icon: "icon-print"})
+            //- PROFILE
+            .scan-page__profile
+              +profile-card({})
+          .scan-page__title Route Optimized
+          .scan-page__label
             +label-info({version: 1})
-          .scan-page__grid-table
+          .scan-page__table
             include ../mocks/table-data-1
             +table-orders({data: tableData1})
-        .scan-page__grid-item
-          h3.scan-page__grid-title Driver Out
-          .scan-page__grid-label
+
+        //- COL 2
+        .scan-page__item
+          .scan-page__top.scan-page__top--btn
+            +label-fridge({})
+          .scan-page__title Driver Out
+          .scan-page__label
             +label-info({version: 2})
-          .scan-page__grid-table
+          .scan-page__table
             include ../mocks/table-data-2
             +table-orders({data: tableData2})
-        .scan-page__grid-item
-          h3.scan-page__grid-title Assigned equipments
-          .scan-page__grid-label
+
+        //- COL 3
+        .scan-page__item
+          .scan-page__title Assigned equipments
+          .scan-page__label
             +label-info({version: 2})
-          .scan-page__grid-table
+          .scan-page__table
             +table-text({})
 
     .scan-page__profile
