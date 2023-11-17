@@ -14,23 +14,6 @@
 .form-select-input__field {
   position: relative;
 }
-.form-select-input__input {
-  width: 100%;
-  padding: 10px 12px;
-  font-family: $font-default;
-  font-size: 14px;
-  line-height: 17px;
-  color: $color-text;
-  border: 1px solid $color-light-gray;
-  border-radius: 6px;
-  &::placeholder {
-    font-family: inherit;
-    font-size: inherit;
-    line-height: inherit;
-    font-weight: inherit;
-    color: $color-text;
-  }
-}
 .form-select-input__toggle {
   @include transition(transform);
   position: absolute;

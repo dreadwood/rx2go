@@ -17,7 +17,7 @@ mixin table-icon-list({isFridge, secondIcon})
         +svg({name: secondIcon, width: 20, height: 20})
 
 
-mixin table-orders({data})
+mixin table-orders({data, isError})
   table.table.table--orders
     thead
       tr
@@ -27,7 +27,7 @@ mixin table-orders({data})
     if data
       tbody
         each row, i in data
-          tr
+          tr(class=(isError && i === 0 && 'table__tr-error'))
             td.table__td-order
               if row.order
                 +table-order({order: row.order})

@@ -4,7 +4,7 @@ include ../templates/button/btn-form
 
 mixin modal({isErrorHeader, isSubmitDisabled, submitText, textareaPlaceholder, textareaValue, textareaError})
   .overlay
-    .modal(class=(isErrorHeader && 'error'))
+    .modal(class=(isErrorHeader && 'modal--error'))
       .modal__header
         if isErrorHeader
           +svg({name: "icon-cross-round", width: 52, height: 52, className: "modal__title-icon"})

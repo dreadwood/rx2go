@@ -39,6 +39,9 @@
   tbody tr:nth-child(odd) {
     background-color: $color-gray-984;
   }
+  .table__tr-error:nth-child(n) {
+    background-color: $color-chewing-gum;
+  }
 }
 .table.table--orders {
   .table__td-order {

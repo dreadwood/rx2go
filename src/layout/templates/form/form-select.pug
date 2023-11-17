@@ -1,4 +1,4 @@
-mixin form-select({isOpen, scriptId, value})
+mixin form-select({isOpen, scriptId, value, color})
   -
     const data = [
       "Ready to Print",
@@ -19,6 +19,7 @@ mixin form-select({isOpen, scriptId, value})
       "Draft",
     ]
   .form-select(
+    class=(color && `form-select--${color}`)
     class=(isOpen && "open")
     class=`js-form-select-input${scriptId || ''}`
   )

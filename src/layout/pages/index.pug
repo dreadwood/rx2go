@@ -71,6 +71,14 @@ mixin page-list(data)
     url: "route-content-page.html",
   }]
 
+  const validatePages = [{
+    name: "Scan: validate queue, content",
+    url: "scan-validate-content-page.html",
+  },{
+    name: "Scan: validate queue, error (modal)",
+    url: "scan-validate-error-page.html",
+  }]
+
 doctype html
 html(lang="en")
   +head("Rx2go. Index.")
@@ -109,3 +117,5 @@ html(lang="en")
     +page-list(scanDriverPages)
     +page-list(scanReturnedPages)
     +page-list(routePages)
+
+    +page-list(validatePages)

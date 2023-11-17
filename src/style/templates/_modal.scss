@@ -4,7 +4,7 @@
   padding: 16px;
   background-color: $color-white;
   border-radius: 12px;
-  &.error .modal__header {
+  &--error .modal__header {
     color: $color-red;
   }
 }

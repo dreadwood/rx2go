@@ -8,6 +8,7 @@ include ../templates/button/btn-table
 include ../templates/button/btn-filter
 include ../templates/form/form-field-wrp-input
 include ../templates/form/form-field-wrp-select-input
+include ../templates/form/form-field-wrp-select
 include ../templates/form/form-input
 include ../templates/form/form-select-input
 include ../templates/form/form-textarea
@@ -121,8 +122,6 @@ block content
       +table-route({data: tableData4})
 
 
-
-
     h2.ui-second-title Header
 
     .ui-header
@@ -138,7 +137,7 @@ block content
     +form-select-input({scriptId: 1})
 
     p Select
-    +form-select({})
+    +form-select({color: "blue"})
 
     p Textarea
     +form-textarea({
@@ -152,6 +151,12 @@ block content
     +form-field-wrp-input({
       placeholder: "Enter Barcode Numbers, Vendor ID, Equipments",
       error: "Error. Information not found in the system",
+      color: "blue"
+    })
+
+    p Field wrapper select
+    +form-field-wrp-select({
+      scriptId: 3,
       color: "blue"
     })
 
@@ -191,14 +196,8 @@ block content
         +label-city({text: "Pennsylvania hub", color: "green", size: "medium"})
         +label-city({text: "Long Island hub", color: "yellow", size: "medium"})
       div
-        //- +label-city({text: "Gotham", size: "big"})
         +label-city({text: "Brooklyn", color: "blue", size: "big"})
         +label-city({text: "Connecticut", color: "black", size: "big"})
-        //- +label-city({text: "New Jersey", color: "light-green", size: "big"})
-        //- +label-city({text: "Pennsylvania", color: "green", size: "big"})
-        //- +label-city({text: "Long Island", color: "yellow", size: "big"})
-
-
 
 
     h2.ui-second-title Modal
@@ -233,3 +232,5 @@ block content
     h2.ui-second-title Form
 
     +form-grid({})
+      .wrp-center
+        Order Activity

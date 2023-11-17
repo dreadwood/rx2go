@@ -10,18 +10,25 @@
   &.open .form-select__dropdown {
     display: block
   }
+  &--blue .form-select__field {
+    padding: 9px 11px 10px 11px;
+    font-size: 16px;
+    line-height: 19px;
+    color: $color-gray-blue;
+    background-color: $color-ghostly-bluish-white;
+  }
 }
 .form-select__field {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 9px 11px 10px 11px;
+  padding: 10px 11px 11px 11px;
   font-family: $font-default;
-  font-size: 16px;
-  line-height: 19px;
-  color: $color-gray-blue;
-  background-color: $color-ghostly-bluish-white;
+  font-size: 14px;
+  line-height: 17px;
+  color: $color-text;
+  background-color: $color-white;
   border: 1px solid $color-light-gray;
   border-radius: 6px;
 }
