@@ -1,4 +1,4 @@
-.btn-3 {
+.btn-form {
   @include transition(background-color, border-color);
   display: block;
   min-height: 37px;
@@ -9,13 +9,21 @@
   line-height: 21px;
   font-weight: 700;
   color: $color-white;
-  background-color: $color-lime-green;
-  border: 1px solid $color-lime-green;
+  background-color: $color-gray-639;
+  border: 1px solid $color-gray-639;
   border-radius: 6px;
   &[disabled] {
     opacity: 0.4;
   }
   &:not([disabled]):hover {
+    background-color: color.adjust($color-gray-639, $blackness: 10%);
+    border-color: color.adjust($color-gray-639, $blackness: 10%);
+  }
+  &--green {
+    background-color: $color-lime-green;
+    border: 1px solid $color-lime-green;
+  }
+  &--green:not([disabled]):hover {
     background-color: $color-lime-green-ligh;
     border-color: $color-lime-green-ligh;
   }

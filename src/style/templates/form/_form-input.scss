@@ -18,11 +18,34 @@
   }
   &[type="number"]::-webkit-outer-spin-button,
   &[type="number"]::-webkit-inner-spin-button {
+    display: none;
     margin: 0;
     appearance: none;
   }
   &[type="number"] { // firefox
     appearance: textfield;
+  }
+  &--blue {
+    background-color: $color-ghostly-bluish-white;
+  }
+  &::-webkit-clear-button {
+    display: none;
+  }
+  &::-webkit-datetime-edit-month-field {
+    font-family: inherit;
+  }
+  &::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+  }
+  &::-webkit-datetime-edit {
+    margin-bottom: -2px;
+    padding: 0;
+    line-height: 1;
+  }
+  &::-webkit-datetime-edit-day-field,
+  &::-webkit-datetime-edit-month-field,
+  &::-webkit-datetime-edit-year-field {
+    padding: 0;
   }
   // for hidden key icon in safari
   &::-webkit-credentials-auto-fill-button {

@@ -4,6 +4,7 @@ include ../templates/filter-panel
 include ../templates/table/table-route
 include ../templates/label/label-city
 include ../templates/form/form-field-wrp-input
+include ../templates/form/form-switch
 
 block data
   - title = "Get Route Name: empty"
@@ -14,6 +15,7 @@ block content
     .route-page__info
       +form-field-wrp-input({text: "#16247419"})
       .wrp-center
+        +form-switch({id: "switch"})
     .route-page__city
       +label-city({text: "Pennsylvania", color: "green", size: "big"})
 

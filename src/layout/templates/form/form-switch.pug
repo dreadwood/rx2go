@@ -1,0 +1,11 @@
+mixin form-switch({id, isChecked})
+  .form-switch
+    input.form-switch__input(
+      type="checkbox"
+      name=""
+      id=id
+      role="switch"
+      checked=isChecked
+      aria-label="On/off magic value"
+    )
+    label.form-switch__toggle(for=id)

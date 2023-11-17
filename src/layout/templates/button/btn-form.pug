@@ -1,0 +1,7 @@
+mixin btn-form({text, color, type, isDisabled})
+  button.btn-form(
+    type=(type || "button")
+    class=(color && `btn-form--${color}`)
+    disabled=isDisabled
+    onclick="window.utils.toggleCssClass(this, 'actv')"
+  )=text

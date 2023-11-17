@@ -10,14 +10,14 @@
   &--uppercase {
     text-transform: uppercase;
   }
-  &.success {
-    color: $color-white;
-    background-color: $color-lime-green;
-  }
-  &.error {
-    color: $color-white;
-    background-color: $color-red;
-  }
+  // &.success {
+  //   color: $color-white;
+  //   background-color: $color-lime-green;
+  // }
+  // &.error {
+  //   color: $color-white;
+  //   background-color: $color-red;
+  // }
   @include container {
     width: 100%;
     font-size: 26px;

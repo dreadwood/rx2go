@@ -1,6 +1,6 @@
 include ../elements/images
 include ../templates/form/form-textarea
-include ../templates/button/btn-3
+include ../templates/button/btn-form
 
 mixin modal({isErrorHeader, isSubmitDisabled, submitText, textareaPlaceholder, textareaValue, textareaError})
   .overlay
@@ -21,4 +21,4 @@ mixin modal({isErrorHeader, isSubmitDisabled, submitText, textareaPlaceholder, t
           if textareaError
             .modal__form-error=textareaError
         .modal__form-submit
-          +btn-3({text: submitText, isDisabled: isSubmitDisabled})
+          +btn-form({text: submitText, isDisabled: isSubmitDisabled})

@@ -1,9 +1,8 @@
-//- extends ../elements/layout
 include ../elements/head
 include ../elements/images
 include ../templates/button/btn-1
 include ../templates/button/btn-2
-include ../templates/button/btn-3
+include ../templates/button/btn-form
 include ../templates/button/btn-4
 include ../templates/button/btn-5
 include ../templates/button/btn-filter
@@ -12,6 +11,8 @@ include ../templates/form/form-field-wrp-select-input
 include ../templates/form/form-input
 include ../templates/form/form-select-input
 include ../templates/form/form-textarea
+include ../templates/form/form-switch
+include ../templates/form/form-grid
 include ../templates/table/table-text
 include ../templates/table/table-orders
 include ../templates/table/table-returns
@@ -56,8 +57,8 @@ block content
 
     p Button 3
     .ui-btn-list
-      +btn-3({text: "Save"})
-      +btn-3({text: "Save", isDisabled: true})
+      +btn-form({text: "Save"})
+      +btn-form({text: "Save", isDisabled: true})
 
     p Button 4
     .ui-btn-list
@@ -148,6 +149,9 @@ block content
       color: "blue"
     })
 
+    p Switch
+    +form-switch({id: "switch"})
+
 
     h2.ui-second-title Profile card
 
@@ -218,3 +222,8 @@ block content
         textareaPlaceholder: "Write how you corrected the error",
         textareaError: "Too short a comment"
       })
+
+
+    h2.ui-second-title Form
+
+    +form-grid({})

@@ -1,0 +1,36 @@
+.form-switch {
+  position: relative;
+  flex-shrink: 0;
+  width: max-content;
+}
+.form-switch__input {
+  @include transition(background-color);
+  display: block;
+  width: 44px;
+  height: 24px;
+  margin: 0;
+  padding: 0;
+  background-color: $color-gray-773;
+  border-radius: 30px;
+  cursor: pointer;
+  appearance: none;
+  &:checked {
+    background-color: $color-green-blue-crayola;
+  }
+  &:checked + .form-switch__toggle {
+    left: 44px - 1px - 22px;
+  }
+}
+.form-switch__toggle {
+  @include transition(left);
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: 22px;
+  height: 22px;
+  background-color: $color-white;
+  border-radius: 50%;
+  cursor: pointer;
+  // transition: left 0.25s ease;
+}
+

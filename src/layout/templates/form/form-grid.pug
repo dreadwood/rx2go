@@ -1,0 +1,18 @@
+include ../../templates/form/form-input
+include ../../templates/form/form-label
+include ../../templates/button/btn-form
+
+mixin form-grid({})
+  form.form-grid(action="")
+    .form-grid__el
+      +form-label({text: "Special Instructions"})
+      +form-input({color: "blue"})
+    .form-grid__el
+      +form-label({text: "Number of Items"})
+      +form-input({color: "blue"})
+    .form-grid__el
+      +form-label({text: "Date/Time to Deliver"})
+      +form-input({type: "date", color: "blue"})
+    .form-grid__controls
+      +btn-form({text: "Create", color: "green", type: "submit"})
+      +btn-form({text: "Close"})
