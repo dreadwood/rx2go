@@ -1,0 +1,5 @@
+mixin btn-icon({text, icon, isDisabled})
+  button.btn-icon(disabled=isDisabled)
+    if icon
+      +svg({name: icon, width: 17, height: 17, className: "btn-icon__icon"})
+    =text

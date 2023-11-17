@@ -1,10 +1,10 @@
 include ../elements/head
 include ../elements/images
-include ../templates/button/btn-1
-include ../templates/button/btn-2
+include ../templates/button/btn-section
+include ../templates/button/btn-section-counter
 include ../templates/button/btn-form
-include ../templates/button/btn-4
-include ../templates/button/btn-5
+include ../templates/button/btn-icon
+include ../templates/button/btn-table
 include ../templates/button/btn-filter
 include ../templates/form/form-field-wrp-input
 include ../templates/form/form-field-wrp-select-input
@@ -42,37 +42,39 @@ block content
 
     h2.ui-second-title Buttons
 
-    p Button 1
+    p Button section
     .ui-btn-list
-      +btn-1({text: "Search Info"})
-      +btn-1({text: "Print Labels"})
-      +btn-1({text: "Get Hub Name", isDisabled: true})
-      +btn-1({text: "Get Route Name", isActive: true})
+      +btn-section({text: "Search Info"})
+      +btn-section({text: "Print Labels"})
+      +btn-section({text: "Get Hub Name", isDisabled: true})
+      +btn-section({text: "Get Route Name", isActive: true})
 
-    p Button 2
+    p Button section counter
     .ui-btn-list
-      +btn-2({text: "Ready for Delivery", icon: "icon-building", counter: 124})
-      +btn-2({text: "Driver Out", icon: "icon-auto", isActive: true})
-      +btn-2({text: "Returned", icon: "icon-building-arrows", isDisabled: true})
-      +btn-2({text: "..."})
+      +btn-section-counter({text: "Ready for Delivery", icon: "icon-building", counter: 124})
+      +btn-section-counter({text: "Driver Out", icon: "icon-auto", isActive: true})
+      +btn-section-counter({text: "Returned", icon: "icon-building-arrows", isDisabled: true})
+      +btn-section-counter({text: "..."})
 
-    p Button 3
+    p Button form
     .ui-btn-list
+      +btn-form({text: "Save", color: "green"})
+      +btn-form({text: "Save", color: "green", isDisabled: true})
       +btn-form({text: "Save"})
       +btn-form({text: "Save", isDisabled: true})
 
-    p Button 4
+    p Button icon
     .ui-btn-list
-      +btn-4({text: "Print the label", icon: "icon-print"})
-      +btn-4({text: "Print the label", icon: "icon-print", isDisabled: true})
+      +btn-icon({text: "Print the label", icon: "icon-print"})
+      +btn-icon({text: "Print the label", icon: "icon-print", isDisabled: true})
 
-    p Button 5
+    p Button table
     .ui-btn-list
-      +btn-5({text: "Print all"})
-      +btn-5({text: "Print all", isDisabled: true})
-      +btn-5({text: "Print", icon: "icon-print"})
-      +btn-5({text: "Unpaid", isError: true})
-      +btn-5({text: "Unpaid", isError: true, isDisabled: true})
+      +btn-table({text: "Print all"})
+      +btn-table({text: "Print all", isDisabled: true})
+      +btn-table({text: "Print", icon: "icon-print"})
+      +btn-table({text: "Unpaid", isError: true})
+      +btn-table({text: "Unpaid", isError: true, isDisabled: true})
 
 
     h2.ui-second-title Filter

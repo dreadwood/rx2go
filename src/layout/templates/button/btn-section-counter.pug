@@ -1,0 +1,12 @@
+mixin btn-section-counter({text, icon, counter, isActive, isDisabled, isExtra, onclick})
+  button.btn-section-counter(
+    class=(isActive ? 'actv' : null)
+    class=(isExtra ? 'btn-section-counter--extra' : null)
+    disabled=isDisabled
+    onclick=(onclick || "window.utils.toggleCssClass(this, 'actv')")
+  )
+    if icon
+      +svg({name: icon, width: 17, height: 17, className: "btn-section-counter__icon"})
+    =text
+    if counter
+      .btn-section-counter__counter=counter

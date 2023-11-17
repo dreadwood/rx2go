@@ -1,6 +1,6 @@
 extends ../elements/layout-page
 include ../templates/btn-panel
-include ../templates/button/btn-4
+include ../templates/button/btn-icon
 include ../templates/form/form-field-wrp-input
 include ../templates/form/form-field-wrp-select-input
 include ../templates/table/table-text
@@ -31,7 +31,7 @@ block content
                   color: "blue"
                 })
               .scan-page__print
-                +btn-4({text: "Print the label", icon: "icon-print"})
+                +btn-icon({text: "Print the label", icon: "icon-print"})
             //- PROFILE
             .scan-page__profile
               +profile-card({})

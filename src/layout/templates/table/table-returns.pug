@@ -1,4 +1,4 @@
-include ../../templates/button/btn-5
+include ../../templates/button/btn-table
 
 mixin table-returns({})
   table.table.table--returns
@@ -8,7 +8,7 @@ mixin table-returns({})
         th Date
         th Name of pharmacy
         th.table__th-price Collected by Driver
-        th.table__th-btn #[+btn-5({text: "Print all"})]
+        th.table__th-btn #[+btn-table({text: "Print all"})]
     tbody
       each it in [12, 9, 14]
         tr
@@ -20,5 +20,5 @@ mixin table-returns({})
           td.table__td-price 120$
           td
             .table__btns
-              +btn-5({text: "Print", icon: "icon-print"})
-              +btn-5({text: "Unpaid", isError: true})
+              +btn-table({text: "Print", icon: "icon-print"})
+              +btn-table({text: "Unpaid", isError: true})

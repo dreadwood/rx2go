@@ -1,4 +1,4 @@
-.btn-2 {
+.btn-section-counter {
   --color: #{$color-cornflower};
   --border-color: #{$color-cornflower};
   --bg-color-pressed: #{$color-cornflower};
@@ -42,20 +42,20 @@
     color: $color-white;
     background-color: $color-cornflower;
     border-color: $color-cornflower;
-    .btn-2__counter {
+    .btn-section-counter__counter {
       color: $color-grayish-blue;
       border-color: $color-white;
     }
   }
 }
-.btn-2__icon {
+.btn-section-counter__icon {
   @include transition(fill);
   flex-shrink: 0;
   width: 17px;
   height: 17px;
   fill: currentColor;
 }
-.btn-2__counter {
+.btn-section-counter__counter {
   @include transition(color, border-color);
   flex-shrink: 0;
   padding: 1px 5px;

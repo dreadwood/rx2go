@@ -1,5 +1,5 @@
-include ../templates/button/btn-1
-include ../templates/button/btn-2
+include ../templates/button/btn-section
+include ../templates/button/btn-section-counter
 
 mixin btn-panel({isExtraVisible, activeSection, counter})
   .btn-panel
@@ -18,7 +18,7 @@ mixin btn-panel({isExtraVisible, activeSection, counter})
           "Quick Create “Return to pharmacy”"
         ]
       each it in btns1
-        +btn-1({text: it, isActive: it === activeSection})
+        +btn-section({text: it, isActive: it === activeSection})
     .panel.panel--wrap
       -
         const btns2 = [
@@ -28,23 +28,23 @@ mixin btn-panel({isExtraVisible, activeSection, counter})
         ]
       each it in btns2
         - const isActive = it.text === activeSection
-        +btn-2({
+        +btn-section-counter({
           text: it.text,
           icon: it.icon,
           isActive: isActive,
           counter: isActive && counter ? counter : null
         })
-      +btn-2({text: "...", onclick: "window.utils.toggleVisibleNodes(this, 'js-btn-panel-extra')"})
+      +btn-section-counter({text: "...", onclick: "window.utils.toggleVisibleNodes(this, 'js-btn-panel-extra')"})
     .panel.panel--wrap.js-btn-panel-extra(hidden=(isExtraVisible ? false : true))
-      +btn-2({text: "Ready to Print", icon: "icon-print", isExtra: true})
-      +btn-2({text: "Ready to Pickup", icon: "icon-package", isExtra: true})
-      +btn-2({text: "Pickup Occurred", icon: "icon-fast-truck", isExtra: true})
-      +btn-2({text: "Route Optimized", icon: "icon-dots", isExtra: true})
-      +btn-2({text: "Delivery Attempted", icon: "icon-floppy-prohibit", isExtra: true})
-      +btn-2({text: "Rejected", icon: "icon-bag-prohibit", isExtra: true})
-      +btn-2({text: "Investigation", icon: "icon-magnifier-question", isExtra: true})
-      +btn-2({text: "Back to Pharmacy", icon: "icon-briefcase-plus", isExtra: true})
-      +btn-2({text: "Other date delivery", icon: "icon-calendar", isExtra: true})
-      +btn-2({text: "Ready to optimize", icon: "icon-gear", isExtra: true})
-      +btn-2({text: "On its way to facility", icon: "icon-home-delivery", isExtra: true})
-      +btn-2({text: "Draft", icon: "icon-notebook", isExtra: true})
+      +btn-section-counter({text: "Ready to Print", icon: "icon-print", isExtra: true})
+      +btn-section-counter({text: "Ready to Pickup", icon: "icon-package", isExtra: true})
+      +btn-section-counter({text: "Pickup Occurred", icon: "icon-fast-truck", isExtra: true})
+      +btn-section-counter({text: "Route Optimized", icon: "icon-dots", isExtra: true})
+      +btn-section-counter({text: "Delivery Attempted", icon: "icon-floppy-prohibit", isExtra: true})
+      +btn-section-counter({text: "Rejected", icon: "icon-bag-prohibit", isExtra: true})
+      +btn-section-counter({text: "Investigation", icon: "icon-magnifier-question", isExtra: true})
+      +btn-section-counter({text: "Back to Pharmacy", icon: "icon-briefcase-plus", isExtra: true})
+      +btn-section-counter({text: "Other date delivery", icon: "icon-calendar", isExtra: true})
+      +btn-section-counter({text: "Ready to optimize", icon: "icon-gear", isExtra: true})
+      +btn-section-counter({text: "On its way to facility", icon: "icon-home-delivery", isExtra: true})
+      +btn-section-counter({text: "Draft", icon: "icon-notebook", isExtra: true})

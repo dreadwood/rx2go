@@ -1,5 +1,5 @@
-mixin btn-1({text, isActive, isDisabled})
-  button.btn-1(
+mixin btn-section({text, isActive, isDisabled})
+  button.btn-section(
     class=(isActive ? 'actv' : null)
     disabled=isDisabled
     onclick="window.utils.toggleCssClass(this, 'actv')"

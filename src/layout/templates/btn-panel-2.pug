@@ -1,4 +1,4 @@
-include ../templates/button/btn-1
+include ../templates/button/btn-section
 
 mixin btn-panel-2({activeSection})
   .panel.panel--wrap
@@ -13,4 +13,4 @@ mixin btn-panel-2({activeSection})
         "Accounting checked",
       ]
     each it in data
-      +btn-1({text: it, isActive: it === activeSection})
+      +btn-section({text: it, isActive: it === activeSection})
