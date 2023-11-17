@@ -43,7 +43,7 @@
   @include container {
     &--medium {
       width: 100%;
-      min-width: none;
+      min-width: auto;
     }
   }
   @include desktop-lg {
