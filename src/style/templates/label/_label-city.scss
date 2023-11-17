@@ -40,7 +40,11 @@
     text-transform: uppercase;
     border-radius: 30px;
   }
-  @include desktop {
+  @include container {
+    &--medium {
+      width: 100%;
+      min-width: none;
+    }
     &--big {
       padding: 23px 20px 22px 20px;
       font-size: 35px;
@@ -50,7 +54,6 @@
   }
   @include mobile {
     &--medium {
-      min-width: 360px;
       padding: 28px 20px;
       font-size: 26px;
       line-height: 34px;

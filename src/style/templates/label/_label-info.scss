@@ -3,6 +3,7 @@
   padding: 26px 28px 28px 25px;
   font-size: 30px;
   line-height: 39px;
+  text-align: center;
   color: $color-black;
   background-color: $color-platinum;
   border-radius: 12px;
@@ -16,5 +17,10 @@
   &.error {
     color: $color-white;
     background-color: $color-red;
+  }
+  @include container {
+    width: 100%;
+    font-size: 26px;
+    line-height: 34px;
   }
 }
