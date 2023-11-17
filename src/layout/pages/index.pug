@@ -79,6 +79,11 @@ mixin page-list(data)
     url: "scan-validate-error-page.html",
   }]
 
+  const returnPharmacyPages = [{
+    name: "Scan: return to pharmacy, content",
+    url: "scan-pharmacy-content-page.html",
+  }]
+
 doctype html
 html(lang="en")
   +head("Rx2go. Index.")
@@ -118,4 +123,5 @@ html(lang="en")
     +page-list(scanReturnedPages)
     +page-list(routePages)
 
+    +page-list(returnPharmacyPages)
     +page-list(validatePages)

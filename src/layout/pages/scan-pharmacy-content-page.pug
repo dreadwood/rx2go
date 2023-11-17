@@ -1,20 +1,23 @@
 extends ../elements/layout-page
 include ../templates/btn-panel
+include ../templates/button/btn-icon
+include ../templates/table/table-pharmacy
 include ../templates/table/table-orders
 include ../templates/label/label-status
-include ../templates/label/label-info
+include ../templates/label/label-fridge
 include ../templates/profile-card
+include ../templates/form/form-grid
 include ../templates/form/form-field-wrp-input
 include ../templates/form/form-field-wrp-select
 
 block data
-  - title = "Scan: validate Queue, content"
+  - title = "Scan: return to pharmacy, content"
 
 
 block content
   .scan-page__main
     .scan-page__content
-      +btn-panel({activeSection: "Validate Queue"})
+      +btn-panel({activeSection: "Quick Create “Return to pharmacy”"})
 
       .scan-page__grid
         //- COL 1
@@ -22,30 +25,29 @@ block content
           .scan-page__top
             .scan-page__fields
               .scan-page__select-route
-                +form-field-wrp-select({color: "blue", value: "Returned"})
+                +form-field-wrp-select({
+                  color: "blue",
+                  value: "Modern Remedies Pharmacy - modernremedies"
+                })
               .scan-page__scan
                 +form-field-wrp-input({
                   placeholder: "Enter Barcode Numbers, Vendor ID, Equipments",
                   color: "blue"
                 })
-          .scan-page__title Route Optimized
-          .scan-page__label
-            +label-status({version: 1})
+          .scan-page__title Header
           .scan-page__table
-            include ../mocks/table-data-1
-            +table-orders({data: tableData1})
+            include ../mocks/table-data-3
+            +table-pharmacy({data: tableData3})
 
         //- COL 2
         .scan-page__item
           .scan-page__top
-            +label-info({
-              text: "Matched successfully",
-              isUppercase: true,
-              color: "success"
-            })
-          .scan-page__title Driver Out
-          .scan-page__label
-            +label-status({version: 2})
+            +label-fridge({})
+          .scan-page__title Header
           .scan-page__table
-            include ../mocks/table-data-2
-            +table-orders({data: tableData2})
+            +table-pharmacy({data: tableData3})
+
+        //- COL 3
+        .scan-page__item
+          .scan-page__form
+            +form-grid({})

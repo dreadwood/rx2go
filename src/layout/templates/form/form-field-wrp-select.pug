@@ -1,6 +1,6 @@
 include ../../templates/form/form-select
 
-mixin form-field-wrp-select({isOpen, scriptId, color})
+mixin form-field-wrp-select({isOpen, scriptId, color, value})
   .wrp-field(class=(color && `wrp-field--${color}`))
     label.wrp-field__label Select a Queue:
-    +form-select({isOpen, scriptId, value: "Returned"})
+    +form-select({isOpen, scriptId, value})
