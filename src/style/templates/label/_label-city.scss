@@ -46,7 +46,7 @@
       min-width: none;
     }
   }
-  @include desktop {
+  @include desktop-lg {
     &--big {
       padding: 23px 20px 22px 20px;
       font-size: 35px;

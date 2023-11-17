@@ -6,6 +6,7 @@
 }
 .scan-page__main {
   position: relative;
+  height: calc(100vh - 82px);
   padding: $desktop-padding;
   border-top: 1px solid $color-light-gray; // FIXME: 2023-11-10 / remove
   @include mobile {
@@ -145,4 +146,12 @@
 .scan-page__select-el {
   display: grid;
   row-gap: 8px;
+}
+.scan-page__city {
+  display: grid;
+  place-items: center;
+  margin-top: 220px;
+  @include desktop-lg {
+    margin-top: 0;
+  }
 }

@@ -64,11 +64,21 @@ mixin page-list(data)
   }]
 
   const routePages = [{
-    name: "Get Route Name: empty",
-    url: "route-empty-page.html",
+    name: "Get Route Name: city",
+    url: "route-city-page.html",
   },{
     name: "Get Route Name: content",
     url: "route-content-page.html",
+  }]
+
+  const scanReturnPharmacyPages = [{
+    name: "Scan: return to pharmacy, content",
+    url: "scan-pharmacy-content-page.html",
+  }]
+
+  const scanHubPages = [{
+    name: "Scan: get hub name",
+    url: "scan-hub-page.html",
   }]
 
   const scanValidatePages = [{
@@ -77,11 +87,6 @@ mixin page-list(data)
   },{
     name: "Scan: validate queue, error (modal)",
     url: "scan-validate-error-page.html",
-  }]
-
-  const scanReturnPharmacyPages = [{
-    name: "Scan: return to pharmacy, content",
-    url: "scan-pharmacy-content-page.html",
   }]
 
   const scanFilterPages = [{
@@ -133,5 +138,6 @@ html(lang="en")
     +page-list(routePages)
 
     +page-list(scanReturnPharmacyPages)
+    +page-list(scanHubPages)
     +page-list(scanValidatePages)
     +page-list(scanFilterPages)

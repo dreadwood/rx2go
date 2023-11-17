@@ -1,0 +1,25 @@
+extends ../elements/layout-page
+include ../templates/btn-panel
+include ../templates/label/label-city
+include ../templates/profile-card
+include ../templates/form/form-field-wrp-input
+
+block data
+  - title = "Scan: get hub name"
+
+
+block content
+  .scan-page__main
+    .scan-page__content
+      +btn-panel({activeSection: "Get Hub Name"})
+
+      .scan-page__top.scan-page__top--margin
+        .scan-page__fields
+          .scan-page__scan
+            +form-field-wrp-input({
+              placeholder: "Enter Barcode Numbers, Vendor ID, Equipments",
+              color: "blue"
+            })
+
+      .scan-page__city
+        +label-city({text: "Brooklyn HUB", color: "blue", size: "big"})
