@@ -71,7 +71,7 @@ mixin page-list(data)
     url: "route-content-page.html",
   }]
 
-  const validatePages = [{
+  const scanValidatePages = [{
     name: "Scan: validate queue, content",
     url: "scan-validate-content-page.html",
   },{
@@ -79,9 +79,17 @@ mixin page-list(data)
     url: "scan-validate-error-page.html",
   }]
 
-  const returnPharmacyPages = [{
+  const scanReturnPharmacyPages = [{
     name: "Scan: return to pharmacy, content",
     url: "scan-pharmacy-content-page.html",
+  }]
+
+  const scanFilterPages = [{
+    name: "Scan: scan by filter, success",
+    url: "scan-filter-success-page.html",
+  },{
+    name: "Scan: scan by filter, error",
+    url: "scan-filter-error-page.html",
   }]
 
 doctype html
@@ -121,7 +129,9 @@ html(lang="en")
     +page-list(scanDeliveryPages)
     +page-list(scanDriverPages)
     +page-list(scanReturnedPages)
+
     +page-list(routePages)
 
-    +page-list(returnPharmacyPages)
-    +page-list(validatePages)
+    +page-list(scanReturnPharmacyPages)
+    +page-list(scanValidatePages)
+    +page-list(scanFilterPages)

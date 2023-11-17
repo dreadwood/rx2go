@@ -15,9 +15,13 @@
 }
 .scan-page__content {
   // 1860px
-  margin-right: $container-main-width - $desktop-padding * 2 - 1860px;
+  &--profile {
+    margin-right: $container-main-width - $desktop-padding * 2 - 1860px;
+  }
   @include tablet {
-    margin-right: 0;
+    &--profile {
+      margin-right: 0;
+    }
   }
 }
 .scan-page__grid {
@@ -41,6 +45,9 @@
   margin-bottom: 16px;
   &--big {
     min-height: 151px;
+  }
+  &--margin {
+    margin-top: 16px;
   }
   @include container {
     min-height: auto;
@@ -123,4 +130,19 @@
 }
 .scan-page__form {
   max-width: 543px;
+}
+.scan-page__select {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px 12px;
+  @include desktop-lg {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+}
+.scan-page__select-el {
+  display: grid;
+  row-gap: 8px;
 }

@@ -1,0 +1,63 @@
+extends ../elements/layout-page
+include ../templates/btn-panel
+include ../templates/label/label-info
+include ../templates/profile-card
+include ../templates/form/form-field-wrp-input
+include ../templates/form/form-label
+include ../templates/form/form-select
+
+block data
+  - title = "Scan: scan by filter, success"
+
+
+block content
+  .scan-page__main
+    .scan-page__content
+      +btn-panel({activeSection: "Scan by Filter”"})
+
+      .scan-page__top.scan-page__top--margin
+        .scan-page__fields
+          .scan-page__scan
+            +form-field-wrp-input({
+              placeholder: "Enter Barcode Numbers, Vendor ID, Equipments",
+              color: "blue"
+            })
+          +label-info({
+            text: "Darger! The order #16601162  did not match your filters. ",
+            color: "error"
+          })
+
+      .scan-page__select
+        include ../mocks/select-data-2
+        .scan-page__select-el
+          +form-label({text: "Select a Status"})
+          +form-select({
+            value: "Pickup Occurred",
+            scriptId: 1,
+            color: "blue",
+            data: selectData2
+          })
+        .scan-page__select-el
+          +form-label({text: "Select a Sub Status"})
+          +form-select({
+            value: "Scheduled",
+            scriptId: 2,
+            color: "blue",
+            data: selectData2
+          })
+        .scan-page__select-el
+          +form-label({text: "Select an Order Type"})
+          +form-select({
+            value: "Regular",
+            scriptId: 3,
+            color: "blue",
+            data: selectData2
+          })
+        .scan-page__select-el
+          +form-label({text: "Select an Activity"})
+          +form-select({
+            value: "Recipient Refused",
+            scriptId: 4,
+            color: "blue",
+            data: selectData2
+          })

@@ -1,23 +1,4 @@
-mixin form-select({isOpen, scriptId, value, color})
-  -
-    const data = [
-      "Ready to Print",
-      "Ready for Pickup",
-      "Pickup Occurred",
-      "Ready for Delivery",
-      "Route Optimized",
-      "Driver Out",
-      "Delivered",
-      "Delivery Attempted",
-      "Returned",
-      "Rejected",
-      "Investigation",
-      "Back to Pharmacy",
-      "Other date delivery",
-      "Ready to Optimize",
-      "On its way to facility",
-      "Draft",
-    ]
+mixin form-select({isOpen, scriptId, value, color, data})
   .form-select(
     class=(color && `form-select--${color}`)
     class=(isOpen && "open")
@@ -28,6 +9,7 @@ mixin form-select({isOpen, scriptId, value, color})
       .form-select__icon
         +svg({name: "icon-arrow-dropdown", width: 20, height: 16})
     .form-select__dropdown
-      each it in data
-        button.form-select__option=it
+      if data
+        each it in data
+          button.form-select__option=it
 

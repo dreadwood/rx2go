@@ -137,7 +137,8 @@ block content
     +form-select-input({scriptId: 1})
 
     p Select
-    +form-select({color: "blue"})
+    include ../mocks/select-data-1
+    +form-select({color: "blue", data: selectData1})
 
     p Textarea
     +form-textarea({
@@ -155,10 +156,12 @@ block content
     })
 
     p Field wrapper select
+    include ../mocks/select-data-2
     +form-field-wrp-select({
       scriptId: 3,
       color: "blue",
-      value: "Returned"
+      value: "Returned",
+      data: selectData2
     })
 
     p Switch
