@@ -13,6 +13,7 @@ include ../templates/form/form-select-input
 include ../templates/form/form-textarea
 include ../templates/form/form-switch
 include ../templates/form/form-grid
+include ../templates/form/form-select
 include ../templates/table/table-text
 include ../templates/table/table-orders
 include ../templates/table/table-returns
@@ -128,11 +129,14 @@ block content
 
     h2.ui-second-title Form elements
 
-    p Field wrapper select input
+    p Input
     +form-input({placeholder: "Enter Barcode Numbers"})
 
-    p Field wrapper select input
+    p Select input
     +form-select-input({scriptId: 1})
+
+    p Select
+    +form-select({})
 
     p Textarea
     +form-textarea({

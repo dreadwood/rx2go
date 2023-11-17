@@ -1,37 +1,31 @@
-.form-select-input {
+.form-select {
   position: relative;
-  &.open .form-input {
+  &.open .form-select__field {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
   }
-  &.open .form-select-input__toggle {
+  &.open .form-select__icon {
     transform: rotate(180deg);
   }
-  &.open .form-select-input__dropdown {
+  &.open .form-select__dropdown {
     display: block
   }
 }
-.form-select-input__field {
-  position: relative;
-}
-.form-select-input__input {
+.form-select__field {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
-  padding: 10px 12px;
+  padding: 9px 11px 10px 11px;
   font-family: $font-default;
-  font-size: 14px;
-  line-height: 17px;
-  color: $color-text;
+  font-size: 16px;
+  line-height: 19px;
+  color: $color-gray-blue;
+  background-color: $color-ghostly-bluish-white;
   border: 1px solid $color-light-gray;
   border-radius: 6px;
-  &::placeholder {
-    font-family: inherit;
-    font-size: inherit;
-    line-height: inherit;
-    font-weight: inherit;
-    color: $color-text;
-  }
 }
-.form-select-input__toggle {
+.form-select__icon {
   @include transition(transform);
   position: absolute;
   top: 0;
@@ -44,13 +38,14 @@
   padding: 0;
   background-color: transparent;
   border: none;
+  transform: rotate(0deg);
   svg {
     width: 20px;
     height: 16px;
-    fill: $color-cadet-bluec-rayola
+    fill: $color-cadet-bluec-rayola;
   }
 }
-.form-select-input__dropdown {
+.form-select__dropdown {
   position: absolute;
   top: 100%;
   left: 0;
@@ -68,7 +63,7 @@
     border-bottom: 1px solid transparentize($color-black, 0.8);
   }
 }
-.form-select-input__item {
+.form-select__option {
   @include transition(background-color);
   display: block;
   width: 100%;

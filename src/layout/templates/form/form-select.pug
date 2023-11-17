@@ -1,0 +1,32 @@
+mixin form-select({isOpen, scriptId, value})
+  -
+    const data = [
+      "Ready to Print",
+      "Ready for Pickup",
+      "Pickup Occurred",
+      "Ready for Delivery",
+      "Route Optimized",
+      "Driver Out",
+      "Delivered",
+      "Delivery Attempted",
+      "Returned",
+      "Rejected",
+      "Investigation",
+      "Back to Pharmacy",
+      "Other date delivery",
+      "Ready to Optimize",
+      "On its way to facility",
+      "Draft",
+    ]
+  .form-select(
+    class=(isOpen && "open")
+    class=`js-form-select-input${scriptId || ''}`
+  )
+    button.form-select__field(onclick=`window.utils.toggleCssClassNodes(this, 'js-form-select-input${scriptId || ''}', 'open')`)
+      =(value || "All")
+      .form-select__icon
+        +svg({name: "icon-arrow-dropdown", width: 20, height: 16})
+    .form-select__dropdown
+      each it in data
+        button.form-select__option=it
+
