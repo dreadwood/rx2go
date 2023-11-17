@@ -1,0 +1,19 @@
+.btn-any {
+  display: block;
+  width: max-content;
+  margin: 0;
+  padding: 8px 12px;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 18px;
+  color: $color-white;
+  background-color: $color-gray-639;
+  border: none;
+  border-radius: 10px;
+  &--pink {
+    background-color: $color-wild-watermelon-criola;
+  }
+  &--blue {
+    background-color: $color-cornflower;
+  }
+}

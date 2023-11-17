@@ -155,3 +155,11 @@
     margin-top: 0;
   }
 }
+.scan-page__contols {
+  @include mobile {
+    & > .wrp-contols {
+      width: 100%;
+      max-width: 420px;
+    }
+  }
+}

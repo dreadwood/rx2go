@@ -5,7 +5,9 @@ include ../templates/button/btn-section-counter
 include ../templates/button/btn-form
 include ../templates/button/btn-icon
 include ../templates/button/btn-table
+include ../templates/button/btn-any
 include ../templates/button/btn-filter
+include ../templates/filter-panel
 include ../templates/form/form-field-wrp-input
 include ../templates/form/form-field-wrp-select-input
 include ../templates/form/form-field-wrp-select
@@ -77,6 +79,11 @@ block content
       +btn-table({text: "Unpaid", isError: true})
       +btn-table({text: "Unpaid", isError: true, isDisabled: true})
 
+    p Button any
+    .ui-btn-list
+      +btn-any({text: "<b>Activity:</b> Not Present", color: "pink"})
+      +btn-any({text: "<b>Schedule Date:</b> N/A", color: "blue"})
+
 
     h2.ui-second-title Filter
 
@@ -145,27 +152,8 @@ block content
       placeholder: "Write why does copay is unpaid"
     })
 
-    p Field wrapper select input
-    +form-field-wrp-select-input({scriptId: 2, color: "blue"})
-
-    p Field wrapper input
-    +form-field-wrp-input({
-      placeholder: "Enter Barcode Numbers, Vendor ID, Equipments",
-      error: "Error. Information not found in the system",
-      color: "blue"
-    })
-
-    p Field wrapper select
-    include ../mocks/select-data-2
-    +form-field-wrp-select({
-      scriptId: 3,
-      color: "blue",
-      value: "Returned",
-      data: selectData2
-    })
-
     p Switch
-    +form-switch({id: "switch"})
+    +form-switch({id: "switch-1"})
 
 
     h2.ui-second-title Profile card
@@ -236,5 +224,42 @@ block content
     h2.ui-second-title Form
 
     +form-grid({})
-      .wrp-center
-        Order Activity
+
+
+    h2.ui-second-title Wrappes
+
+    p Wrapper activity
+    .wrp-contols
+      | Order Activity
+      .wrp-button__buttons
+        +btn-any({text: "<b>Activity:</b> Not Present", color: "pink"})
+        +btn-any({text: "<b>Schedule Date:</b> N/A", color: "blue"})
+
+    p Wrapper center
+    .wrp-center
+      +form-switch({id: "switch-2", isChecked: true})
+
+    p Wrapper filter
+    .wrp-filter
+      | Filter by hub:
+      .wrp-filter__scroll
+        +filter-panel({})
+
+    p Wrapper field select input
+    +form-field-wrp-select-input({scriptId: 2, color: "blue"})
+
+    p Wrapper field input
+    +form-field-wrp-input({
+      placeholder: "Enter Barcode Numbers, Vendor ID, Equipments",
+      error: "Error. Information not found in the system",
+      color: "blue"
+    })
+
+    p Wrapper field select
+    include ../mocks/select-data-2
+    +form-field-wrp-select({
+      scriptId: 3,
+      color: "blue",
+      value: "Returned",
+      data: selectData2
+    })

@@ -1,0 +1,20 @@
+.wrp-contols {
+  gap: 8px 12px;
+  width: max-content;
+  max-width: 100%;
+  padding: 11px 11px 17px 11px;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 700;
+  color: $color-black;
+  text-transform: uppercase;
+  background-color: $color-ghost-white;
+  border: 1px solid $color-light-gray;
+  border-radius: 12px;
+}
+.wrp-button__buttons {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  margin-top: 8px;
+}

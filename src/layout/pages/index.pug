@@ -81,6 +81,11 @@ mixin page-list(data)
     url: "scan-hub-page.html",
   }]
 
+  const scanActivityPages = [{
+    name: "Scan: see activity",
+    url: "scan-activity-page.html",
+  }]
+
   const scanValidatePages = [{
     name: "Scan: validate queue, content",
     url: "scan-validate-content-page.html",
@@ -130,6 +135,7 @@ html(lang="en")
 
     h2 Pages
     +page-list(UIPages)
+
     +page-list(scanEmptyPages)
     +page-list(scanDeliveryPages)
     +page-list(scanDriverPages)
@@ -139,5 +145,6 @@ html(lang="en")
 
     +page-list(scanReturnPharmacyPages)
     +page-list(scanHubPages)
+    +page-list(scanActivityPages)
     +page-list(scanValidatePages)
     +page-list(scanFilterPages)
