@@ -121,10 +121,10 @@ const server = () => {
     ui: false
   })
 
-  gulp.watch('src/layout/**/*.{pug,js}', gulp.series(html, refresh))
+  gulp.watch('src/pug/**/*.{pug,js}', gulp.series(html, refresh))
   gulp.watch('src/img/icon-*.svg', gulp.series(sprite, html, refresh))
   gulp.watch('src/scss/**/*.scss', gulp.series(cssWrp(['style', 'dev'])))
-  gulp.watch('src/script/**/*.js', gulp.series(js, refresh))
+  gulp.watch('src/js/**/*.js', gulp.series(js, refresh))
 }
 
 const build = gulp.series(
