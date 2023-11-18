@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Rx2go. Scan: driver out, error (modal)</title>
+    <link rel="stylesheet" href="css/dev.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+  </head>
+  <body>
+    <main class="scan-page container">
+      <header class="header">
+        <div class="header__title">scan orders</div>
+        <div class="header__info">
+          <div class="header__time">
+            <svg width="20" height="20">
+              <use xlink:href="img/sprite.svg#icon-play-indent-round"></use>
+            </svg>09/21 12:00 AM
+          </div>
+          <div class="header__time">
+            <svg width="20" height="20">
+              <use xlink:href="img/sprite.svg#icon-done-indent-round"></use>
+            </svg>5 HR 28 MIN 38 SEC
+          </div>
+          <div class="header__time">
+            <svg width="20" height="20">
+              <use xlink:href="img/sprite.svg#icon-cross-indent-round"></use>
+            </svg>10 HR 18 MIN 40 SEC
+          </div>
+          <div class="header__time">
+            <svg width="20" height="20">
+              <use xlink:href="img/sprite.svg#icon-doc-indent-round"></use>
+            </svg>1 MIN 40 SEC
+          </div>
+          <div class="header__label">in</div>
+        </div>
+        <div class="header__search">
+          <form action="#" role="search">
+            <input class="form-search" type="search" placeholder="Search..."/>
+          </form>
+        </div>
+        <button class="header__burger-btn">
+          <svg width="40" height="40">
+            <use xlink:href="img/sprite.svg#icon-burger"></use>
+          </svg>
+        </button>
+      </header>
+      <div class="scan-page__main">
+        <div class="scan-page__content scan-page__content--profile">
+          <div class="btn-panel">
+            <div class="panel panel--wrap">
+              <button class="btn-section" onclick="window.utils.toggleCssClass(this, 'actv')">Search Info</button>
+              <button class="btn-section" onclick="window.utils.toggleCssClass(this, 'actv')">Print Labels</button>
+              <button class="btn-section" onclick="window.utils.toggleCssClass(this, 'actv')">Get Hub Name</button>
+              <button class="btn-section" onclick="window.utils.toggleCssClass(this, 'actv')">Get Route Name</button>
+              <button class="btn-section" onclick="window.utils.toggleCssClass(this, 'actv')">See Activity</button>
+              <button class="btn-section" onclick="window.utils.toggleCssClass(this, 'actv')">Validate Queue</button>
+              <button class="btn-section" onclick="window.utils.toggleCssClass(this, 'actv')">Scan by Filter</button>
+              <button class="btn-section" onclick="window.utils.toggleCssClass(this, 'actv')">Return labels</button>
+              <button class="btn-section" onclick="window.utils.toggleCssClass(this, 'actv')">Print Stops</button>
+              <button class="btn-section" onclick="window.utils.toggleCssClass(this, 'actv')">Quick Create “Return to pharmacy”</button>
+            </div>
+            <div class="panel panel--wrap">
+              <button class="btn-section-counter" onclick="window.utils.toggleCssClass(this, 'actv')">
+                <svg class="btn-section-counter__icon" width="17" height="17">
+                  <use xlink:href="img/sprite.svg#icon-building"></use>
+                </svg>Ready for Delivery
+              </button>
+              <button class="btn-section-counter actv" onclick="window.utils.toggleCssClass(this, 'actv')">
+                <svg class="btn-section-counter__icon" width="17" height="17">
+                  <use xlink:href="img/sprite.svg#icon-auto"></use>
+                </svg>Driver Out
+                <div class="btn-section-counter__counter">13</div>
+              </button>
+              <button class="btn-section-counter" onclick="window.utils.toggleCssClass(this, 'actv')">
+                <svg class="btn-section-counter__icon" width="17" height="17">
+                  <use xlink:href="img/sprite.svg#icon-building-arrows"></use>
+                </svg>Returned
+              </button>
+              <button class="btn-section-counter" onclick="window.utils.toggleVisibleNodes(this, 'js-btn-panel-extra')">...
+              </button>
+            </div>
+            <div class="panel panel--wrap js-btn-panel-extra" hidden="hidden">
+              <button class="btn-section-counter btn-section-counter--extra" onclick="window.utils.toggleCssClass(this, 'actv')">
+                <svg class="btn-section-counter__icon" width="17" height="17">
+                  <use xlink:href="img/sprite.svg#icon-print"></use>
+                </svg>Ready to Print
+              </button>
+              <button class="btn-section-counter btn-section-counter--extra" onclick="window.utils.toggleCssClass(this, 'actv')">
+                <svg class="btn-section-counter__icon" width="17" height="17">
+                  <use xlink:href="img/sprite.svg#icon-package"></use>
+                </svg>Ready to Pickup
+              </button>
+              <button class="btn-section-counter btn-section-counter--extra" onclick="window.utils.toggleCssClass(this, 'actv')">
+                <svg class="btn-section-counter__icon" width="17" height="17">
+                  <use xlink:href="img/sprite.svg#icon-fast-truck"></use>
+                </svg>Pickup Occurred
+              </button>
+              <button class="btn-section-counter btn-section-counter--extra" onclick="window.utils.toggleCssClass(this, 'actv')">
+                <svg class="btn-section-counter__icon" width="17" height="17">
+                  <use xlink:href="img/sprite.svg#icon-dots"></use>
+                </svg>Route Optimized
+              </button>
+              <button class="btn-section-counter btn-section-counter--extra" onclick="window.utils.toggleCssClass(this, 'actv')">
+                <svg class="btn-section-counter__icon" width="17" height="17">
+                  <use xlink:href="img/sprite.svg#icon-floppy-prohibit"></use>
+                </svg>Delivery Attempted
+              </button>
+              <button class="btn-section-counter btn-section-counter--extra" onclick="window.utils.toggleCssClass(this, 'actv')">
+                <svg class="btn-section-counter__icon" width="17" height="17">
+                  <use xlink:href="img/sprite.svg#icon-bag-prohibit"></use>
+                </svg>Rejected
+              </button>
+              <button class="btn-section-counter btn-section-counter--extra" onclick="window.utils.toggleCssClass(this, 'actv')">
+                <svg class="btn-section-counter__icon" width="17" height="17">
+                  <use xlink:href="img/sprite.svg#icon-magnifier-question"></use>
+                </svg>Investigation
+              </button>
+              <button class="btn-section-counter btn-section-counter--extra" onclick="window.utils.toggleCssClass(this, 'actv')">
+                <svg class="btn-section-counter__icon" width="17" height="17">
+                  <use xlink:href="img/sprite.svg#icon-briefcase-plus"></use>
+                </svg>Back to Pharmacy
+              </button>
+              <button class="btn-section-counter btn-section-counter--extra" onclick="window.utils.toggleCssClass(this, 'actv')">
+                <svg class="btn-section-counter__icon" width="17" height="17">
+                  <use xlink:href="img/sprite.svg#icon-calendar"></use>
+                </svg>Other date delivery
+              </button>
+              <button class="btn-section-counter btn-section-counter--extra" onclick="window.utils.toggleCssClass(this, 'actv')">
+                <svg class="btn-section-counter__icon" width="17" height="17">
+                  <use xlink:href="img/sprite.svg#icon-gear"></use>
+                </svg>Ready to optimize
+              </button>
+              <button class="btn-section-counter btn-section-counter--extra" onclick="window.utils.toggleCssClass(this, 'actv')">
+                <svg class="btn-section-counter__icon" width="17" height="17">
+                  <use xlink:href="img/sprite.svg#icon-home-delivery"></use>
+                </svg>On its way to facility
+              </button>
+              <button class="btn-section-counter btn-section-counter--extra" onclick="window.utils.toggleCssClass(this, 'actv')">
+                <svg class="btn-section-counter__icon" width="17" height="17">
+                  <use xlink:href="img/sprite.svg#icon-notebook"></use>
+                </svg>Draft
+              </button>
+            </div>
+          </div>
+          <div class="scan-page__grid">
+            <div class="scan-page__item">
+              <div class="scan-page__top">
+                <div class="scan-page__fields">
+                  <div class="scan-page__select-route">
+                    <div class="wrp-field wrp-field--blue">
+                      <label class="wrp-field__label">Select a Route:</label>
+                      <div class="form-select-input js-form-select-input">
+                        <div class="form-select-input__field">
+                          <input class="form-input" type="text" placeholder="Select a Route..." name=""/>
+                          <button class="form-select-input__toggle" onclick="window.utils.toggleCssClassNodes(this, 'js-form-select-input', 'open')">
+                            <svg width="20" height="16">
+                              <use xlink:href="img/sprite.svg#icon-arrow-dropdown"></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="form-select-input__dropdown">
+                          <button class="form-select-input__item"><b>NH Q - 1</b>  |  
+                            <13>Orders</13>  |  21 September 01:56 pm
+                          </button>
+                          <button class="form-select-input__item"><b>NH Q - 1</b>  |  
+                            <13>Orders</13>  |  21 September 01:56 pm
+                          </button>
+                          <button class="form-select-input__item"><b>NH Q - 1</b>  |  
+                            <13>Orders</13>  |  21 September 01:56 pm
+                          </button>
+                          <button class="form-select-input__item"><b>NH Q - 1</b>  |  
+                            <13>Orders</13>  |  21 September 01:56 pm
+                          </button>
+                          <button class="form-select-input__item"><b>NH Q - 1</b>  |  
+                            <13>Orders</13>  |  21 September 01:56 pm
+                          </button>
+                          <button class="form-select-input__item"><b>NH Q - 1</b>  |  
+                            <13>Orders</13>  |  21 September 01:56 pm
+                          </button>
+                          <button class="form-select-input__item"><b>NH Q - 1</b>  |  
+                            <13>Orders</13>  |  21 September 01:56 pm
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="scan-page__scan">
+                    <div class="wrp-field wrp-field--blue">
+                      <label class="wrp-field__label">Scan:</label>
+                      <input class="form-input" type="text" placeholder="Enter Barcode Numbers, Vendor ID, Equipments" name=""/>
+                    </div>
+                  </div>
+                  <div class="scan-page__print">
+                    <button class="btn-icon">
+                      <svg class="btn-icon__icon" width="17" height="17">
+                        <use xlink:href="img/sprite.svg#icon-print"></use>
+                      </svg>Print the label
+                    </button>
+                  </div>
+                </div>
+                <div class="scan-page__profile">
+                  <div class="profile-card hide js-profile-card">
+                    <div class="profile-card__header">Vendor information
+                      <button class="profile-card__btn-hide" onclick="window.utils.toggleCssClassNodes(this, 'js-profile-card', 'hide')">
+                        <svg width="20" height="20">
+                          <use xlink:href="img/sprite.svg#icon-arrow-profile-card"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="profile-card__content">
+                      <div class="profile-card__person">
+                        <div class="profile-card__photo-wrp">
+                          <div class="profile-card__photo img img--circle">
+                            <picture>
+                              <source type="image/webp" srcset="/img/person-02@1x.webp 1x, /img/person-02@2x.webp 2x"/><img src="/img/person-02@1x.jpg" srcset="/img/person-02@2x.jpg 2x" width="112" height="112"/>
+                            </picture>
+                          </div>
+                          <div class="profile-card__rating">
+                            <svg width="10" height="10">
+                              <use xlink:href="img/sprite.svg#icon-star-spiky"></use>
+                            </svg>5.0
+                          </div>
+                        </div>
+                        <div class="profile-card__person-info">
+                          <div class="profile-card__name">Aslambek Farkhodov</div>
+                          <div class="profile-card__info">ID: 219222040</div>
+                          <div class="profile-card__info">Experience: 900 days</div>
+                        </div>
+                      </div>
+                      <div class="profile-card__group profile-card__group--col">
+                        <div>
+                          <div class="profile-card__title">Orders</div>
+                          <div class="profile-card__col">
+                            <div class="profile-card__label profile-card__label--orange">
+                              <svg width="17" height="17">
+                                <use xlink:href="img/sprite.svg#icon-fast-truck"></use>
+                              </svg>Pickup Occurred<span class="counter">100</span>
+                            </div>
+                            <div class="profile-card__label profile-card__label--green">
+                              <svg width="17" height="17">
+                                <use xlink:href="img/sprite.svg#icon-building-arrows"></use>
+                              </svg>Driver Out &amp; DA<span class="counter">100</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div>
+                          <div class="profile-card__title">Copay</div>
+                          <div class="profile-card__col">
+                            <div class="profile-card__label profile-card__label--purple">
+                              <svg width="17" height="17">
+                                <use xlink:href="img/sprite.svg#icon-wallet"></use>
+                              </svg>1460$
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="profile-card__group">
+                        <div class="profile-card__title">Overall left to scan items:</div>
+                        <div class="profile-card__list">
+                          <div class="profile-card__label">
+                            <svg width="17" height="17">
+                              <use xlink:href="img/sprite.svg#icon-snowflake"></use>
+                            </svg>Amazon fridge bags<span class="counter">2</span>
+                          </div>
+                          <div class="profile-card__label">
+                            <svg width="17" height="17">
+                              <use xlink:href="img/sprite.svg#icon-boxes"></use>
+                            </svg>Ice packs<span class="counter">10</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="profile-card__group">
+                        <div class="profile-card__title">Recent feedback:</div>
+                        <div class="profile-card__col">
+                          <div class="profile-card__feedback">
+                            <div class="profile-card__stars">
+                              <svg class="profile-card__star actv" width="22" height="22">
+                                <use xlink:href="img/sprite.svg#icon-star"></use>
+                              </svg>
+                              <svg class="profile-card__star " width="22" height="22">
+                                <use xlink:href="img/sprite.svg#icon-star"></use>
+                              </svg>
+                              <svg class="profile-card__star " width="22" height="22">
+                                <use xlink:href="img/sprite.svg#icon-star"></use>
+                              </svg>
+                              <svg class="profile-card__star " width="22" height="22">
+                                <use xlink:href="img/sprite.svg#icon-star"></use>
+                              </svg>
+                              <svg class="profile-card__star " width="22" height="22">
+                                <use xlink:href="img/sprite.svg#icon-star"></use>
+                              </svg>
+                            </div>Did Not Follow Instructions and Late Delivery
+                          </div>
+                          <div class="profile-card__feedback">
+                            <div class="profile-card__stars">
+                              <svg class="profile-card__star actv" width="22" height="22">
+                                <use xlink:href="img/sprite.svg#icon-star"></use>
+                              </svg>
+                              <svg class="profile-card__star actv" width="22" height="22">
+                                <use xlink:href="img/sprite.svg#icon-star"></use>
+                              </svg>
+                              <svg class="profile-card__star actv" width="22" height="22">
+                                <use xlink:href="img/sprite.svg#icon-star"></use>
+                              </svg>
+                              <svg class="profile-card__star actv" width="22" height="22">
+                                <use xlink:href="img/sprite.svg#icon-star"></use>
+                              </svg>
+                              <svg class="profile-card__star actv" width="22" height="22">
+                                <use xlink:href="img/sprite.svg#icon-star"></use>
+                              </svg>
+                            </div>Went Above and Beyond
+                          </div>
+                        </div>
+                      </div>
+                      <div class="profile-card__footer">
+                        <button class="profile-card__btn-link">Choose a different driver</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="scan-page__title">Route Optimized</div>
+              <div class="scan-page__label">
+                <div class="label-status">There are<span class="label-status__counter">150</span>of<span class="label-status__counter">150</span>left to scan</div>
+              </div>
+              <div class="scan-page__table">
+                <table class="table table--orders">
+                  <thead>
+                    <tr>
+                      <th colspan="2">Order ID</th>
+                      <th>Hubs</th>
+                      <th>Items</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="table__td-order">
+                        <div class="table__order">#16247419
+                          <div class="table__order-time">11:45 - 15:45</div>
+                        </div>
+                      </td>
+                      <td class="table__td-icons">
+                        <div class="table__icon-list">
+                          <div class="table__icon table__icon--color">
+                            <svg width="20" height="20">
+                              <use xlink:href="img/sprite.svg#icon-snowflake"></use>
+                            </svg>
+                          </div>
+                          <div class="table__icon">
+                            <svg width="20" height="20">
+                              <use xlink:href="img/sprite.svg#icon-watch-round"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="label-city blue">Brooklyn</div>
+                      </td>
+                      <td>
+                        <div class="table__number-list">
+                          <div class="number-circle">1</div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="table__td-order">
+                        <div class="table__order">#16247419
+                          <div class="table__order-time">11:45 - 15:45</div>
+                        </div>
+                      </td>
+                      <td class="table__td-icons">
+                        <div class="table__icon-list">
+                          <div class="table__icon table__icon--color">
+                          </div>
+                          <div class="table__icon">
+                            <svg width="20" height="20">
+                              <use xlink:href="img/sprite.svg#icon-stopwatch-round"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="label-city light-green">New Jersey</div>
+                      </td>
+                      <td>
+                        <div class="table__number-list">
+                          <div class="number-circle">1</div>
+                          <div class="number-circle actv">2</div>
+                          <div class="number-circle">3</div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="table__td-order">
+                        <div class="table__order">#16247419
+                          <div class="table__order-time">11:45 - 15:45</div>
+                        </div>
+                      </td>
+                      <td class="table__td-icons">
+                        <div class="table__icon-list">
+                          <div class="table__icon table__icon--color">
+                            <svg width="20" height="20">
+                              <use xlink:href="img/sprite.svg#icon-snowflake"></use>
+                            </svg>
+                          </div>
+                          <div class="table__icon">
+                            <svg width="20" height="20">
+                              <use xlink:href="img/sprite.svg#icon-lightning-round"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="label-city black">Connecticut</div>
+                      </td>
+                      <td>
+                        <div class="table__number-list">
+                          <div class="number-circle">1</div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="table__td-order">
+                        <div class="table__order">#16247419
+                          <div class="table__order-time">11:45 - 15:45</div>
+                        </div>
+                      </td>
+                      <td class="table__td-icons">
+                        <div class="table__icon-list">
+                          <div class="table__icon table__icon--color">
+                            <svg width="20" height="20">
+                              <use xlink:href="img/sprite.svg#icon-snowflake"></use>
+                            </svg>
+                          </div>
+                          <div class="table__icon">
+                            <svg width="20" height="20">
+                              <use xlink:href="img/sprite.svg#icon-bag-round"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="label-city green">Pennsylvania</div>
+                      </td>
+                      <td>
+                        <div class="table__number-list">
+                          <div class="number-circle">1</div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="table__td-order">
+                        <div class="table__order">#16247419
+                          <div class="table__order-time">11:45 - 15:45</div>
+                        </div>
+                      </td>
+                      <td class="table__td-icons">
+                        <div class="table__icon-list">
+                          <div class="table__icon table__icon--color">
+                          </div>
+                          <div class="table__icon">
+                            <svg width="20" height="20">
+                              <use xlink:href="img/sprite.svg#icon-truck-round"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="label-city black">Connecticut</div>
+                      </td>
+                      <td>
+                        <div class="table__number-list">
+                          <div class="number-circle">1</div>
+                          <div class="number-circle">2</div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="table__td-order">
+                        <div class="table__order">#16247419
+                          <div class="table__order-time">11:45 - 15:45</div>
+                        </div>
+                      </td>
+                      <td class="table__td-icons">
+                        <div class="table__icon-list">
+                          <div class="table__icon table__icon--color">
+                            <svg width="20" height="20">
+                              <use xlink:href="img/sprite.svg#icon-snowflake"></use>
+                            </svg>
+                          </div>
+                          <div class="table__icon">
+                            <svg width="20" height="20">
+                              <use xlink:href="img/sprite.svg#icon-truck-round"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="label-city yellow">Long Island</div>
+                      </td>
+                      <td>
+                        <div class="table__number-list">
+                          <div class="number-circle">1</div>
+                          <div class="number-circle">2</div>
+                          <div class="number-circle">3</div>
+                          <div class="number-circle actv">4</div>
+                          <div class="number-circle">5</div>
+                          <div class="number-circle">6</div>
+                          <div class="number-circle">7</div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="scan-page__item">
+              <div class="scan-page__top scan-page__top--big"></div>
+              <div class="scan-page__title">Driver Out</div>
+              <div class="scan-page__label">
+                <div class="label-status">There are<span class="label-status__counter">7</span>of<span class="label-status__counter">13</span>left to scan</div>
+              </div>
+              <div class="scan-page__table">
+                <table class="table table--orders">
+                  <thead>
+                    <tr>
+                      <th colspan="2">Order ID</th>
+                      <th>Hubs</th>
+                      <th>Items</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="table__td-order">
+                        <div class="table__order">#16247419
+                          <div class="table__order-time">11:45 - 15:45</div>
+                        </div>
+                      </td>
+                      <td class="table__td-icons">
+                        <div class="table__icon-list">
+                          <div class="table__icon table__icon--color">
+                          </div>
+                          <div class="table__icon">
+                            <svg width="20" height="20">
+                              <use xlink:href="img/sprite.svg#icon-watch-round"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="label-city blue">Brooklyn</div>
+                      </td>
+                      <td>
+                        <div class="table__number-list">
+                          <div class="number-circle actv">1</div>
+                          <div class="number-circle actv">2</div>
+                          <div class="number-circle actv">3</div>
+                          <div class="number-circle actv">4</div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="table__td-order">
+                        <div class="table__order">#16247419
+                          <div class="table__order-time">11:45 - 15:45</div>
+                        </div>
+                      </td>
+                      <td class="table__td-icons">
+                        <div class="table__icon-list">
+                          <div class="table__icon table__icon--color">
+                          </div>
+                          <div class="table__icon">
+                            <svg width="20" height="20">
+                              <use xlink:href="img/sprite.svg#icon-stopwatch-round"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="label-city light-green">New Jersey</div>
+                      </td>
+                      <td>
+                        <div class="table__number-list">
+                          <div class="number-circle actv">1</div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="table__td-order">
+                        <div class="table__order">#16247419
+                          <div class="table__order-time">11:45 - 15:45</div>
+                        </div>
+                      </td>
+                      <td class="table__td-icons">
+                        <div class="table__icon-list">
+                          <div class="table__icon table__icon--color">
+                          </div>
+                          <div class="table__icon">
+                            <svg width="20" height="20">
+                              <use xlink:href="img/sprite.svg#icon-lightning-round"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="label-city">Connecticut</div>
+                      </td>
+                      <td>
+                        <div class="table__number-list">
+                          <div class="number-circle actv">1</div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="table__td-order">
+                        <div class="table__order">#16247419
+                          <div class="table__order-time">11:45 - 15:45</div>
+                        </div>
+                      </td>
+                      <td class="table__td-icons">
+                        <div class="table__icon-list">
+                          <div class="table__icon table__icon--color">
+                          </div>
+                          <div class="table__icon">
+                            <svg width="20" height="20">
+                              <use xlink:href="img/sprite.svg#icon-bag-round"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="label-city green">Pennsylvania</div>
+                      </td>
+                      <td>
+                        <div class="table__number-list">
+                          <div class="number-circle actv">1</div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="table__td-order">
+                        <div class="table__order">#16247419
+                          <div class="table__order-time">11:45 - 15:45</div>
+                        </div>
+                      </td>
+                      <td class="table__td-icons">
+                        <div class="table__icon-list">
+                          <div class="table__icon table__icon--color">
+                          </div>
+                          <div class="table__icon">
+                            <svg width="20" height="20">
+                              <use xlink:href="img/sprite.svg#icon-truck-round"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="label-city">Connecticut</div>
+                      </td>
+                      <td>
+                        <div class="table__number-list">
+                          <div class="number-circle actv">1</div>
+                          <div class="number-circle actv">2</div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="table__td-order">
+                        <div class="table__order">#16247419
+                          <div class="table__order-time">11:45 - 15:45</div>
+                        </div>
+                      </td>
+                      <td class="table__td-icons">
+                        <div class="table__icon-list">
+                          <div class="table__icon table__icon--color">
+                          </div>
+                          <div class="table__icon">
+                            <svg width="20" height="20">
+                              <use xlink:href="img/sprite.svg#icon-truck-round"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="label-city yellow">Long Island</div>
+                      </td>
+                      <td>
+                        <div class="table__number-list">
+                          <div class="number-circle actv">1</div>
+                          <div class="number-circle actv">2</div>
+                          <div class="number-circle actv">3</div>
+                          <div class="number-circle actv">4</div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="scan-page__item">
+              <div class="scan-page__title">Assigned equipments</div>
+              <div class="scan-page__label">
+                <div class="label-status">There are<span class="label-status__counter">7</span>of<span class="label-status__counter">13</span>left to scan</div>
+              </div>
+              <div class="scan-page__table">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>ID</th>
+                      <th>Title</th>
+                      <th>Pickup &amp; Ago</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>#162</td>
+                      <td>Amazon fridge bags</td>
+                      <td>Picked up 5 hours ago at 13:05</td>
+                    </tr>
+                    <tr>
+                      <td>#162</td>
+                      <td>Amazon fridge bags</td>
+                      <td>Picked up 5 hours ago at 13:05</td>
+                    </tr>
+                    <tr>
+                      <td>#162</td>
+                      <td>Amazon fridge bags</td>
+                      <td>Picked up 5 hours ago at 13:05</td>
+                    </tr>
+                    <tr>
+                      <td>#162</td>
+                      <td>Amazon fridge bags</td>
+                      <td>Picked up 5 hours ago at 13:05</td>
+                    </tr>
+                    <tr>
+                      <td>#162</td>
+                      <td>Amazon fridge bags</td>
+                      <td>Picked up 5 hours ago at 13:05</td>
+                    </tr>
+                    <tr>
+                      <td>#162</td>
+                      <td>Amazon fridge bags</td>
+                      <td>Picked up 5 hours ago at 13:05</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="overlay">
+      <div class="modal modal--error">
+        <div class="modal__header">
+          <svg class="modal__title-icon" width="52" height="52">
+            <use xlink:href="img/sprite.svg#icon-cross-round"></use>
+          </svg>
+          <div class="modal__title">Order #16854456 does not apply to this route. Move the order to route 09/21/2023 01:42 am (CONNECTICUT - 2)</div>
+          <div class="modal__stopwatch">10 SEC</div>
+        </div>
+        <form class="modal__form">
+          <div class="modal__form-field">
+            <textarea class="form-textarea" placeholder="Write how you corrected the error"></textarea>
+          </div>
+          <div class="modal__form-submit">
+            <button class="btn-form" type="button" disabled="disabled" onclick="window.utils.toggleCssClass(this, 'actv')">Save</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Rx2go. Scan: ready for delivery</title>
+    <link rel="stylesheet" href="css/dev.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+  </head>
+  <body>
+    <main class="scan-page container">
+      <header class="header">
+        <div class="header__title">scan orders</div>
+        <div class="header__info">
+          <div class="header__time">
+            <svg width="20" height="20">
+              <use xlink:href="img/sprite.svg#icon-play-indent-round"></use>
+            </svg>09/21 12:00 AM
+          </div>
+          <div class="header__time">
+            <svg width="20" height="20">
+              <use xlink:href="img/sprite.svg#icon-done-indent-round"></use>
+            </svg>5 HR 28 MIN 38 SEC
+          </div>
+          <div class="header__time">
+            <svg width="20" height="20">
+              <use xlink:href="img/sprite.svg#icon-cross-indent-round"></use>
+            </svg>10 HR 18 MIN 40 SEC
+          </div>
+          <div class="header__time">
+            <svg width="20" height="20">
+              <use xlink:href="img/sprite.svg#icon-doc-indent-round"></use>
+            </svg>1 MIN 40 SEC
+          </div>
+          <div class="header__label">in</div>
+        </div>
+        <div class="header__search">
+          <form action="#" role="search">
+            <input class="form-search" type="search" placeholder="Search..."/>
+          </form>
+        </div>
+        <button class="header__burger-btn">
+          <svg width="40" height="40">
+            <use xlink:href="img/sprite.svg#icon-burger"></use>
+          </svg>
+        </button>
+      </header>
+      <div class="scan-page__main">
+        <div class="scan-page__content scan-page__content--profile">
+          <div class="btn-panel">
+            <div class="panel panel--wrap">
+              <button class="btn-section" onclick="window.utils.toggleCssClass(this, 'actv')">Search Info</button>
+              <button class="btn-section" onclick="window.utils.toggleCssClass(this, 'actv')">Print Labels</button>
+              <button class="btn-section" onclick="window.utils.toggleCssClass(this, 'actv')">Get Hub Name</button>
+              <button class="btn-section" onclick="window.utils.toggleCssClass(this, 'actv')">Get Route Name</button>
+              <button class="btn-section" onclick="window.utils.toggleCssClass(this, 'actv')">See Activity</button>
+              <button class="btn-section" onclick="window.utils.toggleCssClass(this, 'actv')">Validate Queue</button>
+              <button class="btn-section" onclick="window.utils.toggleCssClass(this, 'actv')">Scan by Filter</button>
+              <button class="btn-section" onclick="window.utils.toggleCssClass(this, 'actv')">Return labels</button>
+              <button class="btn-section" onclick="window.utils.toggleCssClass(this, 'actv')">Print Stops</button>
+              <button class="btn-section" onclick="window.utils.toggleCssClass(this, 'actv')">Quick Create “Return to pharmacy”</button>
+            </div>
+            <div class="panel panel--wrap">
+              <button class="btn-section-counter actv" onclick="window.utils.toggleCssClass(this, 'actv')">
+                <svg class="btn-section-counter__icon" width="17" height="17">
+                  <use xlink:href="img/sprite.svg#icon-building"></use>
+                </svg>Ready for Delivery
+              </button>
+              <button class="btn-section-counter" onclick="window.utils.toggleCssClass(this, 'actv')">
+                <svg class="btn-section-counter__icon" width="17" height="17">
+                  <use xlink:href="img/sprite.svg#icon-auto"></use>
+                </svg>Driver Out
+              </button>
+              <button class="btn-section-counter" onclick="window.utils.toggleCssClass(this, 'actv')">
+                <svg class="btn-section-counter__icon" width="17" height="17">
+                  <use xlink:href="img/sprite.svg#icon-building-arrows"></use>
+                </svg>Returned
+              </button>
+              <button class="btn-section-counter" onclick="window.utils.toggleVisibleNodes(this, 'js-btn-panel-extra')">...
+              </button>
+            </div>
+            <div class="panel panel--wrap js-btn-panel-extra" hidden="hidden">
+              <button class="btn-section-counter btn-section-counter--extra" onclick="window.utils.toggleCssClass(this, 'actv')">
+                <svg class="btn-section-counter__icon" width="17" height="17">
+                  <use xlink:href="img/sprite.svg#icon-print"></use>
+                </svg>Ready to Print
+              </button>
+              <button class="btn-section-counter btn-section-counter--extra" onclick="window.utils.toggleCssClass(this, 'actv')">
+                <svg class="btn-section-counter__icon" width="17" height="17">
+                  <use xlink:href="img/sprite.svg#icon-package"></use>
+                </svg>Ready to Pickup
+              </button>
+              <button class="btn-section-counter btn-section-counter--extra" onclick="window.utils.toggleCssClass(this, 'actv')">
+                <svg class="btn-section-counter__icon" width="17" height="17">
+                  <use xlink:href="img/sprite.svg#icon-fast-truck"></use>
+                </svg>Pickup Occurred
+              </button>
+              <button class="btn-section-counter btn-section-counter--extra" onclick="window.utils.toggleCssClass(this, 'actv')">
+                <svg class="btn-section-counter__icon" width="17" height="17">
+                  <use xlink:href="img/sprite.svg#icon-dots"></use>
+                </svg>Route Optimized
+              </button>
+              <button class="btn-section-counter btn-section-counter--extra" onclick="window.utils.toggleCssClass(this, 'actv')">
+                <svg class="btn-section-counter__icon" width="17" height="17">
+                  <use xlink:href="img/sprite.svg#icon-floppy-prohibit"></use>
+                </svg>Delivery Attempted
+              </button>
+              <button class="btn-section-counter btn-section-counter--extra" onclick="window.utils.toggleCssClass(this, 'actv')">
+                <svg class="btn-section-counter__icon" width="17" height="17">
+                  <use xlink:href="img/sprite.svg#icon-bag-prohibit"></use>
+                </svg>Rejected
+              </button>
+              <button class="btn-section-counter btn-section-counter--extra" onclick="window.utils.toggleCssClass(this, 'actv')">
+                <svg class="btn-section-counter__icon" width="17" height="17">
+                  <use xlink:href="img/sprite.svg#icon-magnifier-question"></use>
+                </svg>Investigation
+              </button>
+              <button class="btn-section-counter btn-section-counter--extra" onclick="window.utils.toggleCssClass(this, 'actv')">
+                <svg class="btn-section-counter__icon" width="17" height="17">
+                  <use xlink:href="img/sprite.svg#icon-briefcase-plus"></use>
+                </svg>Back to Pharmacy
+              </button>
+              <button class="btn-section-counter btn-section-counter--extra" onclick="window.utils.toggleCssClass(this, 'actv')">
+                <svg class="btn-section-counter__icon" width="17" height="17">
+                  <use xlink:href="img/sprite.svg#icon-calendar"></use>
+                </svg>Other date delivery
+              </button>
+              <button class="btn-section-counter btn-section-counter--extra" onclick="window.utils.toggleCssClass(this, 'actv')">
+                <svg class="btn-section-counter__icon" width="17" height="17">
+                  <use xlink:href="img/sprite.svg#icon-gear"></use>
+                </svg>Ready to optimize
+              </button>
+              <button class="btn-section-counter btn-section-counter--extra" onclick="window.utils.toggleCssClass(this, 'actv')">
+                <svg class="btn-section-counter__icon" width="17" height="17">
+                  <use xlink:href="img/sprite.svg#icon-home-delivery"></use>
+                </svg>On its way to facility
+              </button>
+              <button class="btn-section-counter btn-section-counter--extra" onclick="window.utils.toggleCssClass(this, 'actv')">
+                <svg class="btn-section-counter__icon" width="17" height="17">
+                  <use xlink:href="img/sprite.svg#icon-notebook"></use>
+                </svg>Draft
+              </button>
+            </div>
+          </div>
+          <div class="scan-page__grid">
+            <div class="scan-page__item">
+              <div class="scan-page__top">
+                <div class="scan-page__fields">
+                  <div class="scan-page__scan">
+                    <div class="wrp-field wrp-field--blue">
+                      <label class="wrp-field__label">Scan:</label>
+                      <input class="form-input" type="text" placeholder="Enter Barcode Numbers, Vendor ID, Equipments" name=""/>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="js/script.js"></script>
+  </body>
+</html>
