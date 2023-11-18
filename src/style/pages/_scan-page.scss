@@ -1,13 +1,12 @@
 .scan-page {
   width: 100%;
-  max-width: $container-main-width;
+  max-width: $container-width;
   margin: 0 auto;
   border: 1px solid $color-light-gray; // FIXME: 2023-11-10 / remove
 }
 .scan-page__main {
   position: relative;
   padding: $desktop-padding;
-  border-top: 1px solid $color-light-gray; // FIXME: 2023-11-10 / remove
   @include mobile {
     padding-right: $mobile-padding;
     padding-left: $mobile-padding;
@@ -16,7 +15,7 @@
 .scan-page__content {
   // 1860px
   &--profile {
-    margin-right: $container-main-width - $desktop-padding * 2 - 1860px;
+    margin-right: $container-width - $desktop-padding * 2 - 1860px;
   }
   @include tablet {
     &--profile {

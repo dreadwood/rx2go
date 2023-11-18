@@ -3,6 +3,7 @@
   align-items: center;
   width: 100%;
   padding: 19px 16px;
+  border-bottom: 1px solid $color-light-gray;
   @include mobile {
     padding: 10px 8px;
   }

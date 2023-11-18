@@ -1,5 +1,5 @@
 // fonts
-$font-default: "Lato", system-ui, -apple-system, "Segoe UI", "roboto", "Helvetica Neue", "Noto Sans", arial, sans-serif;
+$font-default: "Lato", sans-serif;
 $font-title: "Dosis", sans-serif;
 $font-info: "Barlow Condensed", sans-serif;
 
@@ -8,9 +8,7 @@ $retina-dpi: 144dpi;
 $retina-dppx: 1.5dppx;
 
 // container
-$container-width: 1250px;
-$container-main-width: 2320px; // TODO: 2023-11-10 / rename
-
+$container-width: 2320px;
 
 // viewport
 $desktop-xl-width: 1400px;
@@ -23,17 +21,6 @@ $mobile-width: 375px;
 $desktop-padding: 16px;
 $tablet-padding: 16px;
 $mobile-padding: 8px;
-
-// padding block
-$block-padding: 10px;
-$block-padding-mobile: 8px;
-$page-top-padding: 20px;
-$page-top-padding-mobile: 16px;
-$page-bottom-padding: 20px;
-$page-bottom-padding-mobile: 16px;
-
-// other
-$box-shadow: 0 4px 15px 4px transparentize($color-gray-827, 0.5);
 
 // character css code
 $character-nbsp: "\00A0";

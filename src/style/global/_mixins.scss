@@ -5,7 +5,7 @@
 }
 
 @mixin container {
-  @media (max-width: $container-main-width - 1px) {
+  @media (max-width: $container-width - 1px) {
     @content;
   }
 }
@@ -47,50 +47,10 @@
   }
 }
 
-/* stylelint-disable property-no-vendor-prefix, value-no-vendor-prefix */
-@mixin crop-text(
-  $row-count: 3,
-  $row-count-mobile: null,
-  $row-count-tablet: null
-) {
-  // hack to trim multiline text
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: $row-count;
-  display: -webkit-box;
-  overflow: hidden;
-  @if $row-count-tablet {
-    @include tablet {
-      -webkit-line-clamp: $row-count-tablet;
-    }
-  }
-  @if $row-count-mobile {
-    @include mobile {
-      -webkit-line-clamp: $row-count-mobile;
-    }
-  }
-}
-/* stylelint-enable property-no-vendor-prefix, value-no-vendor-prefix */
-
 @mixin crop-simple-text {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-}
-
-@mixin wrapper {
-  width: 100%;
-  max-width: $container-width;
-  margin: 0 auto;
-  padding-right: $desktop-padding;
-  padding-left: $desktop-padding;
-  @include tablet {
-    padding-right: $tablet-padding;
-    padding-left: $tablet-padding;
-  }
-  @include mobile {
-    padding-right: $mobile-padding;
-    padding-left: $mobile-padding;
-  }
 }
 
 @mixin transition($args...) {
@@ -102,14 +62,4 @@
 @mixin word-break {
   word-break: break-word;
   overflow-wrap: break-word;
-}
-
-@mixin link {
-  a {
-    @include transition(color);
-    color: $color-main;
-    &:hover {
-      color: inherit;
-    }
-  }
 }

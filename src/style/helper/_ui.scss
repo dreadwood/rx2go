@@ -1,4 +1,12 @@
-// .ui {}
+.ui {
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 20px 16px;
+  @include mobile {
+    padding: 16px 8px;
+  }
+}
 .ui-second-title {
   margin-top: 40px;
 }
