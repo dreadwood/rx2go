@@ -25,9 +25,11 @@ block content
           .scan-page__top
             .scan-page__fields
               .scan-page__select-route
+                include ../mocks/select-data-1
                 +form-field-wrp-select({
                   color: "blue",
-                  value: "Modern Remedies Pharmacy - modernremedies"
+                  value: "Modern Remedies Pharmacy - modernremedies",
+                  data: selectData1,
                 })
               .scan-page__scan
                 +form-field-wrp-input({
