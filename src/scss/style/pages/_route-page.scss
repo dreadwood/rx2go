@@ -59,8 +59,6 @@
   overflow-x: scroll;
 }
 .route-page__city {
-  display: grid;
-  place-items: center;
   margin-top: 64px;
   @include desktop-lg {
     margin-top: 0;
