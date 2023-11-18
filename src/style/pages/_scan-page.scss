@@ -6,7 +6,6 @@
 }
 .scan-page__main {
   position: relative;
-  height: calc(100vh - 82px);
   padding: $desktop-padding;
   border-top: 1px solid $color-light-gray; // FIXME: 2023-11-10 / remove
   @include mobile {
