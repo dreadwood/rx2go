@@ -38,6 +38,7 @@
   }
   &::-webkit-calendar-picker-indicator {
     cursor: pointer;
+    opacity: 0;
   }
   &::-webkit-datetime-edit {
     margin-bottom: -2px;

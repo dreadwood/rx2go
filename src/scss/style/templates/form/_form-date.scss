@@ -1,0 +1,18 @@
+.form-date {
+  position: relative;
+}
+.form-date__icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  z-index: 1;
+  transform: translateY(-50%);
+  &--blue {
+    background-color: $color-ghostly-bluish-white;
+  }
+  svg {
+    width: 22px;
+    height: 22px;
+    fill: $color-light-purple-blue;
+  }
+}

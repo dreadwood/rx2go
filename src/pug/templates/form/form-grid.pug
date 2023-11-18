@@ -1,5 +1,6 @@
 include ../../templates/form/form-input
 include ../../templates/form/form-label
+include ../../templates/form/form-date
 include ../../templates/button/btn-form
 
 mixin form-grid({})
@@ -12,7 +13,7 @@ mixin form-grid({})
       +form-input({color: "blue"})
     .form-grid__el
       +form-label({text: "Date/Time to Deliver"})
-      +form-input({type: "date", color: "blue"})
+      +form-date({color: "blue", color: "blue", id: "date"})
     .form-grid__controls
       +btn-form({text: "Create", color: "green", type: "submit"})
       +btn-form({text: "Close"})

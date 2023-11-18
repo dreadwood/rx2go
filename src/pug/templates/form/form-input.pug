@@ -1,8 +1,10 @@
-mixin form-input({type, placeholder, value, color})
+mixin form-input({type, placeholder, value, color, className, id})
    input.form-input(
+    class=className
     class=(color && `form-input--${color}`)
     type=(type || "text")
     placeholder=placeholder
     value=value
     name=""
+    id=id
   )

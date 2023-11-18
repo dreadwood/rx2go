@@ -1,0 +1,8 @@
+include ../../elements/images
+include ../../templates/form/form-input
+
+mixin form-date({color, id})
+  .form-date
+    label.form-date__icon(for=id class=(color && `form-date__icon--${color}`))
+      +svg({name: "icon-calendar", width: 22, height: 22})
+    +form-input({type: "date", id: id, color: color})
