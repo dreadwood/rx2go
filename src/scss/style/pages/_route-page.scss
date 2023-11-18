@@ -1,7 +1,5 @@
 .route-page {
   position: relative;
-  display: flex;
-  flex-direction: column;
   width: 100%;
   max-width: $container-width;
   margin: 0 auto;
@@ -63,8 +61,7 @@
 .route-page__city {
   display: grid;
   place-items: center;
-  margin-top: auto;
-  margin-bottom: auto;
+  margin-top: 64px;
   @include desktop-lg {
     margin-top: 0;
     margin-bottom: 0;
