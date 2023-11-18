@@ -1,0 +1,12 @@
+@mixin mobile {
+  @media (max-width: $tablet-width - 1px) {
+    @content;
+  }
+}
+
+@mixin hide-scroll {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
